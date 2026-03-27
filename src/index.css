@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-gold: #c9a96e;
+  --color-gold-light: #d4b97e;
+  --color-gold-dark: #a8884e;
+  --color-sage: #7a9e7e;
+  --color-sage-dark: #5a7e5e;
+  --color-charcoal: #1a1a1a;
+  --color-charcoal-light: #2a2a2a;
+  --color-charcoal-dark: #0a0a0a;
+  --color-obsidian: #080a08;
+  --color-deep-green: #1a2e22;
+  --color-ivory: #f0ece4;
+  --color-smoke: #9a968e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: rgba(201, 169, 110, 0.3);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080a08;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
