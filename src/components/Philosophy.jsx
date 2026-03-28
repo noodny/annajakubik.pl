@@ -1,30 +1,33 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const principles = [
   {
-    number: '01',
-    title: 'Holistyczna diagnostyka',
-    text: 'Każde leczenie zaczyna się od kompleksowej oceny — nie tylko jamy ustnej, ale powiązanych systemów wpływających na zdrowie przyzębia.',
+    number: "01",
+    title: "Holistyczna diagnostyka",
+    text: "Każde leczenie zaczyna się od kompleksowej oceny - nie tylko jamy ustnej, ale powiązanych systemów wpływających na zdrowie przyzębia.",
   },
   {
-    number: '02',
-    title: 'Współpraca interdyscyplinarna',
-    text: 'Złożone przypadki wymagają skoordynowanej wiedzy. Współpraca z ortodontami, implantologami i innymi specjalistami zapewnia zintegrowane, długoterminowe rezultaty.',
+    number: "02",
+    title: "Współpraca interdyscyplinarna",
+    text: "Złożone przypadki wymagają skoordynowanej wiedzy. Współpraca z ortodontami, implantologami i innymi specjalistami zapewnia zintegrowane, długoterminowe rezultaty.",
   },
   {
-    number: '03',
-    title: 'Precyzja oparta na dowodach',
-    text: 'Decyzje kliniczne zakorzenione w najnowszych badaniach naukowych. Żadnych skrótów, żadnych trendów — tylko to, co potwierdza nauka.',
+    number: "03",
+    title: "Precyzja oparta na dowodach",
+    text: "Decyzje kliniczne zakorzenione w najnowszych badaniach naukowych. Żadnych skrótów, żadnych trendów - tylko to, co potwierdza nauka.",
   },
-]
+];
 
 export default function Philosophy() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="philosophy" className="relative py-32 lg:py-44 overflow-hidden">
+    <section
+      id="philosophy"
+      className="relative py-32 lg:py-44 overflow-hidden"
+    >
       {/* Background accent */}
       <div className="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full bg-sage/[0.03] blur-[150px]" />
 
@@ -40,9 +43,9 @@ export default function Philosophy() {
             Podejście
           </p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-            Więcej niż
+            Oparte na
             <br />
-            <span className="text-white/30">stomatologia</span>
+            <span className="text-white/30">wiedzy i doświadczeniu</span>
           </h2>
         </motion.div>
 
@@ -54,13 +57,14 @@ export default function Philosophy() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="text-xl md:text-2xl text-white/60 font-light leading-relaxed font-serif italic">
-              „Już od czasu studiów interesował mnie związek chorób jamy ustnej ze zdrowiem ogólnym oraz holistyczne podejście do każdego pacjenta, obejmujące kompleksową diagnostykę i&nbsp;prowadzenie leczenia zarówno zachowawczego, jak i&nbsp;chirurgicznego."
+              „Już od czasu studiów interesował mnie związek chorób jamy ustnej
+              ze zdrowiem ogólnym oraz holistyczne podejście do każdego
+              pacjenta, obejmujące kompleksową diagnostykę i&nbsp;prowadzenie
+              leczenia zarówno zachowawczego, jak i&nbsp;chirurgicznego."
             </p>
             <div className="mt-8 flex items-center gap-4">
               <div className="w-12 h-px bg-gold/30" />
-              <p className="text-sm text-gold/60 tracking-wide">
-                Anna Jakubik
-              </p>
+              <p className="text-sm text-gold/60 tracking-wide">Anna Jakubik</p>
             </div>
           </motion.div>
 
@@ -70,8 +74,14 @@ export default function Philosophy() {
               <motion.div
                 key={p.number}
                 initial={{ opacity: 0, x: 30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-                transition={{ duration: 0.6, delay: 0.3 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                animate={
+                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }
+                }
+                transition={{
+                  duration: 0.6,
+                  delay: 0.3 + i * 0.15,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className="group flex gap-6"
               >
                 <span className="text-gold/20 font-serif text-3xl leading-none pt-1 group-hover:text-gold/40 transition-colors duration-500">
@@ -91,5 +101,5 @@ export default function Philosophy() {
         </div>
       </div>
     </section>
-  )
+  );
 }

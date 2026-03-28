@@ -1,25 +1,25 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: '#about', label: 'O mnie' },
-  { href: '#services', label: 'Leczenie' },
-  { href: '#philosophy', label: 'Podejście' },
-  { href: '#education', label: 'Wykształcenie' },
-  { href: '#conditions', label: 'Periodontologia' },
-  { href: '#contact', label: 'Kontakt' },
-]
+  { href: "#about", label: "O mnie" },
+  { href: "#services", label: "Leczenie" },
+  { href: "#philosophy", label: "Podejście" },
+  { href: "#education", label: "Wykształcenie" },
+  { href: "#conditions", label: "Periodontologia" },
+  { href: "#contact", label: "Kontakt" },
+];
 
 export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <motion.nav
@@ -28,18 +28,18 @@ export default function Navigation() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-charcoal-dark/90 backdrop-blur-md border-b border-white/5'
-          : 'bg-transparent'
+          ? "bg-charcoal-dark/90 backdrop-blur-md border-b border-white/5"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="group flex items-baseline gap-2">
-            <span className="font-serif text-xl text-white tracking-wide">
+          <a href="#" className="group flex flex-col items-baseline">
+            <span className="font-serif text-[1.6rem] text-white tracking-wide">
               Anna Jakubik
             </span>
             <span className="hidden sm:inline text-xs text-gold/60 tracking-widest uppercase font-light">
-              Periodontologia
+              Specjalista Periodontologii
             </span>
           </a>
 
@@ -78,7 +78,7 @@ export default function Navigation() {
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-charcoal-dark/95 backdrop-blur-lg border-b border-white/5 overflow-hidden"
@@ -106,5 +106,5 @@ export default function Navigation() {
         )}
       </AnimatePresence>
     </motion.nav>
-  )
+  );
 }

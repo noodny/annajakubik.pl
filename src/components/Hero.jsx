@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-const NOISE_SVG = `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`
+const NOISE_SVG = `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`;
 
 export default function Hero() {
   return (
@@ -11,21 +11,21 @@ export default function Hero() {
       {/* Layer 2: Deep green → obsidian vertical gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-deep-green/50 via-obsidian/80 to-obsidian" />
 
-      {/* Layer 3: Green radial glow — top left */}
+      {/* Layer 3: Green radial glow - top left */}
       <div
         className="absolute inset-0"
         style={{
           backgroundImage:
-            'radial-gradient(ellipse 60% 50% at 30% 20%, rgba(90,122,106,0.18), transparent)',
+            "radial-gradient(ellipse 60% 50% at 30% 20%, rgba(90,122,106,0.18), transparent)",
         }}
       />
 
-      {/* Layer 4: Gold radial glow — bottom right */}
+      {/* Layer 4: Gold radial glow - bottom right */}
       <div
         className="absolute inset-0"
         style={{
           backgroundImage:
-            'radial-gradient(ellipse 50% 40% at 75% 75%, rgba(196,162,101,0.07), transparent)',
+            "radial-gradient(ellipse 50% 40% at 75% 75%, rgba(196,162,101,0.07), transparent)",
         }}
       />
 
@@ -35,26 +35,8 @@ export default function Hero() {
         style={{ backgroundImage: NOISE_SVG }}
       />
 
-      {/* Layer 6: Vertical gold accent line — left edge */}
-      <motion.div
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        transition={{ duration: 1.5, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute left-[clamp(2rem,5vw,5rem)] top-0 w-px h-full bg-gradient-to-b from-transparent via-gold/15 to-transparent origin-top hidden md:block"
-      />
-
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <p className="text-gold/70 text-sm tracking-[0.3em] uppercase mb-8 font-light">
-            Specjalista periodontologii
-          </p>
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,8 +46,7 @@ export default function Hero() {
           Periodontologia
           <br />
           <span className="text-gold">z precyzją</span>
-          <br />
-          i troską
+          <br />i troską
         </motion.h1>
 
         <motion.p
@@ -74,7 +55,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mt-10 text-white/40 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
         >
-          Holistyczne podejście do zdrowia dziąseł i&nbsp;jamy ustnej&nbsp;—
+          Holistyczne podejście do zdrowia dziąseł i&nbsp;jamy ustnej&nbsp;-
           <br className="hidden md:block" />
           kompleksowa diagnostyka, leczenie zachowawcze i&nbsp;chirurgiczne.
         </motion.p>
@@ -106,17 +87,17 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-[1px] h-16 bg-gradient-to-b from-transparent via-gold/40 to-transparent"
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="w-[1px] h-16 bg-gradient-to-b from-transparent via-gold/80 to-transparent"
         />
       </motion.div>
 
       {/* Layer 7: Bottom fade for seamless transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-obsidian to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-obsidian to-transparent" />
     </section>
-  )
+  );
 }
