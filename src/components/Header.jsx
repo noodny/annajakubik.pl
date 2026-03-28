@@ -11,7 +11,7 @@ const navLinks = [
   { href: "#contact", label: "Kontakt" },
 ];
 
-export default function Navigation() {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -29,7 +29,7 @@ export default function Navigation() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-charcoal-dark/90 backdrop-blur-md border-b border-white/5"
-          : "bg-transparent"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -38,7 +38,7 @@ export default function Navigation() {
             <span className="font-serif text-[1.6rem] text-white tracking-wide">
               Anna Jakubik
             </span>
-            <span className="hidden sm:inline text-xs text-gold/60 tracking-widest uppercase font-light">
+            <span className="text-xs text-gold/80 tracking-widest uppercase font-light">
               Specjalista Periodontologii
             </span>
           </a>

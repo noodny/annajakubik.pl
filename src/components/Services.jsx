@@ -93,7 +93,7 @@ function ServiceCard({ service, index }) {
       <div className="relative z-10">
         <SvgIcon
           svg={service.icon}
-          className="w-12 h-12 text-gold/50 group-hover:text-gold transition-colors duration-500 mb-6"
+          className="w-20 h-20 text-gold/50 group-hover:text-gold transition-colors duration-500 mb-6"
         />
         <h3 className="font-serif text-xl text-white mb-3 group-hover:text-gold-light transition-colors duration-500">
           {service.title}

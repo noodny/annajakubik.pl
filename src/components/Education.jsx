@@ -33,7 +33,7 @@ export default function Education() {
           {/* Vertical line */}
           <div className="absolute left-[19px] lg:left-1/2 top-0 bottom-0 w-px bg-white/[0.06]" />
 
-          <div className="space-y-16 lg:space-y-24">
+          <div className="space-y-16 lg:space-y-24" ref={ref}>
             {milestones.map((item, i) => (
               <motion.div
                 key={item.title}
