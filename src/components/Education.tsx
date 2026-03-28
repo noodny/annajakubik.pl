@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -6,7 +8,7 @@ const milestones = [
     year: "Wykształcenie",
     title: "Collegium Medicum Uniwersytetu Jagiellońskiego",
     description:
-      "Ukończenie jednej z najstarszych i najbardziej prestiżowych uczelni medycznych w Polsce, w Krakowie - gdzie narodziło się głębokie zainteresowanie związkiem zdrowia jamy ustnej ze zdrowiem ogólnym.",
+      "Ukończenie jednej z najstarszych i najbardziej prestiżowych uczelni medycznych w Polsce, w Krakowie — gdzie narodziło się głębokie zainteresowanie związkiem zdrowia jamy ustnej ze zdrowiem ogólnym.",
   },
   {
     year: "Specjalizacja",
@@ -18,7 +20,7 @@ const milestones = [
     year: "Nauka",
     title: "Praca naukowa i dydaktyczna",
     description:
-      "Aktywna rola asystenta na uczelni - udział w badaniach naukowych, publikacjach oraz kształceniu przyszłych lekarzy dentystów.",
+      "Aktywna rola asystenta na uczelni — udział w badaniach naukowych, publikacjach oraz kształceniu przyszłych lekarzy dentystów.",
   },
 ];
 
@@ -57,7 +59,9 @@ export default function Education() {
 
                 {/* Content */}
                 <div
-                  className={`pl-12 lg:pl-0 lg:w-1/2 ${i % 2 === 0 ? "lg:text-right lg:pr-16" : "lg:pl-16"}`}
+                  className={`pl-12 lg:pl-0 lg:w-1/2 ${
+                    i % 2 === 0 ? "lg:text-right lg:pr-16" : "lg:pl-16"
+                  }`}
                 >
                   <p className="text-gold/50 text-xs tracking-[0.3em] uppercase mb-3">
                     {item.year}

@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -10,7 +12,7 @@ import icon06 from "../assets/icons/06.svg?raw";
 import icon07 from "../assets/icons/07.svg?raw";
 import icon08 from "../assets/icons/08.svg?raw";
 
-function SvgIcon({ svg, className = "" }) {
+function SvgIcon({ svg, className = "" }: { svg: string; className?: string }) {
   const html = svg
     .replace(/fill="#fff"/g, 'fill="currentColor"')
     .replace(/fill="white"/g, 'fill="currentColor"')
@@ -24,54 +26,54 @@ const services = [
   {
     title: "Zapalenie dziąseł",
     description:
-      "Kompleksowa diagnostyka i leczenie stanów zapalnych dziąseł - od skalingu po zaawansowane procedury chirurgiczne.",
+      "Kompleksowa diagnostyka i leczenie stanów zapalnych dziąseł — od skalingu po zaawansowane procedury chirurgiczne.",
     icon: icon01,
   },
   {
     title: "Zapalenie przyzębia",
     description:
-      "Diagnostyka i leczenie choroby przyzębia - zapobieganie powstawaniu kieszeni przyzębnych, utracie kości i ruchomości zębów.",
+      "Diagnostyka i leczenie choroby przyzębia — zapobieganie powstawaniu kieszeni przyzębnych, utracie kości i ruchomości zębów.",
     icon: icon02,
   },
   {
     title: "Recesje dziąseł",
     description:
-      "Precyzyjne techniki mikrochirurgiczne z wykorzystaniem przeszczepów tkanki łącznej - pokrycie odsłoniętych szyjek zębowych.",
+      "Precyzyjne techniki mikrochirurgiczne z wykorzystaniem przeszczepów tkanki łącznej — pokrycie odsłoniętych szyjek zębowych.",
     icon: icon07,
   },
   {
     title: "Augmentacja dziąseł",
     description:
-      "Pogrubienie dziąsła przed leczeniem ortodontycznym - zapobieganie pogłębianiu recesji podczas noszenia aparatu stałego.",
+      "Pogrubienie dziąsła przed leczeniem ortodontycznym — zapobieganie pogłębianiu recesji podczas noszenia aparatu stałego.",
     icon: icon04,
   },
   {
     title: "Wydłużenie koron klinicznych",
     description:
-      "Chirurgiczne modelowanie dziąsła i kości w celu odsłonięcia większej części zęba - przywrócenie proporcjonalnej, zbalansowanej estetyki.",
+      "Chirurgiczne modelowanie dziąsła i kości w celu odsłonięcia większej części zęba — przywrócenie proporcjonalnej, zbalansowanej estetyki.",
     icon: icon08,
   },
   {
     title: "Tkanki wokół implantów",
     description:
-      "Specjalistyczne leczenie stanów zapalnych tkanek wokół implantów - ochrona integracji i długoterminowego powodzenia leczenia.",
+      "Specjalistyczne leczenie stanów zapalnych tkanek wokół implantów — ochrona integracji i długoterminowego powodzenia leczenia.",
     icon: icon06,
   },
   {
     title: "Wędzidełka warg i języka",
     description:
-      "Frenulektomia i miofrenuloplastyka przy skróconym wędzidełku - przywrócenie prawidłowej funkcji mowy, oddychania i połykania.",
+      "Frenulektomia i miofrenuloplastyka przy skróconym wędzidełku — przywrócenie prawidłowej funkcji mowy, oddychania i połykania.",
     icon: icon05,
   },
   {
     title: "Choroby błony śluzowej",
     description:
-      "Diagnostyka i leczenie aft, zmian zapalnych i chorób błony śluzowej jamy ustnej - gdzie medycyna stomatologiczna spotyka codzienny komfort.",
+      "Diagnostyka i leczenie aft, zmian zapalnych i chorób błony śluzowej jamy ustnej — gdzie medycyna stomatologiczna spotyka codzienny komfort.",
     icon: icon03,
   },
 ];
 
-function ServiceCard({ service, index }) {
+function ServiceCard({ service, index }: { service: (typeof services)[number]; index: number }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 

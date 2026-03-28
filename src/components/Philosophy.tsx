@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -5,7 +7,7 @@ const principles = [
   {
     number: "01",
     title: "Holistyczna diagnostyka",
-    text: "Każde leczenie zaczyna się od kompleksowej oceny - nie tylko jamy ustnej, ale powiązanych systemów wpływających na zdrowie przyzębia.",
+    text: "Każde leczenie zaczyna się od kompleksowej oceny — nie tylko jamy ustnej, ale powiązanych systemów wpływających na zdrowie przyzębia.",
   },
   {
     number: "02",
@@ -15,7 +17,7 @@ const principles = [
   {
     number: "03",
     title: "Precyzja oparta na dowodach",
-    text: "Decyzje kliniczne zakorzenione w najnowszych badaniach naukowych. Żadnych skrótów, żadnych trendów - tylko to, co potwierdza nauka.",
+    text: "Decyzje kliniczne zakorzenione w najnowszych badaniach naukowych. Żadnych skrótów, żadnych trendów — tylko to, co potwierdza nauka.",
   },
 ];
 
@@ -54,7 +56,11 @@ export default function Philosophy() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <p className="text-xl md:text-2xl text-white/60 font-light leading-relaxed font-serif italic">
               „Już od czasu studiów interesował mnie związek chorób jamy ustnej
@@ -64,7 +70,9 @@ export default function Philosophy() {
             </p>
             <div className="mt-8 flex items-center gap-4">
               <div className="w-12 h-px bg-gold/30" />
-              <p className="text-sm text-gold/60 tracking-wide">Anna Jakubik</p>
+              <p className="text-sm text-gold/60 tracking-wide">
+                Anna Jakubik
+              </p>
             </div>
           </motion.div>
 

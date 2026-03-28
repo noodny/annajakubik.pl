@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -14,7 +16,7 @@ const stages = [
     stage: "Etap 2",
     title: "Wczesne zapalenie przyzębia",
     description:
-      "Stan zapalny rozprzestrzenia się poniżej linii dziąseł. Zaczynają powstawać kieszenie przyzębne. Rozpoczyna się utrata kości - ale progresję można zatrzymać.",
+      "Stan zapalny rozprzestrzenia się poniżej linii dziąseł. Zaczynają powstawać kieszenie przyzębne. Rozpoczyna się utrata kości — ale progresję można zatrzymać.",
     visual: "●●○○",
     color: "text-gold",
   },
@@ -66,7 +68,7 @@ export default function Conditions() {
           </h2>
           <p className="mt-6 text-white/30 text-base leading-relaxed max-w-xl">
             Choroba przyzębia rozwija się stopniowo, często bez bólu.
-            Rozpoznanie jej etapów to pierwszy krok do ochrony nie tylko zębów -
+            Rozpoznanie jej etapów to pierwszy krok do ochrony nie tylko zębów —
             ale całego organizmu.
           </p>
         </motion.div>
@@ -96,7 +98,9 @@ export default function Conditions() {
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              animate={
+                isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+              }
               transition={{
                 duration: 0.6,
                 delay: 0.3 + i * 0.1,
@@ -138,7 +142,8 @@ export default function Conditions() {
               chorobami sercowo-naczyniowymi
             </span>
             , <span className="text-white/60">miażdżycą</span>,{" "}
-            <span className="text-white/60">przedwczesnym porodem</span> i&nbsp;
+            <span className="text-white/60">przedwczesnym porodem</span>{" "}
+            i&nbsp;
             <span className="text-white/60">niską masą urodzeniową</span>.
             Leczenie dziąseł to inwestycja w zdrowie całego organizmu.
           </p>

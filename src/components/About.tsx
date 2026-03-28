@@ -1,8 +1,17 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+"use client";
+
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-function FadeInSection({ children, className = "", delay = 0 }) {
+function FadeInSection({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -41,7 +50,7 @@ export default function About() {
             <div className="mt-12 aspect-[3/4] max-w-md bg-charcoal-light relative overflow-hidden">
               <img
                 src="/photo.jpg"
-                alt="Anna Jakubik - specjalista periodontologii"
+                alt="Anna Jakubik — specjalista periodontologii"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark/80 via-transparent to-transparent" />

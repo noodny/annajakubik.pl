@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 const NOISE_SVG = `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`;
@@ -87,12 +89,12 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-[1px] h-16 bg-gradient-to-b from-transparent via-gold/80 to-transparent"
+          className="w-[1px] h-16 bg-gradient-to-b from-transparent via-gold/50 to-transparent"
         />
       </motion.div>
 

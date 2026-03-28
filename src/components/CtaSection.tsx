@@ -1,9 +1,11 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function CtaSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section className="relative py-32 lg:py-44 overflow-hidden">
@@ -26,7 +28,8 @@ export default function CtaSection() {
             <span className="text-gold">swoich dziąseł</span>
           </h2>
           <p className="mt-8 text-white/30 text-lg font-light max-w-xl mx-auto leading-relaxed">
-            Zdrowe dziąsła to fundament zdrowego organizmu. Umów się na konsultację i zadbaj o swoje przyzębie.
+            Zdrowe dziąsła to fundament zdrowego organizmu. Umów się na
+            konsultację i zadbaj o swoje przyzębie.
           </p>
 
           <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -41,5 +44,5 @@ export default function CtaSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
