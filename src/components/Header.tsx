@@ -9,7 +9,6 @@ const navLinks = [
   { href: "#services", label: "Leczenie" },
   { href: "#philosophy", label: "Podejście" },
   { href: "#education", label: "Wykształcenie" },
-  { href: "#conditions", label: "Periodontologia" },
   { href: "#contact", label: "Kontakt" },
 ];
 
@@ -29,7 +28,7 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        scrolled || mobileOpen
           ? "bg-charcoal-dark/90 backdrop-blur-md border-b border-white/5"
           : "bg-transparent border-b border-transparent"
       }`}
@@ -83,7 +82,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-charcoal-dark/95 backdrop-blur-lg border-b border-white/5 overflow-hidden"
+            className="lg:hidden border-b border-white/5 overflow-hidden"
           >
             <div className="px-6 py-8 flex flex-col gap-6">
               {navLinks.map((link) => (

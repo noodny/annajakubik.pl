@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import Header from "@/components/Header";
+import Contact from "@/components/Contact";
+import CtaSection from "@/components/CtaSection";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-      <body className="bg-[#080a08] text-white antialiased">{children}</body>
+      <body className="bg-[#080a08] text-white antialiased">
+        <Header />
+        {children}
+        <Contact />
+        <CtaSection />
+        <Footer />
+      </body>
     </html>
   );
 }

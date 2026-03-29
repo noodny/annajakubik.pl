@@ -2,19 +2,21 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, Smartphone } from "lucide-react";
 
 const locations = [
   {
     name: "S3 Stomatologia",
     address: "Za Torem 28D, 34-520 Poronin",
     phone: "+48 18 201 29 29",
-    region: "Podhale",
+    mobilePhone: "+48 508 012 929",
+    region: "Poronin",
   },
   {
     name: "Centrum Stomatologii Dominik",
     address: "Zakopiańska 6A, 34-700 Rabka-Zdrój",
     phone: "+48 18 267 07 39",
+    mobilePhone: "+48 696 025 147",
     region: "Rabka-Zdrój",
   },
 ];
@@ -41,6 +43,11 @@ export default function Contact() {
             <br />
             <span className="text-white/30">konsultuję pacjentów</span>
           </h2>
+          <p className="mt-6 text-white/30 text-base leading-relaxed max-w-xl">
+            Na konsultacje zgłaszają się do mnie pacjenci z całego regionu
+            Podhala, w tym z miejscowości takich jak Rabka-Zdrój, Nowy Targ,
+            Jordanów, Poronin, Zakopane.
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
@@ -48,9 +55,7 @@ export default function Contact() {
             <motion.div
               key={loc.name}
               initial={{ opacity: 0, y: 30 }}
-              animate={
-                isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-              }
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{
                 duration: 0.6,
                 delay: 0.2 + i * 0.15,
@@ -83,6 +88,15 @@ export default function Contact() {
                       className="text-white/60 hover:text-gold transition-colors duration-300 text-base"
                     >
                       {loc.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Smartphone size={18} className="text-gold/40 shrink-0" />
+                    <a
+                      href={`tel:${loc.mobilePhone.replace(/\s/g, "")}`}
+                      className="text-white/60 hover:text-gold transition-colors duration-300 text-base"
+                    >
+                      {loc.mobilePhone}
                     </a>
                   </div>
                 </div>
