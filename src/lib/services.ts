@@ -1,9 +1,16 @@
+export interface BeforeAfter {
+  before: string;
+  after: string;
+  label: string;
+}
+
 export interface ServicePage {
   slug: string;
   title: string;
   subtitle: string;
   description: string;
   icon: string;
+  beforeAfter?: BeforeAfter;
   content: {
     lead: string;
     sections: {
@@ -75,6 +82,11 @@ export const services: ServicePage[] = [
     description:
       "Precyzyjne techniki mikrochirurgiczne z wykorzystaniem przeszczepów tkanki łącznej — pokrycie odsłoniętych szyjek zębowych.",
     icon: "07",
+    beforeAfter: {
+      before: "/photos/recesje-przed.jpg",
+      after: "/photos/recesje-po.jpg",
+      label: "Zabieg pokrycia recesji",
+    },
     content: {
       lead: "Recesja dziąsła to cofnięcie się brzegu dziąsłowego, które odsłania szyjkę lub korzeń zęba. Powoduje nadwrażliwość, pogorszenie estetyki i zwiększone ryzyko próchnicy korzeniowej.",
       sections: [
@@ -125,6 +137,11 @@ export const services: ServicePage[] = [
     description:
       "Chirurgiczne modelowanie dziąsła i kości w celu odsłonięcia większej części zęba — przywrócenie proporcjonalnej, zbalansowanej estetyki.",
     icon: "08",
+    beforeAfter: {
+      before: "/photos/korony-przed.jpg",
+      after: "/photos/korony-po.jpg",
+      label: "Zabieg wydłużenia koron klinicznych",
+    },
     content: {
       lead: "Wydłużenie korony klinicznej to precyzyjny zabieg chirurgiczny polegający na usunięciu nadmiaru dziąsła i/lub kości, aby odsłonić większą powierzchnię zęba. Stosowany zarówno ze wskazań estetycznych, jak i protetycznych.",
       sections: [

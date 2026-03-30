@@ -57,7 +57,8 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mt-10 text-white/40 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
         >
-          Holistyczne podejście do zdrowia dziąseł i&nbsp;jamy ustnej&nbsp;-
+          Holistyczne podejście do zdrowia dziąseł i&nbsp;jamy
+          ustnej&nbsp;-&nbsp;
           <br className="hidden md:block" />
           kompleksowa diagnostyka, leczenie zachowawcze i&nbsp;chirurgiczne.
         </motion.p>

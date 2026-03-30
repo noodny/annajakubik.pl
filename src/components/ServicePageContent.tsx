@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type { ServicePage } from "@/lib/services";
+import BeforeAfter from "./BeforeAfter";
 import ConditionsContent from "./ConditionsContent";
 import ServiceCard from "./ServiceCard";
 
@@ -78,6 +79,11 @@ export default function ServicePageContent({
           </div>
         </div>
       </section>
+
+      {/* Before / After photos */}
+      {service.beforeAfter && (
+        <BeforeAfter data={service.beforeAfter} />
+      )}
 
       {/* Conditions stages — only for periodontal disease pages */}
       {showConditions && (

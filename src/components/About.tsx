@@ -99,7 +99,7 @@ export default function About() {
         </div>
 
         <FadeInSection delay={0.5}>
-          <div className="mt-16 grid grid-cols-4 gap-8">
+          <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { number: "#1", label: "Wynik egzaminu w kraju" },
               {
