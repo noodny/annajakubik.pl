@@ -47,9 +47,9 @@ export function Carousel<T extends object>({
   }, [autoScroll, next, goTo, hasNextPage]);
 
   return (
-    <div className="overflow-hidden">
+    <div className="min-w-0 max-w-[calc(100vw-3rem)]">
       <ul
-        className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none -mx-6 px-6"
+        className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none"
         ref={scrollRef}
         style={{ scrollbarWidth: "none" }}
       >

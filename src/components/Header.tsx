@@ -8,7 +8,6 @@ const navLinks = [
   { href: "#about", label: "O mnie" },
   { href: "#services", label: "Leczenie" },
   { href: "#philosophy", label: "Podejście" },
-  { href: "#education", label: "Wykształcenie" },
   { href: "#contact", label: "Kontakt" },
 ];
 
@@ -35,17 +34,17 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="group flex flex-col items-baseline">
+          <a href="/" className="group flex flex-col items-baseline">
             <span className="font-serif text-[1.6rem] text-white tracking-wide">
               Anna Jakubik
             </span>
-            <span className="text-xs text-gold/80 tracking-widest uppercase font-light">
+            <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light">
               Specjalista Periodontologii
             </span>
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-6 lg:gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -65,7 +64,7 @@ export default function Header() {
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden text-white/70 hover:text-white transition-colors"
+            className="md:hidden text-white/70 hover:text-white transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >

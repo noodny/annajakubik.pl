@@ -23,7 +23,7 @@ export default function ServicePageContent({
   return (
     <div className="min-h-screen bg-obsidian">
       {/* Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28">
+      <section className="relative pt-32 lg:pt-44 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,7 @@ export default function ServicePageContent({
               className="inline-flex items-center gap-2 text-sm text-white/30 hover:text-gold transition-colors duration-300 mb-12"
             >
               <ArrowLeft size={16} />
-              <span>Wszystkie usługi</span>
+              <span>Zobacz wszystkie</span>
             </Link>
 
             <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4">
@@ -52,7 +52,7 @@ export default function ServicePageContent({
       </section>
 
       {/* Content sections */}
-      <section className="relative pb-24 lg:pb-32">
+      <section className="relative pbs-24 pbe-16 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {service.content.sections.map((section, i) => (

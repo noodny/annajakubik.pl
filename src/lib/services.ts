@@ -26,11 +26,11 @@ export const services: ServicePage[] = [
       sections: [
         {
           heading: "Objawy",
-          body: "Krwawienie dziąseł podczas szczotkowania lub nitkowania, zaczerwienienie i obrzęk brzegu dziąsłowego, nieprzyjemny zapach z ust. Zapalenie dziąseł często przebiega bezbólowo, dlatego regularne wizyty kontrolne są kluczowe dla wczesnego wykrycia.",
+          body: "Krwawienie dziąseł podczas szczotkowania lub nitkowania, zaczerwienienie i obrzęk brzegu dziąsłowego, nieprzyjemny zapach z ust. Zapalenie dziąseł często przebiega bezbólowo, dlatego regularne wizyty kontrolne są kluczowe dla jego wczesnego wykrycia.",
         },
         {
           heading: "Diagnostyka",
-          body: "Kompleksowe badanie periodontologiczne obejmuje ocenę głębokości kieszonek dziąsłowych, poziomu przyczepu łącznotkankowego, krwawienia przy sondowaniu oraz analizę zdjęć rentgenowskich. Precyzyjna diagnostyka pozwala dobrać optymalny plan leczenia.",
+          body: "Kompleksowe badanie periodontologiczne obejmuje ocenę głębokości sondowania, poziomu przyczepu łącznotkankowego, obecności krwawienia przy sondowaniu oraz analizę zdjęć rentgenowskich. Precyzyjna diagnostyka pozwala dobrać optymalny plan leczenia.",
         },
         {
           heading: "Leczenie",

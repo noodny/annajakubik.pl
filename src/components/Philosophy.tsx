@@ -70,7 +70,10 @@ export default function Philosophy() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="philosophy" className="relative py-32 lg:py-44">
+    <section
+      id="philosophy"
+      className="relative pbs-32 pbe-16 lg:pbs-44 lg:pbe-32"
+    >
       {/* Background accent */}
       <div className="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full bg-sage/[0.03] blur-[150px] pointer-events-none" />
 

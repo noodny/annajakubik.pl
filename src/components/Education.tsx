@@ -3,6 +3,42 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const publications = [
+  {
+    year: "2020",
+    title: "Awareness of oral health prophylaxis in pregnant women",
+    journal: "Folia Medica Cracoviensia, Vol. 60, nr 3",
+  },
+  {
+    year: "2018",
+    title: "Świadomość biegaczy w zakresie profilaktyki chorób jamy ustnej",
+    journal: "Medicina Sportiva Practica, t. 19, nr 2",
+  },
+  {
+    year: "2018",
+    title:
+      "Development of dental awareness concerning oral health behavior among students of selected universities in Krakow",
+    journal: "Przegląd Lekarski, vol. 75, no. 11",
+  },
+  {
+    year: "2017",
+    title: "Artificial saliva and its use in biological experiments",
+    journal: "Journal of Physiology and Pharmacology, vol. 68, no. 6",
+  },
+  {
+    year: "2015",
+    title:
+      "Pregnant women\u2019s awareness of dental care with regard to oral health prophylaxis",
+    journal: "Journal of Stomatology, vol. 68, no. 6",
+  },
+  {
+    year: "2014",
+    title:
+      "Częstość występowania próchnicy zębów mlecznych i wskaźniki jej leczenia u dzieci w wieku przedszkolnym z różnych środowisk województwa małopolskiego",
+    journal: "Stomatologia Współczesna, t. 21, nr 4",
+  },
+];
+
 const milestones = [
   {
     year: "Wykształcenie",
@@ -29,7 +65,7 @@ export default function Education() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="education" className="relative py-32 lg:py-44 bg-charcoal/30">
+    <section id="education" className="relative py-16 lg:py-32 bg-charcoal/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="relative">
           {/* Vertical line */}
@@ -72,6 +108,27 @@ export default function Education() {
                   <p className="text-white/30 text-sm leading-relaxed max-w-md inline-block">
                     {item.description}
                   </p>
+
+                  {item.year === "Nauka" && (
+                    <div className="mt-8 space-y-4 max-w-md inline-block">
+                      <p className="text-gold/40 text-xs tracking-[0.2em] uppercase">
+                        Wybrane publikacje
+                      </p>
+                      {publications.map((pub) => (
+                        <div
+                          key={pub.title}
+                          className="border-t border-white/[0.04] pt-3"
+                        >
+                          <p className="text-white/50 text-sm leading-relaxed">
+                            {pub.title}
+                          </p>
+                          <p className="text-white/20 text-xs mt-1">
+                            {pub.journal}, {pub.year}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

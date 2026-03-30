@@ -68,7 +68,10 @@ export default function Services() {
   const isInView = useInView(headingRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="relative py-32 lg:py-44 bg-charcoal-dark">
+    <section
+      id="services"
+      className="relative pbs-32 lg:pbs-44 bg-charcoal-dark"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           ref={headingRef}

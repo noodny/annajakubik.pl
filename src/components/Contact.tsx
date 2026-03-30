@@ -26,14 +26,17 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="relative py-32 lg:py-44 bg-charcoal/30">
+    <section
+      id="contact"
+      className="relative pbs-16 pbe-16 lg:py-44 bg-charcoal/30"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-2xl mb-20"
+          className="max-w-2xl"
         >
           <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
             Lokalizacje
@@ -50,7 +53,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid pbs-20 lg:grid-cols-2 gap-8" id="contact-details">
           {locations.map((loc, i) => (
             <motion.div
               key={loc.name}

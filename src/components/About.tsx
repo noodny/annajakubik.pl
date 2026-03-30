@@ -30,7 +30,7 @@ function FadeInSection({
 
 export default function About() {
   return (
-    <section id="about" className="relative py-16 lg:py-24">
+    <section id="about" className="relative pbs-16 lg:pbs-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left: Label + Photo placeholder */}
@@ -56,6 +56,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark/80 via-transparent to-transparent" />
               {/* Accent border */}
               <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-gold/40 via-gold/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 h-full w-px bg-gradient-to-t from-gold/40 via-gold/20 to-transparent" />
             </div>
           </FadeInSection>
 
@@ -79,42 +80,44 @@ export default function About() {
                   i&nbsp;chirurgicznego.
                 </p>
                 <p>
-                  W tej dziedzinie kształciłam się podczas dodatkowego
-                  3-letniego szkolenia specjalizacyjnego z&nbsp;periodontologii.
-                  Obecnie łączę pracę kliniczną z&nbsp;działalnością naukową
-                  i&nbsp;dydaktyczną na uczelni, dbając o&nbsp;to, by moja
-                  praktyka była zawsze oparta na najnowszych dowodach naukowych.
+                  Periodontologia stanowiła dla mnie wymarzoną ścieżkę rozwoju,
+                  łączącą w sobie wszystkie te aspekty. W tej dziedzinie
+                  kształciłam się podczas dodatkowego, 3-letniego szkolenia
+                  specjalizacyjnego w ramach rezydentury. Przez kilka lat
+                  łączyłam pracę kliniczną z działalnością naukową i dydaktyczną
+                  na uczelni, dzieląc się swoją pasją ze studentami.
                 </p>
-              </div>
-            </FadeInSection>
-
-            <FadeInSection delay={0.5}>
-              <div className="mt-16 grid grid-cols-2 gap-8">
-                {[
-                  { number: "#1", label: "Wynik egzaminu w kraju" },
-                  {
-                    number: "Collegium Medicum",
-                    label: "Uniwersytet Jagielloński",
-                  },
-                  { number: "3", label: "Lata specjalizacji" },
-                  { number: "> 10", label: "Lat doświadczenia" },
-                ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="border-t border-white/10 pt-4"
-                  >
-                    <p className="font-serif text-2xl text-gold">
-                      {stat.number}
-                    </p>
-                    <p className="text-xs text-white/30 mt-1 tracking-wide uppercase">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
+                <p>
+                  Nieustannie się rozwijam poprzez uczestnictwo w zagranicznych
+                  kursach i kongresach, prezentując tam swoje przypadki i dbając
+                  o to, by moja praktyka była oparta o aktualne wytyczne i
+                  wyniki badań naukowych.
+                </p>
               </div>
             </FadeInSection>
           </div>
         </div>
+
+        <FadeInSection delay={0.5}>
+          <div className="mt-16 grid grid-cols-4 gap-8">
+            {[
+              { number: "#1", label: "Wynik egzaminu w kraju" },
+              {
+                number: "Collegium Medicum",
+                label: "Uniwersytet Jagielloński",
+              },
+              { number: "3", label: "Lata specjalizacji" },
+              { number: "> 10", label: "Lat doświadczenia" },
+            ].map((stat) => (
+              <div key={stat.label} className="border-t border-white/10 pt-4">
+                <p className="font-serif text-2xl text-gold">{stat.number}</p>
+                <p className="text-xs text-white/30 mt-1 tracking-wide uppercase">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </FadeInSection>
       </div>
     </section>
   );

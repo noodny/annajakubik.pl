@@ -8,7 +8,7 @@ export default function CtaSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative py-32 lg:py-44 overflow-hidden">
+    <section className="relative py-16 lg:py-44 overflow-hidden">
       {/* Accent glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.04] blur-[150px]" />
 
@@ -34,7 +34,7 @@ export default function CtaSection() {
 
           <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
-              href="#contact"
+              href="#contact-details"
               className="group relative px-12 py-4 bg-gold text-charcoal-dark font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(201,169,110,0.25)]"
             >
               <span className="relative z-10">Umów konsultację</span>
