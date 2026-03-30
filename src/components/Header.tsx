@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -12,6 +13,8 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -20,6 +23,18 @@ export default function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  function scrollToHash(e: React.MouseEvent<HTMLAnchorElement>, hash: string) {
+    if (!isHome) return; // let the browser navigate to /{hash}
+    e.preventDefault();
+    const id = hash.replace("#", "");
+    const el = id ? document.getElementById(id) : null;
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
 
   return (
     <motion.nav
@@ -34,7 +49,11 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <a href="/" className="group flex flex-col items-baseline">
+          <a
+            href="/"
+            onClick={(e) => scrollToHash(e, "")}
+            className="group flex flex-col items-baseline"
+          >
             <span className="font-serif text-[1.6rem] text-white tracking-wide">
               Anna Jakubik
             </span>
@@ -48,14 +67,16 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={isHome ? link.href : `/${link.href}`}
+                onClick={(e) => scrollToHash(e, link.href)}
                 className="text-sm text-white/50 hover:text-gold transition-colors duration-300 tracking-wide"
               >
                 {link.label}
               </a>
             ))}
             <a
-              href="#contact"
+              href={isHome ? "#contact" : "/#contact"}
+              onClick={(e) => scrollToHash(e, "#contact")}
               className="text-sm px-6 py-2.5 border border-gold/40 text-gold hover:bg-gold/10 transition-all duration-300 tracking-wider uppercase"
             >
               Umów wizytę
@@ -87,16 +108,16 @@ export default function Header() {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  href={isHome ? link.href : `/${link.href}`}
+                  onClick={(e) => { scrollToHash(e, link.href); setMobileOpen(false); }}
                   className="text-base text-white/60 hover:text-gold transition-colors tracking-wide"
                 >
                   {link.label}
                 </a>
               ))}
               <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
+                href={isHome ? "#contact" : "/#contact"}
+                onClick={(e) => { scrollToHash(e, "#contact"); setMobileOpen(false); }}
                 className="text-sm px-6 py-3 border border-gold/40 text-gold text-center hover:bg-gold/10 transition-all tracking-wider uppercase mt-2"
               >
                 Umów wizytę

@@ -14,12 +14,12 @@ const publications = [
     title: "Świadomość biegaczy w zakresie profilaktyki chorób jamy ustnej",
     journal: "Medicina Sportiva Practica, t. 19, nr 2",
   },
-  {
-    year: "2018",
-    title:
-      "Development of dental awareness concerning oral health behavior among students of selected universities in Krakow",
-    journal: "Przegląd Lekarski, vol. 75, no. 11",
-  },
+  // {
+  //   year: "2018",
+  //   title:
+  //     "Development of dental awareness concerning oral health behavior among students of selected universities in Krakow",
+  //   journal: "Przegląd Lekarski, vol. 75, no. 11",
+  // },
   {
     year: "2017",
     title: "Artificial saliva and its use in biological experiments",
@@ -31,12 +31,12 @@ const publications = [
       "Pregnant women\u2019s awareness of dental care with regard to oral health prophylaxis",
     journal: "Journal of Stomatology, vol. 68, no. 6",
   },
-  {
-    year: "2014",
-    title:
-      "Częstość występowania próchnicy zębów mlecznych i wskaźniki jej leczenia u dzieci w wieku przedszkolnym z różnych środowisk województwa małopolskiego",
-    journal: "Stomatologia Współczesna, t. 21, nr 4",
-  },
+  // {
+  //   year: "2014",
+  //   title:
+  //     "Częstość występowania próchnicy zębów mlecznych i wskaźniki jej leczenia u dzieci w wieku przedszkolnym z różnych środowisk województwa małopolskiego",
+  //   journal: "Stomatologia Współczesna, t. 21, nr 4",
+  // },
 ];
 
 const milestones = [

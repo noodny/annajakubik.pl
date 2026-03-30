@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import type { BeforeAfter as BeforeAfterType } from "@/lib/services";
 
@@ -9,15 +9,30 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 export default function BeforeAfter({ data }: { data: BeforeAfterType }) {
   const [sliderPos, setSliderPos] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  function handleMove(
-    e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
-  ) {
-    if (!isDragging) return;
-    const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
-    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
+  const updatePos = useCallback((clientX: number) => {
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return;
     const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
     setSliderPos((x / rect.width) * 100);
+  }, []);
+
+  useEffect(() => {
+    if (!isDragging) return;
+    const onMouseMove = (e: MouseEvent) => updatePos(e.clientX);
+    const onMouseUp = () => setIsDragging(false);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
+    };
+  }, [isDragging, updatePos]);
+
+  function handleTouchMove(e: React.TouchEvent<HTMLDivElement>) {
+    if (!isDragging) return;
+    updatePos(e.touches[0].clientX);
   }
 
   return (
@@ -40,11 +55,9 @@ export default function BeforeAfter({ data }: { data: BeforeAfterType }) {
 
         <div
           className="relative w-full max-w-3xl mx-auto aspect-video select-none overflow-hidden rounded-lg cursor-col-resize touch-none"
-          onMouseMove={handleMove}
-          onTouchMove={handleMove}
+          ref={containerRef}
+          onTouchMove={handleTouchMove}
           onMouseDown={() => setIsDragging(true)}
-          onMouseUp={() => setIsDragging(false)}
-          onMouseLeave={() => setIsDragging(false)}
           onTouchStart={() => setIsDragging(true)}
           onTouchEnd={() => setIsDragging(false)}
         >

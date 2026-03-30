@@ -7,7 +7,7 @@ export default function Footer() {
             <span className="font-serif text-[1.6rem] text-white tracking-wide">
               Anna Jakubik
             </span>
-            <span className="text-xs text-gold/80 tracking-widest uppercase font-light">
+            <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light">
               Specjalista Periodontologii
             </span>
           </div>
