@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://annajakubik.pl"),
   title: "Anna Jakubik — Specjalista Periodontologii",
   description:
     "Periodontologia z precyzją i troską. Specjalista w zakresie zdrowia dziąseł, medycyny jamy ustnej i zaawansowanego leczenia periodontalnego.",
