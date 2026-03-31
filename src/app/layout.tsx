@@ -12,6 +12,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
   },
+  openGraph: {
+    title: "Anna Jakubik — Specjalista Periodontologii",
+    description:
+      "Periodontologia z precyzją i troską. Specjalista w zakresie zdrowia dziąseł, medycyny jamy ustnej i zaawansowanego leczenia periodontalnego.",
+    images: [{ url: "/ogimage.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/ogimage.jpg"],
+  },
 };
 
 export default function RootLayout({

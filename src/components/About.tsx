@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
 function FadeInSection({
@@ -48,10 +49,13 @@ export default function About() {
 
             {/* Photo */}
             <div className="mt-12 aspect-[3/4] max-w-md bg-charcoal-light relative overflow-hidden">
-              <img
+              <Image
                 src="/photo.jpg"
                 alt="Anna Jakubik — specjalista periodontologii"
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 448px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark/80 via-transparent to-transparent" />
               {/* Accent border */}
