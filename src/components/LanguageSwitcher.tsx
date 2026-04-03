@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react";
 
 const labels: Record<string, string> = { pl: "PL", en: "EN", es: "ES" };
 
-export function LanguageSwitcherInline() {
+export function LanguageSwitcherInline({ mobile = false }: { mobile?: boolean }) {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -18,12 +18,16 @@ export function LanguageSwitcherInline() {
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className={`flex items-center ${mobile ? "gap-4" : "gap-2"}`}>
       {routing.locales.map((l) => (
         <button
           key={l}
           onClick={() => onChange(l)}
-          className={`text-xs tracking-wider uppercase cursor-pointer transition-colors duration-300 ${
+          className={`tracking-wider uppercase cursor-pointer transition-colors duration-300 ${
+            mobile
+              ? "w-10 h-10 flex items-center justify-center text-sm"
+              : "text-xs"
+          } ${
             l === locale ? "text-gold" : "text-white/30 hover:text-white/60"
           }`}
         >
