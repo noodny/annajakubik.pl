@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 import { Star } from "lucide-react";
 import { Carousel } from "./Carousel";
 
@@ -11,39 +12,6 @@ interface Testimonial {
   rating: number;
   source: string;
 }
-
-const testimonials: Testimonial[] = [
-  {
-    name: "Katarzyna M.",
-    text: "Pani doktor podeszła do mojego problemu z niezwykłą starannością. Po latach unikania dentysty w końcu trafiłam na specjalistkę, która wszystko spokojnie wytłumaczyła i zaproponowała skuteczne leczenie. Dziąsła przestały krwawić już po kilku tygodniach.",
-    rating: 5,
-    source: "Google",
-  },
-  {
-    name: "Tomasz W.",
-    text: "Profesjonalne podejście na każdym etapie — od diagnostyki po zabieg. Pani doktor Jakubik przeprowadziła przeszczep dziąsła z niezwykłą precyzją. Efekt przerósł moje oczekiwania, a gojenie przebiegło bez komplikacji.",
-    rating: 5,
-    source: "Google",
-  },
-  {
-    name: "Agnieszka K.",
-    text: "Miałam zaawansowane zapalenie przyzębia i byłam przerażona wizją utraty zębów. Dzięki Pani doktor udało się zatrzymać chorobę. Jestem pod stałą opieką i czuję, że moje zęby są w najlepszych rękach.",
-    rating: 5,
-    source: "Google",
-  },
-  {
-    name: "Marcin P.",
-    text: "Zabieg podcięcia wędzidełka u mojego synka przebiegł szybko i bezboleśnie. Pani doktor świetnie radzi sobie z małymi pacjentami — syn był spokojny przez cały czas. Polecam z całego serca.",
-    rating: 5,
-    source: "Google",
-  },
-  {
-    name: "Joanna D.",
-    text: "Po leczeniu ortodontycznym pojawił się problem z recesją dziąseł. Pani doktor Jakubik przeprowadziła zabieg mikrochirurgiczny i efekt jest rewelacyjny — nie ma śladu po odsłoniętych szyjkach. Dziękuję!",
-    rating: 5,
-    source: "Google",
-  },
-];
 
 function TestimonialCard({ name, text, rating, source }: Testimonial) {
   return (
@@ -66,8 +34,17 @@ function TestimonialCard({ name, text, rating, source }: Testimonial) {
 }
 
 export default function Philosophy() {
+  const t = useTranslations("Philosophy");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const testimonials: Testimonial[] = [
+    { name: t("t1Name"), text: t("t1Text"), rating: 5, source: t("t1Source") },
+    { name: t("t2Name"), text: t("t2Text"), rating: 5, source: t("t2Source") },
+    { name: t("t3Name"), text: t("t3Text"), rating: 5, source: t("t3Source") },
+    { name: t("t4Name"), text: t("t4Text"), rating: 5, source: t("t4Source") },
+    { name: t("t5Name"), text: t("t5Text"), rating: 5, source: t("t5Source") },
+  ];
 
   return (
     <section
@@ -87,22 +64,21 @@ export default function Philosophy() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
-              Podejście
+              {t("sectionLabel")}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-              Oparte na
+              {t("heading1")}
               <br />
-              <span className="text-white/30">wiedzy i doświadczeniu</span>
+              <span className="text-white/30">{t("heading2")}</span>
             </h2>
             <p className="mt-8 text-xl md:text-2xl text-white/60 font-light leading-relaxed font-serif italic">
-              „Już od czasu studiów interesował mnie związek chorób jamy ustnej
-              ze zdrowiem ogólnym oraz holistyczne podejście do każdego
-              pacjenta, obejmujące kompleksową diagnostykę i&nbsp;prowadzenie
-              leczenia zarówno zachowawczego, jak i&nbsp;chirurgicznego."
+              {t("quote")}
             </p>
             <div className="mt-8 flex items-center gap-4">
               <div className="w-12 h-px bg-gold/30" />
-              <p className="text-sm text-gold/60 tracking-wide">Anna Jakubik</p>
+              <p className="text-sm text-gold/60 tracking-wide">
+                {t("quoteAuthor")}
+              </p>
             </div>
           </motion.div>
 

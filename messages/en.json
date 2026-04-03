@@ -1,0 +1,237 @@
+{
+  "Metadata": {
+    "title": "Anna Jakubik — Periodontology Specialist",
+    "description": "Periodontology with precision and care. A specialist in gum health, oral medicine, and advanced periodontal treatment."
+  },
+  "Header": {
+    "about": "About",
+    "services": "Services",
+    "approach": "Approach",
+    "contact": "Contact",
+    "bookVisit": "Book a visit",
+    "subtitle": "Periodontology Specialist"
+  },
+  "Hero": {
+    "title1": "Periodontology",
+    "title2": "with precision",
+    "title3": "and care",
+    "description": "A holistic approach to gum and oral health — comprehensive diagnostics, conservative and surgical treatment.",
+    "ctaPrimary": "Book a consultation",
+    "ctaSecondary": "Learn more"
+  },
+  "About": {
+    "sectionLabel": "About me",
+    "degree": "DDS",
+    "photoAlt": "Anna Jakubik — periodontology specialist",
+    "intro": "I am a dental surgeon and periodontology specialist. I passed the National Specialist Examination with the highest score in the country, for which I received an award from the Medical Chamber.",
+    "bio1": "From the very beginning of my studies, I was fascinated by the link between oral diseases and general health, as well as the holistic approach to each patient, encompassing comprehensive diagnostics and both conservative and surgical treatment.",
+    "bio2": "Periodontology was my ideal career path, combining all these aspects. I trained in this field during an additional 3-year specialist residency programme. For several years, I combined clinical work with scientific and teaching activity at the university, sharing my passion with students.",
+    "bio3": "I continuously develop through participation in international courses and conferences, presenting my cases and ensuring that my practice is based on current guidelines and scientific research.",
+    "stat1Number": "#1",
+    "stat1Label": "Exam result in the country",
+    "stat2Number": "Collegium Medicum",
+    "stat2Label": "Jagiellonian University",
+    "stat3Number": "3",
+    "stat3Label": "Years of specialisation",
+    "stat4Number": "> 10",
+    "stat4Label": "Years of experience"
+  },
+  "Services": {
+    "sectionLabel": "Services",
+    "heading1": "Specialist",
+    "heading2": "periodontal care",
+    "description": "Periodontology deals with the prevention, diagnosis, and treatment of periodontal and mucosal diseases — the entire oral environment surrounding the teeth.",
+    "learnMore": "Learn more"
+  },
+  "Philosophy": {
+    "sectionLabel": "Approach",
+    "heading1": "Grounded in",
+    "heading2": "knowledge and experience",
+    "quote": "\u201CFrom the very beginning of my studies, I was fascinated by the link between oral diseases and general health, as well as the holistic approach to each patient, encompassing comprehensive diagnostics and both conservative and surgical treatment.\u201D",
+    "quoteAuthor": "Anna Jakubik",
+    "t1Name": "Katarzyna M.",
+    "t1Text": "The doctor approached my problem with exceptional care. After years of avoiding the dentist, I finally found a specialist who calmly explained everything and proposed an effective treatment. My gums stopped bleeding within a few weeks.",
+    "t1Source": "Google",
+    "t2Name": "Tomasz W.",
+    "t2Text": "Professional approach at every stage — from diagnostics to the procedure. Dr Jakubik performed the gum graft with remarkable precision. The result exceeded my expectations, and the healing was complication-free.",
+    "t2Source": "Google",
+    "t3Name": "Agnieszka K.",
+    "t3Text": "I had advanced periodontitis and was terrified of losing my teeth. Thanks to the doctor, the disease was halted. I'm under constant care and feel my teeth are in the best hands.",
+    "t3Source": "Google",
+    "t4Name": "Marcin P.",
+    "t4Text": "The frenectomy procedure for my son went quickly and painlessly. The doctor handles young patients brilliantly — my son was calm the entire time. I wholeheartedly recommend her.",
+    "t4Source": "Google",
+    "t5Name": "Joanna D.",
+    "t5Text": "After orthodontic treatment, I developed gum recession. Dr Jakubik performed a microsurgical procedure and the result is amazing — no trace of the exposed roots. Thank you!",
+    "t5Source": "Google"
+  },
+  "Education": {
+    "m1Year": "Education",
+    "m1Title": "Collegium Medicum, Jagiellonian University",
+    "m1Description": "Graduated from one of the oldest and most prestigious medical universities in Poland, in Krakow — where a deep interest in the connection between oral health and general health was born.",
+    "m2Year": "Specialisation",
+    "m2Title": "Highest exam result in the country",
+    "m2Description": "Completed a 3-year specialist training in periodontology, culminating in the National Specialist Examination with the highest score in the country. Awarded by the Medical Chamber for outstanding achievement.",
+    "m3Year": "Research",
+    "m3Title": "Scientific and teaching work",
+    "m3Description": "Active role as a university assistant — participating in scientific research, publications, and educating future dentists.",
+    "selectedPublications": "Selected publications"
+  },
+  "Contact": {
+    "sectionLabel": "Locations",
+    "heading1": "Where",
+    "heading2": "I see patients",
+    "description": "Patients from the entire Podhale region come to me for consultations, including from towns such as Rabka-Zdrój, Nowy Targ, Jordanów, Poronin, and Zakopane.",
+    "callAndBook": "Call and book a visit"
+  },
+  "CtaSection": {
+    "label": "First step",
+    "heading1": "Take care of",
+    "heading2": "your gum health",
+    "description": "Healthy gums are the foundation of a healthy body. Book a consultation and take care of your periodontal health.",
+    "cta": "Book a consultation"
+  },
+  "Footer": {
+    "subtitle": "Periodontology Specialist"
+  },
+  "BeforeAfter": {
+    "sectionLabel": "Treatment results",
+    "sliderHint": "Slide to compare the condition before and after the procedure.",
+    "before": "Before",
+    "after": "After"
+  },
+  "ConditionsContent": {
+    "heading": "Stages of periodontal disease",
+    "description": "Periodontal disease develops gradually, often without pain. Recognising its stages is the first step to protecting not only your teeth — but your entire body.",
+    "s1Stage": "Stage 1",
+    "s1Title": "Gingivitis",
+    "s1Description": "An early sign of periodontal disease, characterised by bleeding and reddened gums. Fully reversible with proper treatment.",
+    "s2Stage": "Stage 2",
+    "s2Title": "Early periodontitis",
+    "s2Description": "Inflammation spreads below the gum line. Periodontal pockets begin to form. Bone loss starts — but progression can be stopped.",
+    "s3Stage": "Stage 3",
+    "s3Title": "Moderate periodontitis",
+    "s3Description": "Deeper pockets, increased bone loss, and potential tooth mobility. The link between periodontal disease and general health becomes critical.",
+    "s4Stage": "Stage 4",
+    "s4Title": "Advanced periodontitis",
+    "s4Description": "Severe bone destruction. Teeth may become loose or require extraction. Can result in tooth loss.",
+    "stat1Value": "Only 1%",
+    "stat1Label": "of Poles have healthy periodontium",
+    "stat2Value": "Over 16%",
+    "stat2Label": "suffer from advanced periodontitis",
+    "stat3Value": "6th place",
+    "stat3Label": "among the most common diseases worldwide"
+  },
+  "ServicePage": {
+    "backToAll": "View all services",
+    "nextService": "See also"
+  },
+  "ServiceData": {
+    "zapalenie-dziasel": {
+      "title": "Gingivitis",
+      "subtitle": "Gingivitis",
+      "description": "Comprehensive diagnostics and treatment of gum inflammation — from scaling to advanced surgical procedures.",
+      "lead": "Gingivitis is the earliest and fully reversible stage of periodontal disease. It manifests as bleeding, redness, and swelling of the gums. Early intervention allows the disease process to be completely stopped.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Symptoms",
+      "s1Body": "Bleeding gums during brushing or flossing, redness and swelling of the gingival margin, bad breath. Gingivitis is often painless, which is why regular check-ups are crucial for early detection.",
+      "s2Heading": "Diagnostics",
+      "s2Body": "A comprehensive periodontal examination includes assessment of probing depth, clinical attachment level, bleeding on probing, and analysis of radiographs. Precise diagnostics allow for an optimal treatment plan.",
+      "s3Heading": "Treatment",
+      "s3Body": "Professional removal of dental calculus (scaling) and root surface smoothing (root planing) form the foundation of therapy. Combined with oral hygiene instruction and regular monitoring, treatment leads to complete resolution of inflammation."
+    },
+    "zapalenie-przyzebia": {
+      "title": "Periodontitis",
+      "subtitle": "Periodontitis",
+      "description": "Diagnosis and treatment of periodontal disease — preventing pocket formation, bone loss, and tooth mobility.",
+      "lead": "Periodontitis is an advanced form of disease in which inflammation spreads to the tooth-supporting tissues — alveolar bone, periodontal ligament, and root cementum. Left untreated, it leads to tooth loss.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Disease progression",
+      "s1Body": "Periodontal disease develops gradually — from initial gum inflammation, through pocket formation and bone loss, to tooth mobility and loss. At every stage, effective treatment methods exist that can halt progression.",
+      "s2Heading": "Conservative treatment",
+      "s2Body": "Non-surgical periodontal treatment includes subgingival scaling, root planing, and antibacterial therapy. The goal is to eliminate bacterial biofilm and create conditions for periodontal tissue regeneration.",
+      "s3Heading": "Surgical treatment",
+      "s3Body": "In advanced cases, flap surgery techniques, guided tissue regeneration (GTR), and bone grafts are used. A precise microsurgical approach minimises trauma and accelerates healing.",
+      "s4Heading": "Link to general health",
+      "s4Body": "Periodontal diseases may be linked to diabetes, stroke, cardiovascular diseases, atherosclerosis, premature birth, and low birth weight. Treating gums is an investment in whole-body health."
+    },
+    "recesje-dziasel": {
+      "title": "Gum recession",
+      "subtitle": "Gingival recession",
+      "description": "Precise microsurgical techniques using connective tissue grafts — coverage of exposed tooth roots.",
+      "lead": "Gum recession is the retreat of the gingival margin, exposing the neck or root of a tooth. It causes sensitivity, aesthetic deterioration, and increased risk of root caries.",
+      "beforeAfterLabel": "Recession coverage procedure",
+      "s1Heading": "Causes",
+      "s1Body": "The most common causes are improper brushing technique, thin gingival biotype, periodontitis, tooth misalignment, and habitual clenching or grinding of teeth (bruxism).",
+      "s2Heading": "Microsurgical techniques",
+      "s2Body": "The gold standard for recession treatment is a connective tissue graft harvested from the palate. Tunnel and envelope techniques allow for minimal invasiveness and optimal coverage of exposed roots.",
+      "s3Heading": "Treatment results",
+      "s3Body": "Modern microsurgical techniques allow coverage of exposed roots in 80–100% of cases. Restoring the proper gum line eliminates sensitivity, improves aesthetics, and protects teeth from further destruction."
+    },
+    "augmentacja-dziasel": {
+      "title": "Gum augmentation",
+      "subtitle": "Soft tissue augmentation",
+      "description": "Gum thickening before orthodontic treatment — preventing recession worsening during braces.",
+      "lead": "Gum augmentation is a procedure to thicken thin gingiva, particularly important before planned orthodontic treatment. An adequately thick zone of attached gingiva provides protection against recession.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Indications",
+      "s1Body": "Thin gingival biotype, planned orthodontic treatment, recession prevention in areas of teeth subject to overload or labial movement.",
+      "s2Heading": "Procedure technique",
+      "s2Body": "A free connective tissue graft or mucosal graft allows for widening and thickening of the attached gingiva zone. The procedure is performed under local anaesthesia using microsurgical techniques.",
+      "s3Heading": "Orthodontics and periodontium",
+      "s3Body": "Collaboration between the periodontist and orthodontist is key to safe tooth movement. Gum augmentation before braces minimises the risk of complications and ensures a stable orthodontic outcome."
+    },
+    "wydluzenie-koron-klinicznych": {
+      "title": "Clinical crown lengthening",
+      "subtitle": "Crown lengthening",
+      "description": "Surgical gum and bone recontouring to expose more of the tooth — restoring proportional, balanced aesthetics.",
+      "lead": "Clinical crown lengthening is a precise surgical procedure involving removal of excess gum and/or bone to expose a greater tooth surface. Used for both aesthetic and prosthetic indications.",
+      "beforeAfterLabel": "Crown lengthening procedure",
+      "s1Heading": "Aesthetic indications",
+      "s1Body": "The so-called \"gummy smile\" — excessive gum exposure when smiling. Surgical recontouring of the gum line restores proportional, harmonious smile aesthetics.",
+      "s2Heading": "Prosthetic indications",
+      "s2Body": "A clinical crown that is too short makes it impossible to properly fabricate a prosthetic crown. Crown lengthening ensures adequate retention and proper biological contour of the restoration.",
+      "s3Heading": "Procedure",
+      "s3Body": "The procedure is performed under local anaesthesia. Precise removal of excess soft and hard tissue allows for adequate tooth surface exposure while maintaining the biological width of the periodontium."
+    },
+    "tkanki-wokol-implantow": {
+      "title": "Peri-implant tissues",
+      "subtitle": "Peri-implant tissues",
+      "description": "Specialist treatment of peri-implant inflammation — protecting integration and long-term treatment success.",
+      "lead": "Peri-implant tissue inflammation (mucositis and peri-implantitis) is a growing problem in implantology. As a periodontist, I specialise in diagnosing and treating these conditions that threaten long-term implant survival.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Mucositis and peri-implantitis",
+      "s1Body": "Mucositis is a reversible inflammation of the mucosa around an implant. Peri-implantitis is an advanced inflammatory condition with loss of bone supporting the implant. Early diagnosis is crucial for implant preservation.",
+      "s2Heading": "Treatment",
+      "s2Body": "Therapy includes implant surface decontamination, conservative treatment, and — in advanced cases — regenerative surgery using bone substitute biomaterials and collagen membranes.",
+      "s3Heading": "Prevention",
+      "s3Body": "Regular check-ups, professional hygiene maintenance, and an individualised preventive programme are the foundation of long-term implant treatment success."
+    },
+    "wedzidelka-warg-i-jezyka": {
+      "title": "Lip and tongue frenula",
+      "subtitle": "Frenectomy",
+      "description": "Frenectomy and myofrenuloplasty for shortened frenulum — restoring proper function of speech, breathing, and swallowing.",
+      "lead": "A shortened lip or tongue frenulum can affect breastfeeding in infants, speech development in children, and comfort and function in adults. Frenectomy restores proper mobility and function.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Tongue-tie (ankyloglossia)",
+      "s1Body": "A shortened tongue frenulum restricts its mobility, affecting breastfeeding, speech development, nasal breathing, and resting tongue position. Frenuloplasty restores full range of motion.",
+      "s2Heading": "Lip frenulum",
+      "s2Body": "A bulky or low-attached upper lip frenulum can cause a diastema (gap between central incisors) or gum recession. Frenectomy eliminates tissue tension and facilitates orthodontic gap closure.",
+      "s3Heading": "Procedure technique",
+      "s3Body": "The procedure is performed under local anaesthesia using microsurgical techniques. Healing is rapid and the effect is immediate. For children, I collaborate with speech therapists and orthodontists."
+    },
+    "choroby-blony-sluzowej": {
+      "title": "Oral mucosal diseases",
+      "subtitle": "Oral mucosal diseases",
+      "description": "Diagnosis and treatment of aphthae, inflammatory lesions, and oral mucosal diseases — where dental medicine meets everyday comfort.",
+      "lead": "Oral mucosal diseases encompass a wide spectrum of conditions — from recurrent aphthae, through lichen planus, to precancerous lesions. Precise diagnostics and early treatment are crucial for patient health and comfort.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Most common conditions",
+      "s1Body": "Recurrent aphthae, oral lichen planus, leukoplakia, mucous membrane pemphigoid, drug-induced and fungal lesions. Any chronic oral lesion requires diagnostics to exclude a neoplastic process.",
+      "s2Heading": "Diagnostics",
+      "s2Body": "Clinical examination, photographic documentation, cytological and histopathological examination (biopsy). Collaboration with dermatologists and pathologists for lesions requiring interdisciplinary diagnostics.",
+      "s3Heading": "Treatment",
+      "s3Body": "Local and systemic pharmacological therapy, elimination of irritating factors, treatment of coexisting diseases. Regular monitoring of potentially malignant lesions."
+    }
+  }
+}

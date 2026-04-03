@@ -2,11 +2,19 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import type { BeforeAfter as BeforeAfterType } from "@/lib/services";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-export default function BeforeAfter({ data }: { data: BeforeAfterType }) {
+export default function BeforeAfter({
+  data,
+  label,
+}: {
+  data: BeforeAfterType;
+  label: string;
+}) {
+  const t = useTranslations("BeforeAfter");
   const [sliderPos, setSliderPos] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,13 +52,13 @@ export default function BeforeAfter({ data }: { data: BeforeAfterType }) {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4">
-          Efekty leczenia
+          {t("sectionLabel")}
         </p>
         <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">
-          {data.label}
+          {label}
         </h2>
         <p className="text-white/40 text-base mb-12 max-w-xl">
-          Przesuń suwak, aby porównać stan przed i po zabiegu.
+          {t("sliderHint")}
         </p>
 
         <div
@@ -64,7 +72,7 @@ export default function BeforeAfter({ data }: { data: BeforeAfterType }) {
           {/* After (full background) */}
           <img
             src={data.after}
-            alt="Po zabiegu"
+            alt={t("after")}
             className="absolute inset-0 w-full h-full object-cover"
             draggable={false}
           />
@@ -76,7 +84,7 @@ export default function BeforeAfter({ data }: { data: BeforeAfterType }) {
           >
             <img
               src={data.before}
-              alt="Przed zabiegiem"
+              alt={t("before")}
               className="absolute inset-0 w-full h-full object-cover"
               draggable={false}
             />
@@ -109,10 +117,10 @@ export default function BeforeAfter({ data }: { data: BeforeAfterType }) {
 
           {/* Labels */}
           <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm text-white text-xs tracking-wider uppercase px-3 py-1.5 rounded pointer-events-none">
-            Przed
+            {t("before")}
           </div>
           <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white text-xs tracking-wider uppercase px-3 py-1.5 rounded pointer-events-none">
-            Po
+            {t("after")}
           </div>
         </div>
       </div>

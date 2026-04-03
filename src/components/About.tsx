@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 
 function FadeInSection({
   children,
@@ -30,6 +31,15 @@ function FadeInSection({
 }
 
 export default function About() {
+  const t = useTranslations("About");
+
+  const stats = [
+    { number: t("stat1Number"), label: t("stat1Label") },
+    { number: t("stat2Number"), label: t("stat2Label") },
+    { number: t("stat3Number"), label: t("stat3Label") },
+    { number: t("stat4Number"), label: t("stat4Label") },
+  ];
+
   return (
     <section id="about" className="relative pbs-16 lg:pbs-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -37,10 +47,10 @@ export default function About() {
           {/* Left: Label + Photo placeholder */}
           <FadeInSection>
             <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
-              O mnie
+              {t("sectionLabel")}
             </p>
             <h2 className="font-serif text-white leading-tight">
-              <span className="text-2xl text-white/30">Lek. dent.</span>
+              <span className="text-2xl text-white/30">{t("degree")}</span>
               <br />
               <span className="text-4xl md:text-5xl lg:text-6xl">
                 Anna Jakubik
@@ -51,7 +61,7 @@ export default function About() {
             <div className="mt-12 aspect-[3/4] max-w-md bg-charcoal-light relative overflow-hidden">
               <Image
                 src="/photo.jpg"
-                alt="Anna Jakubik — specjalista periodontologii"
+                alt={t("photoAlt")}
                 fill
                 className="object-cover"
                 loading="lazy"
@@ -68,35 +78,15 @@ export default function About() {
           <div className="lg:pt-24">
             <FadeInSection delay={0.2}>
               <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed font-serif italic">
-                Jestem lekarzem dentystą, specjalistą periodontologii. Państwowy
-                Egzamin Specjalizacyjny zdałam z&nbsp;najwyższym wynikiem
-                w&nbsp;kraju, za co otrzymałam nagrodę Izby Lekarskiej.
+                {t("intro")}
               </p>
             </FadeInSection>
 
             <FadeInSection delay={0.4}>
               <div className="mt-12 space-y-6 text-white/40 text-base leading-relaxed">
-                <p>
-                  Już od czasu studiów interesował mnie związek chorób jamy
-                  ustnej ze zdrowiem ogólnym oraz holistyczne podejście do
-                  każdego pacjenta, obejmujące kompleksową diagnostykę
-                  i&nbsp;prowadzenie leczenia zarówno zachowawczego, jak
-                  i&nbsp;chirurgicznego.
-                </p>
-                <p>
-                  Periodontologia stanowiła dla mnie wymarzoną ścieżkę rozwoju,
-                  łączącą w sobie wszystkie te aspekty. W tej dziedzinie
-                  kształciłam się podczas dodatkowego, 3-letniego szkolenia
-                  specjalizacyjnego w ramach rezydentury. Przez kilka lat
-                  łączyłam pracę kliniczną z działalnością naukową i dydaktyczną
-                  na uczelni, dzieląc się swoją pasją ze studentami.
-                </p>
-                <p>
-                  Nieustannie się rozwijam poprzez uczestnictwo w zagranicznych
-                  kursach i kongresach, prezentując tam swoje przypadki i dbając
-                  o to, by moja praktyka była oparta o aktualne wytyczne i
-                  wyniki badań naukowych.
-                </p>
+                <p>{t("bio1")}</p>
+                <p>{t("bio2")}</p>
+                <p>{t("bio3")}</p>
               </div>
             </FadeInSection>
           </div>
@@ -104,15 +94,7 @@ export default function About() {
 
         <FadeInSection delay={0.5}>
           <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: "#1", label: "Wynik egzaminu w kraju" },
-              {
-                number: "Collegium Medicum",
-                label: "Uniwersytet Jagielloński",
-              },
-              { number: "3", label: "Lata specjalizacji" },
-              { number: "> 10", label: "Lat doświadczenia" },
-            ].map((stat) => (
+            {stats.map((stat) => (
               <div key={stat.label} className="border-t border-white/10 pt-4">
                 <p className="font-serif text-2xl text-gold">{stat.number}</p>
                 <p className="text-xs text-white/30 mt-1 tracking-wide uppercase">

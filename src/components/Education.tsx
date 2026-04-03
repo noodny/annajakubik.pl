@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 
 const publications = [
   {
@@ -14,12 +15,6 @@ const publications = [
     title: "Świadomość biegaczy w zakresie profilaktyki chorób jamy ustnej",
     journal: "Medicina Sportiva Practica, t. 19, nr 2",
   },
-  // {
-  //   year: "2018",
-  //   title:
-  //     "Development of dental awareness concerning oral health behavior among students of selected universities in Krakow",
-  //   journal: "Przegląd Lekarski, vol. 75, no. 11",
-  // },
   {
     year: "2017",
     title: "Artificial saliva and its use in biological experiments",
@@ -31,38 +26,30 @@ const publications = [
       "Pregnant women\u2019s awareness of dental care with regard to oral health prophylaxis",
     journal: "Journal of Stomatology, vol. 68, no. 6",
   },
-  // {
-  //   year: "2014",
-  //   title:
-  //     "Częstość występowania próchnicy zębów mlecznych i wskaźniki jej leczenia u dzieci w wieku przedszkolnym z różnych środowisk województwa małopolskiego",
-  //   journal: "Stomatologia Współczesna, t. 21, nr 4",
-  // },
-];
-
-const milestones = [
-  {
-    year: "Wykształcenie",
-    title: "Collegium Medicum Uniwersytetu Jagiellońskiego",
-    description:
-      "Ukończenie jednej z najstarszych i najbardziej prestiżowych uczelni medycznych w Polsce, w Krakowie — gdzie narodziło się głębokie zainteresowanie związkiem zdrowia jamy ustnej ze zdrowiem ogólnym.",
-  },
-  {
-    year: "Specjalizacja",
-    title: "Najwyższy wynik egzaminu w kraju",
-    description:
-      "Ukończenie 3-letniego szkolenia specjalizacyjnego z periodontologii zakończone Państwowym Egzaminem Specjalizacyjnym z najwyższym wynikiem w kraju. Nagroda Izby Lekarskiej za wybitne osiągnięcie.",
-  },
-  {
-    year: "Nauka",
-    title: "Praca naukowa i dydaktyczna",
-    description:
-      "Aktywna rola asystenta na uczelni — udział w badaniach naukowych, publikacjach oraz kształceniu przyszłych lekarzy dentystów.",
-  },
 ];
 
 export default function Education() {
+  const t = useTranslations("Education");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const milestones = [
+    {
+      year: t("m1Year"),
+      title: t("m1Title"),
+      description: t("m1Description"),
+    },
+    {
+      year: t("m2Year"),
+      title: t("m2Title"),
+      description: t("m2Description"),
+    },
+    {
+      year: t("m3Year"),
+      title: t("m3Title"),
+      description: t("m3Description"),
+    },
+  ];
 
   return (
     <section id="education" className="relative py-16 lg:py-32 bg-charcoal/30">
@@ -109,10 +96,10 @@ export default function Education() {
                     {item.description}
                   </p>
 
-                  {item.year === "Nauka" && (
+                  {i === 2 && (
                     <div className="mt-8 space-y-4 max-w-md inline-block">
                       <p className="text-gold/40 text-xs tracking-[0.2em] uppercase">
-                        Wybrane publikacje
+                        {t("selectedPublications")}
                       </p>
                       {publications.map((pub) => (
                         <div

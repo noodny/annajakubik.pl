@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import type { ServicePage } from "@/lib/services";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { getServiceMeta, getNextServiceSlug } from "@/lib/services";
 import BeforeAfter from "./BeforeAfter";
 import ConditionsContent from "./ConditionsContent";
 import ServiceCard from "./ServiceCard";
@@ -12,14 +13,19 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const periodontalSlugs = ["zapalenie-dziasel", "zapalenie-przyzebia"];
 
-export default function ServicePageContent({
-  service,
-  nextService,
-}: {
-  service: ServicePage;
-  nextService: ServicePage;
-}) {
-  const showConditions = periodontalSlugs.includes(service.slug);
+export default function ServicePageContent({ slug }: { slug: string }) {
+  const t = useTranslations("ServicePage");
+  const ts = useTranslations("ServiceData");
+
+  const meta = getServiceMeta(slug)!;
+  const nextSlug = getNextServiceSlug(slug);
+  const nextMeta = getServiceMeta(nextSlug)!;
+  const showConditions = periodontalSlugs.includes(slug);
+
+  const sections = Array.from({ length: meta.sectionCount }, (_, i) => ({
+    heading: ts(`${slug}.s${i + 1}Heading`),
+    body: ts(`${slug}.s${i + 1}Body`),
+  }));
 
   return (
     <div className="min-h-screen bg-obsidian">
@@ -36,17 +42,17 @@ export default function ServicePageContent({
               className="inline-flex items-center gap-2 text-sm text-white/30 hover:text-gold transition-colors duration-300 mb-12"
             >
               <ArrowLeft size={16} />
-              <span>Zobacz wszystkie</span>
+              <span>{t("backToAll")}</span>
             </Link>
 
             <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4">
-              {service.subtitle}
+              {ts(`${slug}.subtitle`)}
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-              {service.title}
+              {ts(`${slug}.title`)}
             </h1>
             <p className="mt-6 text-white/40 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-              {service.content.lead}
+              {ts(`${slug}.lead`)}
             </p>
           </motion.div>
         </div>
@@ -56,7 +62,7 @@ export default function ServicePageContent({
       <section className="relative pbs-24 pbe-16 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {service.content.sections.map((section, i) => (
+            {sections.map((section, i) => (
               <motion.div
                 key={section.heading}
                 initial={{ opacity: 0, y: 30 }}
@@ -81,8 +87,11 @@ export default function ServicePageContent({
       </section>
 
       {/* Before / After photos */}
-      {service.beforeAfter && (
-        <BeforeAfter data={service.beforeAfter} />
+      {meta.beforeAfter && (
+        <BeforeAfter
+          data={meta.beforeAfter}
+          label={ts(`${slug}.beforeAfterLabel`)}
+        />
       )}
 
       {/* Conditions stages — only for periodontal disease pages */}
@@ -103,10 +112,17 @@ export default function ServicePageContent({
             transition={{ duration: 0.6, ease: EASE }}
             className="text-white/20 text-sm tracking-[0.3em] uppercase mb-8"
           >
-            Zobacz też
+            {t("nextService")}
           </motion.p>
           <div className="max-w-sm">
-            <ServiceCard service={nextService} />
+            <ServiceCard
+              service={{
+                slug: nextSlug,
+                title: ts(`${nextSlug}.title`),
+                description: ts(`${nextSlug}.description`),
+                icon: nextMeta.icon,
+              }}
+            />
           </div>
         </div>
       </section>

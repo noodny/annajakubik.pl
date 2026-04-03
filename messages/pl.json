@@ -1,0 +1,237 @@
+{
+  "Metadata": {
+    "title": "Anna Jakubik — Specjalista Periodontologii",
+    "description": "Periodontologia z precyzją i troską. Specjalista w zakresie zdrowia dziąseł, medycyny jamy ustnej i zaawansowanego leczenia periodontalnego."
+  },
+  "Header": {
+    "about": "O mnie",
+    "services": "Leczenie",
+    "approach": "Podejście",
+    "contact": "Kontakt",
+    "bookVisit": "Umów wizytę",
+    "subtitle": "Specjalista Periodontologii"
+  },
+  "Hero": {
+    "title1": "Periodontologia",
+    "title2": "z precyzją",
+    "title3": "i troską",
+    "description": "Holistyczne podejście do zdrowia dziąseł i\u00a0jamy ustnej\u00a0-\u00a0kompleksowa diagnostyka, leczenie zachowawcze i\u00a0chirurgiczne.",
+    "ctaPrimary": "Umów konsultację",
+    "ctaSecondary": "Dowiedz się więcej"
+  },
+  "About": {
+    "sectionLabel": "O mnie",
+    "degree": "Lek. dent.",
+    "photoAlt": "Anna Jakubik — specjalista periodontologii",
+    "intro": "Jestem lekarzem dentystą, specjalistą periodontologii. Państwowy Egzamin Specjalizacyjny zdałam z\u00a0najwyższym wynikiem w\u00a0kraju, za co otrzymałam nagrodę Izby Lekarskiej.",
+    "bio1": "Już od czasu studiów interesował mnie związek chorób jamy ustnej ze zdrowiem ogólnym oraz holistyczne podejście do każdego pacjenta, obejmujące kompleksową diagnostykę i\u00a0prowadzenie leczenia zarówno zachowawczego, jak i\u00a0chirurgicznego.",
+    "bio2": "Periodontologia stanowiła dla mnie wymarzoną ścieżkę rozwoju, łączącą w sobie wszystkie te aspekty. W tej dziedzinie kształciłam się podczas dodatkowego, 3-letniego szkolenia specjalizacyjnego w ramach rezydentury. Przez kilka lat łączyłam pracę kliniczną z działalnością naukową i dydaktyczną na uczelni, dzieląc się swoją pasją ze studentami.",
+    "bio3": "Nieustannie się rozwijam poprzez uczestnictwo w zagranicznych kursach i kongresach, prezentując tam swoje przypadki i dbając o to, by moja praktyka była oparta o aktualne wytyczne i wyniki badań naukowych.",
+    "stat1Number": "#1",
+    "stat1Label": "Wynik egzaminu w kraju",
+    "stat2Number": "Collegium Medicum",
+    "stat2Label": "Uniwersytet Jagielloński",
+    "stat3Number": "3",
+    "stat3Label": "Lata specjalizacji",
+    "stat4Number": "> 10",
+    "stat4Label": "Lat doświadczenia"
+  },
+  "Services": {
+    "sectionLabel": "Leczenie",
+    "heading1": "Specjalistyczna",
+    "heading2": "opieka periodontologiczna",
+    "description": "Periodontologia zajmuje się zapobieganiem, diagnostyką i\u00a0leczeniem chorób przyzębia oraz błony śluzowej, czyli całą jamą ustną otaczającą zęby.",
+    "learnMore": "Dowiedz się więcej"
+  },
+  "Philosophy": {
+    "sectionLabel": "Podejście",
+    "heading1": "Oparte na",
+    "heading2": "wiedzy i doświadczeniu",
+    "quote": "\u201EJuż od czasu studiów interesował mnie związek chorób jamy ustnej ze zdrowiem ogólnym oraz holistyczne podejście do każdego pacjenta, obejmujące kompleksową diagnostykę i\u00a0prowadzenie leczenia zarówno zachowawczego, jak i\u00a0chirurgicznego.\u201D",
+    "quoteAuthor": "Anna Jakubik",
+    "t1Name": "Katarzyna M.",
+    "t1Text": "Pani doktor podeszła do mojego problemu z niezwykłą starannością. Po latach unikania dentysty w końcu trafiłam na specjalistkę, która wszystko spokojnie wytłumaczyła i zaproponowała skuteczne leczenie. Dziąsła przestały krwawić już po kilku tygodniach.",
+    "t1Source": "Google",
+    "t2Name": "Tomasz W.",
+    "t2Text": "Profesjonalne podejście na każdym etapie — od diagnostyki po zabieg. Pani doktor Jakubik przeprowadziła przeszczep dziąsła z niezwykłą precyzją. Efekt przerósł moje oczekiwania, a gojenie przebiegło bez komplikacji.",
+    "t2Source": "Google",
+    "t3Name": "Agnieszka K.",
+    "t3Text": "Miałam zaawansowane zapalenie przyzębia i byłam przerażona wizją utraty zębów. Dzięki Pani doktor udało się zatrzymać chorobę. Jestem pod stałą opieką i czuję, że moje zęby są w najlepszych rękach.",
+    "t3Source": "Google",
+    "t4Name": "Marcin P.",
+    "t4Text": "Zabieg podcięcia wędzidełka u mojego synka przebiegł szybko i bezboleśnie. Pani doktor świetnie radzi sobie z małymi pacjentami — syn był spokojny przez cały czas. Polecam z całego serca.",
+    "t4Source": "Google",
+    "t5Name": "Joanna D.",
+    "t5Text": "Po leczeniu ortodontycznym pojawił się problem z recesją dziąseł. Pani doktor Jakubik przeprowadziła zabieg mikrochirurgiczny i efekt jest rewelacyjny — nie ma śladu po odsłoniętych szyjkach. Dziękuję!",
+    "t5Source": "Google"
+  },
+  "Education": {
+    "m1Year": "Wykształcenie",
+    "m1Title": "Collegium Medicum Uniwersytetu Jagiellońskiego",
+    "m1Description": "Ukończenie jednej z najstarszych i najbardziej prestiżowych uczelni medycznych w Polsce, w Krakowie — gdzie narodziło się głębokie zainteresowanie związkiem zdrowia jamy ustnej ze zdrowiem ogólnym.",
+    "m2Year": "Specjalizacja",
+    "m2Title": "Najwyższy wynik egzaminu w kraju",
+    "m2Description": "Ukończenie 3-letniego szkolenia specjalizacyjnego z periodontologii zakończone Państwowym Egzaminem Specjalizacyjnym z najwyższym wynikiem w kraju. Nagroda Izby Lekarskiej za wybitne osiągnięcie.",
+    "m3Year": "Nauka",
+    "m3Title": "Praca naukowa i dydaktyczna",
+    "m3Description": "Aktywna rola asystenta na uczelni — udział w badaniach naukowych, publikacjach oraz kształceniu przyszłych lekarzy dentystów.",
+    "selectedPublications": "Wybrane publikacje"
+  },
+  "Contact": {
+    "sectionLabel": "Lokalizacje",
+    "heading1": "Gdzie",
+    "heading2": "konsultuję pacjentów",
+    "description": "Na konsultacje zgłaszają się do mnie pacjenci z całego regionu Podhala, w tym z miejscowości takich jak Rabka-Zdrój, Nowy Targ, Jordanów, Poronin, Zakopane.",
+    "callAndBook": "Zadzwoń i umów wizytę"
+  },
+  "CtaSection": {
+    "label": "Pierwszy krok",
+    "heading1": "Zadbaj o zdrowie",
+    "heading2": "swoich dziąseł",
+    "description": "Zdrowe dziąsła to fundament zdrowego organizmu. Umów się na konsultację i zadbaj o swoje przyzębie.",
+    "cta": "Umów konsultację"
+  },
+  "Footer": {
+    "subtitle": "Specjalista Periodontologii"
+  },
+  "BeforeAfter": {
+    "sectionLabel": "Efekty leczenia",
+    "sliderHint": "Przesuń suwak, aby porównać stan przed i po zabiegu.",
+    "before": "Przed",
+    "after": "Po"
+  },
+  "ConditionsContent": {
+    "heading": "Etapy choroby przyzębia",
+    "description": "Choroba przyzębia rozwija się stopniowo, często bez bólu. Rozpoznanie jej etapów to pierwszy krok do ochrony nie tylko zębów — ale całego organizmu.",
+    "s1Stage": "Etap 1",
+    "s1Title": "Zapalenie dziąseł",
+    "s1Description": "Wczesny objaw choroby przyzębia, charakteryzujący się krwawieniem i zaczerwienieniem dziąseł. W pełni odwracalny przy odpowiednim leczeniu.",
+    "s2Stage": "Etap 2",
+    "s2Title": "Wczesne zapalenie przyzębia",
+    "s2Description": "Stan zapalny rozprzestrzenia się poniżej linii dziąseł. Zaczynają powstawać kieszenie przyzębne. Rozpoczyna się utrata kości — ale progresję można zatrzymać.",
+    "s3Stage": "Etap 3",
+    "s3Title": "Umiarkowane zapalenie przyzębia",
+    "s3Description": "Głębsze kieszenie, nasilona utrata kości i potencjalna ruchomość zębów. Związek między chorobą przyzębia a zdrowiem ogólnym staje się krytyczny.",
+    "s4Stage": "Etap 4",
+    "s4Title": "Zaawansowane zapalenie przyzębia",
+    "s4Description": "Ciężka destrukcja kości. Zęby mogą się rozchwiać lub wymagać usunięcia. Może skutkować utratą zębów.",
+    "stat1Value": "Tylko 1%",
+    "stat1Label": "Polaków ma zdrowe przyzębie",
+    "stat2Value": "Ponad 16%",
+    "stat2Label": "choruje na zaawansowane zapalenie przyzębia",
+    "stat3Value": "6. miejsce",
+    "stat3Label": "wśród najczęstszych chorób na świecie"
+  },
+  "ServicePage": {
+    "backToAll": "Zobacz wszystkie",
+    "nextService": "Zobacz też"
+  },
+  "ServiceData": {
+    "zapalenie-dziasel": {
+      "title": "Zapalenie dziąseł",
+      "subtitle": "Gingivitis",
+      "description": "Kompleksowa diagnostyka i leczenie stanów zapalnych dziąseł — od skalingu po zaawansowane procedury chirurgiczne.",
+      "lead": "Zapalenie dziąseł to najwcześniejszy i w pełni odwracalny etap choroby przyzębia. Objawia się krwawieniem, zaczerwienieniem i obrzękiem dziąseł. Wczesna interwencja pozwala całkowicie zatrzymać proces chorobowy.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Objawy",
+      "s1Body": "Krwawienie dziąseł podczas szczotkowania lub nitkowania, zaczerwienienie i obrzęk brzegu dziąsłowego, nieprzyjemny zapach z ust. Zapalenie dziąseł często przebiega bezbólowo, dlatego regularne wizyty kontrolne są kluczowe dla jego wczesnego wykrycia.",
+      "s2Heading": "Diagnostyka",
+      "s2Body": "Kompleksowe badanie periodontologiczne obejmuje ocenę głębokości sondowania, poziomu przyczepu łącznotkankowego, obecności krwawienia przy sondowaniu oraz analizę zdjęć rentgenowskich. Precyzyjna diagnostyka pozwala dobrać optymalny plan leczenia.",
+      "s3Heading": "Leczenie",
+      "s3Body": "Profesjonalne oczyszczanie kamienia nazębnego (skaling) i wygładzanie powierzchni korzeni (root planing) to fundament terapii. W połączeniu z instruktażem higieny i regularnym monitoringiem, leczenie prowadzi do pełnego cofnięcia stanu zapalnego."
+    },
+    "zapalenie-przyzebia": {
+      "title": "Zapalenie przyzębia",
+      "subtitle": "Periodontitis",
+      "description": "Diagnostyka i leczenie choroby przyzębia — zapobieganie powstawaniu kieszeni przyzębnych, utracie kości i ruchomości zębów.",
+      "lead": "Zapalenie przyzębia to zaawansowana forma choroby, w której stan zapalny rozprzestrzenia się na tkanki podtrzymujące ząb — kość wyrostka zębodołowego, ozębną i cement korzeniowy. Nieleczone prowadzi do utraty zębów.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Progresja choroby",
+      "s1Body": "Choroba przyzębia rozwija się stopniowo — od początkowego zapalenia dziąseł, przez powstawanie kieszeni przyzębnych i utratę kości, aż do ruchomości i utraty zębów. Na każdym etapie istnieją skuteczne metody leczenia, które mogą zatrzymać progresję.",
+      "s2Heading": "Leczenie zachowawcze",
+      "s2Body": "Niechirurgiczne leczenie periodontologiczne obejmuje skaling poddziąsłowy, root planing oraz terapię antybakteryjną. Celem jest eliminacja biofilmu bakteryjnego i stworzenie warunków do regeneracji tkanek przyzębia.",
+      "s3Heading": "Leczenie chirurgiczne",
+      "s3Body": "W zaawansowanych przypadkach stosuje się techniki chirurgii płatowej, regeneracji tkanek kierowanej (GTR) oraz przeszczepy kostne. Precyzyjne podejście mikrochirurgiczne minimalizuje urazowość i przyspiesza gojenie.",
+      "s4Heading": "Związek ze zdrowiem ogólnym",
+      "s4Body": "Choroby przyzębia mogą mieć związek z cukrzycą, udarem mózgu, chorobami sercowo-naczyniowymi, miażdżycą, przedwczesnym porodem i niską masą urodzeniową. Leczenie dziąseł to inwestycja w zdrowie całego organizmu."
+    },
+    "recesje-dziasel": {
+      "title": "Recesje dziąseł",
+      "subtitle": "Gingival recession",
+      "description": "Precyzyjne techniki mikrochirurgiczne z wykorzystaniem przeszczepów tkanki łącznej — pokrycie odsłoniętych szyjek zębowych.",
+      "lead": "Recesja dziąsła to cofnięcie się brzegu dziąsłowego, które odsłania szyjkę lub korzeń zęba. Powoduje nadwrażliwość, pogorszenie estetyki i zwiększone ryzyko próchnicy korzeniowej.",
+      "beforeAfterLabel": "Zabieg pokrycia recesji",
+      "s1Heading": "Przyczyny",
+      "s1Body": "Najczęstsze przyczyny to nieprawidłowa technika szczotkowania, cienki biotyp dziąsła, zapalenie przyzębia, nieprawidłowe ustawienie zębów w łuku oraz nawykowe zaciskanie i zgrzytanie zębami (bruksizm).",
+      "s2Heading": "Techniki mikrochirurgiczne",
+      "s2Body": "Złotym standardem leczenia recesji jest przeszczep tkanki łącznej pobieranej z podniebienia. Techniki tunelowe i kopertowe pozwalają na minimalizację urazowości i osiągnięcie optymalnego pokrycia odsłoniętych korzeni.",
+      "s3Heading": "Efekty leczenia",
+      "s3Body": "Nowoczesne techniki mikrochirurgiczne pozwalają na pokrycie odsłoniętych korzeni w 80–100% przypadków. Przywrócenie prawidłowej linii dziąsła eliminuje nadwrażliwość, poprawia estetykę i chroni zęby przed dalszą destrukcją."
+    },
+    "augmentacja-dziasel": {
+      "title": "Augmentacja dziąseł",
+      "subtitle": "Soft tissue augmentation",
+      "description": "Pogrubienie dziąsła przed leczeniem ortodontycznym — zapobieganie pogłębianiu recesji podczas noszenia aparatu stałego.",
+      "lead": "Augmentacja dziąseł to zabieg pogrubienia cienkiego dziąsła, szczególnie istotny przed planowanym leczeniem ortodontycznym. Odpowiednio gruba strefa dziąsła związanego stanowi ochronę przed powstaniem recesji.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Wskazania",
+      "s1Body": "Cienki biotyp dziąsła, planowane leczenie ortodontyczne, profilaktyka recesji w okolicy zębów narażonych na przeciążenia lub przesuwanie w kierunku wargowym.",
+      "s2Heading": "Technika zabiegu",
+      "s2Body": "Przeszczep wolnej tkanki łącznej lub przeszczep śluzówkowy pozwala na poszerzenie i pogrubienie strefy dziąsła związanego. Zabieg wykonywany jest w znieczuleniu miejscowym z zastosowaniem technik mikrochirurgicznych.",
+      "s3Heading": "Ortodoncja a przyzębie",
+      "s3Body": "Współpraca periodontologa z ortodontą to klucz do bezpiecznego przesuwania zębów. Augmentacja dziąsła przed założeniem aparatu minimalizuje ryzyko powikłań i zapewnia stabilny wynik leczenia ortodontycznego."
+    },
+    "wydluzenie-koron-klinicznych": {
+      "title": "Wydłużenie koron klinicznych",
+      "subtitle": "Crown lengthening",
+      "description": "Chirurgiczne modelowanie dziąsła i kości w celu odsłonięcia większej części zęba — przywrócenie proporcjonalnej, zbalansowanej estetyki.",
+      "lead": "Wydłużenie korony klinicznej to precyzyjny zabieg chirurgiczny polegający na usunięciu nadmiaru dziąsła i/lub kości, aby odsłonić większą powierzchnię zęba. Stosowany zarówno ze wskazań estetycznych, jak i protetycznych.",
+      "beforeAfterLabel": "Zabieg wydłużenia koron klinicznych",
+      "s1Heading": "Wskazania estetyczne",
+      "s1Body": "Tak zwany \u201Euśmiech dziąsłowy\u201D (gummy smile) — nadmierne odsłanianie dziąsła podczas uśmiechu. Chirurgiczne modelowanie linii dziąsła przywraca proporcjonalną, harmonijną estetykę uśmiechu.",
+      "s2Heading": "Wskazania protetyczne",
+      "s2Body": "Zbyt krótka korona kliniczna zęba uniemożliwia prawidłowe wykonanie korony protetycznej. Wydłużenie korony zapewnia wystarczającą retencję i właściwy kontur biologiczny odbudowy.",
+      "s3Heading": "Przebieg zabiegu",
+      "s3Body": "Zabieg wykonywany jest w znieczuleniu miejscowym. Precyzyjne usunięcie nadmiaru tkanek miękkich i kostnych pozwala na odsłonięcie odpowiedniej powierzchni zęba z zachowaniem szerokości biologicznej przyzębia."
+    },
+    "tkanki-wokol-implantow": {
+      "title": "Tkanki wokół implantów",
+      "subtitle": "Peri-implant tissues",
+      "description": "Specjalistyczne leczenie stanów zapalnych tkanek wokół implantów — ochrona integracji i długoterminowego powodzenia leczenia.",
+      "lead": "Zapalenie tkanek wokół implantów (mucositis i peri-implantitis) to narastający problem w implantologii. Jako periodontolog specjalizuję się w diagnostyce i leczeniu tych stanów, które zagrażają długoterminowemu utrzymaniu implantów.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Mucositis i peri-implantitis",
+      "s1Body": "Mucositis to odwracalne zapalenie błony śluzowej wokół implantu. Peri-implantitis to zaawansowany stan zapalny z utratą kości podpierającej implant. Wczesna diagnostyka jest kluczowa dla zachowania implantu.",
+      "s2Heading": "Leczenie",
+      "s2Body": "Terapia obejmuje dekontaminację powierzchni implantu, leczenie zachowawcze oraz — w zaawansowanych przypadkach — chirurgię regeneracyjną z zastosowaniem biomateriałów kościozastępczych i błon kolagenowych.",
+      "s3Heading": "Profilaktyka",
+      "s3Body": "Regularne wizyty kontrolne, profesjonalna higienizacja i indywidualny program profilaktyczny to podstawa długoterminowego powodzenia leczenia implantologicznego."
+    },
+    "wedzidelka-warg-i-jezyka": {
+      "title": "Wędzidełka warg i języka",
+      "subtitle": "Frenectomy",
+      "description": "Frenulektomia i miofrenuloplastyka przy skróconym wędzidełku — przywrócenie prawidłowej funkcji mowy, oddychania i połykania.",
+      "lead": "Skrócone wędzidełko wargi lub języka może wpływać na karmienie piersią u niemowląt, rozwój mowy u dzieci oraz komfort i funkcję u dorosłych. Zabieg frenulektomii przywraca prawidłową ruchomość i funkcję.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Wędzidełko języka (ankyloglossia)",
+      "s1Body": "Skrócone wędzidełko języka ogranicza jego ruchomość, wpływając na karmienie piersią, rozwój mowy, oddychanie przez nos i pozycję spoczynkową języka. Zabieg plastyki wędzidełka przywraca pełen zakres ruchu.",
+      "s2Heading": "Wędzidełko wargi",
+      "s2Body": "Masywne lub nisko przyczepione wędzidełko wargi górnej może powodować diastema (szpara między jedynkami) lub recesję dziąsła. Frenulektomia eliminuje napięcie tkanek i ułatwia zamknięcie szpary ortodontycznie.",
+      "s3Heading": "Technika zabiegu",
+      "s3Body": "Zabieg wykonywany jest w znieczuleniu miejscowym z zastosowaniem technik mikrochirurgicznych. Gojenie jest szybkie, a efekt — natychmiastowy. W przypadku dzieci współpracuję z logopedami i ortodontami."
+    },
+    "choroby-blony-sluzowej": {
+      "title": "Choroby błony śluzowej",
+      "subtitle": "Oral mucosal diseases",
+      "description": "Diagnostyka i leczenie aft, zmian zapalnych i chorób błony śluzowej jamy ustnej — gdzie medycyna stomatologiczna spotyka codzienny komfort.",
+      "lead": "Choroby błony śluzowej jamy ustnej obejmują szerokie spektrum zmian — od nawracających aft, przez liszaj płaski, po zmiany przedrakowe. Precyzyjna diagnostyka i wczesne leczenie są kluczowe dla zdrowia i komfortu pacjenta.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Najczęstsze schorzenia",
+      "s1Body": "Afty nawracające, liszaj płaski jamy ustnej, leukoplakia, pemfigoid błon śluzowych, zmiany polekowe i grzybicze. Każda przewlekła zmiana w jamie ustnej wymaga diagnostyki w celu wykluczenia procesu nowotworowego.",
+      "s2Heading": "Diagnostyka",
+      "s2Body": "Badanie kliniczne, dokumentacja fotograficzna, badanie cytologiczne i histopatologiczne (biopsja). Współpraca z dermatologami i patologami w przypadku zmian wymagających diagnostyki interdyscyplinarnej.",
+      "s3Heading": "Leczenie",
+      "s3Body": "Terapia farmakologiczna miejscowa i ogólna, eliminacja czynników drażniących, leczenie chorób współistniejących. Regularne monitorowanie zmian potencjalnie złośliwych."
+    }
+  }
+}

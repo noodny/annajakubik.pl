@@ -1,10 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const NOISE_SVG = `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`;
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Layer 1: Solid obsidian base */}
@@ -45,10 +48,11 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.1] tracking-tight"
         >
-          Periodontologia
+          {t("title1")}
           <br />
-          <span className="text-gold">z precyzją</span>
-          <br />i troską
+          <span className="text-gold">{t("title2")}</span>
+          <br />
+          {t("title3")}
         </motion.h1>
 
         <motion.p
@@ -57,10 +61,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mt-10 text-white/40 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
         >
-          Holistyczne podejście do zdrowia dziąseł i&nbsp;jamy
-          ustnej&nbsp;-&nbsp;
-          <br className="hidden md:block" />
-          kompleksowa diagnostyka, leczenie zachowawcze i&nbsp;chirurgiczne.
+          {t("description")}
         </motion.p>
 
         <motion.div
@@ -73,14 +74,14 @@ export default function Hero() {
             href="#contact"
             className="group relative px-10 py-4 bg-gold text-charcoal-dark font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(201,169,110,0.3)]"
           >
-            <span className="relative z-10">Umów konsultację</span>
+            <span className="relative z-10">{t("ctaPrimary")}</span>
             <div className="absolute inset-0 bg-gold-light translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
           </a>
           <a
             href="#about"
             className="px-10 py-4 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-all duration-500 tracking-wider uppercase text-sm"
           >
-            Dowiedz się więcej
+            {t("ctaSecondary")}
           </a>
         </motion.div>
       </div>

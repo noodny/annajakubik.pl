@@ -1,0 +1,237 @@
+{
+  "Metadata": {
+    "title": "Anna Jakubik — Especialista en Periodoncia",
+    "description": "Periodoncia con precisión y dedicación. Especialista en salud de las encías, medicina oral y tratamiento periodontal avanzado."
+  },
+  "Header": {
+    "about": "Sobre mí",
+    "services": "Tratamientos",
+    "approach": "Enfoque",
+    "contact": "Contacto",
+    "bookVisit": "Pedir cita",
+    "subtitle": "Especialista en Periodoncia"
+  },
+  "Hero": {
+    "title1": "Periodoncia",
+    "title2": "con precisión",
+    "title3": "y dedicación",
+    "description": "Un enfoque holístico de la salud de las encías y la cavidad oral: diagnóstico integral, tratamiento conservador y quirúrgico.",
+    "ctaPrimary": "Pedir una consulta",
+    "ctaSecondary": "Más información"
+  },
+  "About": {
+    "sectionLabel": "Sobre mí",
+    "degree": "Dra.",
+    "photoAlt": "Anna Jakubik — especialista en periodoncia",
+    "intro": "Soy odontóloga y especialista en periodoncia. Aprobé el Examen Nacional de Especialización con la puntuación más alta del país, por lo que recibí un premio de la Cámara Médica.",
+    "bio1": "Desde el inicio de mis estudios me fascinó la relación entre las enfermedades bucales y la salud general, así como el enfoque holístico de cada paciente, que abarca un diagnóstico integral y un tratamiento tanto conservador como quirúrgico.",
+    "bio2": "La periodoncia fue mi camino profesional ideal, ya que combina todos estos aspectos. Me formé en esta especialidad durante una residencia adicional de 3 años. Durante varios años combiné la práctica clínica con la actividad científica y docente en la universidad, compartiendo mi pasión con los estudiantes.",
+    "bio3": "Me desarrollo continuamente participando en cursos y congresos internacionales, presentando mis casos clínicos y asegurando que mi práctica se base en las directrices actuales y en la investigación científica.",
+    "stat1Number": "#1",
+    "stat1Label": "Resultado del examen en el país",
+    "stat2Number": "Collegium Medicum",
+    "stat2Label": "Universidad Jaguelónica",
+    "stat3Number": "3",
+    "stat3Label": "Años de especialización",
+    "stat4Number": "> 10",
+    "stat4Label": "Años de experiencia"
+  },
+  "Services": {
+    "sectionLabel": "Tratamientos",
+    "heading1": "Atención",
+    "heading2": "periodontal especializada",
+    "description": "La periodoncia se ocupa de la prevención, el diagnóstico y el tratamiento de las enfermedades del periodonto y las mucosas, es decir, de todo el entorno oral que rodea los dientes.",
+    "learnMore": "Más información"
+  },
+  "Philosophy": {
+    "sectionLabel": "Enfoque",
+    "heading1": "Basado en",
+    "heading2": "conocimiento y experiencia",
+    "quote": "\u201CDesde el inicio de mis estudios me fascinó la relación entre las enfermedades bucales y la salud general, así como el enfoque holístico de cada paciente, que abarca un diagnóstico integral y un tratamiento tanto conservador como quirúrgico.\u201D",
+    "quoteAuthor": "Anna Jakubik",
+    "t1Name": "Katarzyna M.",
+    "t1Text": "La doctora abordó mi problema con un cuidado excepcional. Después de años evitando al dentista, por fin encontré una especialista que lo explicó todo con calma y propuso un tratamiento eficaz. Las encías dejaron de sangrar en pocas semanas.",
+    "t1Source": "Google",
+    "t2Name": "Tomasz W.",
+    "t2Text": "Enfoque profesional en cada etapa, desde el diagnóstico hasta el procedimiento. La Dra. Jakubik realizó el injerto de encía con una precisión notable. El resultado superó mis expectativas y la cicatrización transcurrió sin complicaciones.",
+    "t2Source": "Google",
+    "t3Name": "Agnieszka K.",
+    "t3Text": "Tenía periodontitis avanzada y estaba aterrorizada ante la idea de perder los dientes. Gracias a la doctora, la enfermedad se detuvo. Estoy bajo atención constante y siento que mis dientes están en las mejores manos.",
+    "t3Source": "Google",
+    "t4Name": "Marcin P.",
+    "t4Text": "La frenectomía de mi hijo fue rápida e indolora. La doctora maneja a los pacientes pequeños de manera brillante: mi hijo estuvo tranquilo todo el tiempo. La recomiendo de todo corazón.",
+    "t4Source": "Google",
+    "t5Name": "Joanna D.",
+    "t5Text": "Tras el tratamiento de ortodoncia, desarrollé recesión de encías. La Dra. Jakubik realizó un procedimiento microquirúrgico y el resultado es increíble: no queda rastro de las raíces expuestas. ¡Gracias!",
+    "t5Source": "Google"
+  },
+  "Education": {
+    "m1Year": "Formación",
+    "m1Title": "Collegium Medicum, Universidad Jaguelónica",
+    "m1Description": "Graduada en una de las universidades médicas más antiguas y prestigiosas de Polonia, en Cracovia, donde nació un profundo interés por la conexión entre la salud bucal y la salud general.",
+    "m2Year": "Especialización",
+    "m2Title": "Mejor resultado del examen en el país",
+    "m2Description": "Completó una formación de especialista de 3 años en periodoncia, culminando con el Examen Nacional de Especialización con la puntuación más alta del país. Premiada por la Cámara Médica por un logro sobresaliente.",
+    "m3Year": "Investigación",
+    "m3Title": "Trabajo científico y docente",
+    "m3Description": "Rol activo como asistente universitaria: participación en investigación científica, publicaciones y formación de futuros odontólogos.",
+    "selectedPublications": "Publicaciones seleccionadas"
+  },
+  "Contact": {
+    "sectionLabel": "Ubicaciones",
+    "heading1": "Dónde",
+    "heading2": "atiendo a los pacientes",
+    "description": "Recibo pacientes de toda la región de Podhale para consultas, incluyendo localidades como Rabka-Zdrój, Nowy Targ, Jordanów, Poronin y Zakopane.",
+    "callAndBook": "Llame y pida cita"
+  },
+  "CtaSection": {
+    "label": "Primer paso",
+    "heading1": "Cuide la salud",
+    "heading2": "de sus encías",
+    "description": "Unas encías sanas son la base de un organismo sano. Pida una consulta y cuide su salud periodontal.",
+    "cta": "Pedir una consulta"
+  },
+  "Footer": {
+    "subtitle": "Especialista en Periodoncia"
+  },
+  "BeforeAfter": {
+    "sectionLabel": "Resultados del tratamiento",
+    "sliderHint": "Deslice para comparar el estado antes y después del procedimiento.",
+    "before": "Antes",
+    "after": "Después"
+  },
+  "ConditionsContent": {
+    "heading": "Etapas de la enfermedad periodontal",
+    "description": "La enfermedad periodontal se desarrolla gradualmente, a menudo sin dolor. Reconocer sus etapas es el primer paso para proteger no solo los dientes, sino todo el organismo.",
+    "s1Stage": "Etapa 1",
+    "s1Title": "Gingivitis",
+    "s1Description": "Un signo temprano de enfermedad periodontal, caracterizado por sangrado y enrojecimiento de las encías. Totalmente reversible con el tratamiento adecuado.",
+    "s2Stage": "Etapa 2",
+    "s2Title": "Periodontitis temprana",
+    "s2Description": "La inflamación se extiende por debajo de la línea de las encías. Comienzan a formarse bolsas periodontales. Se inicia la pérdida ósea, pero la progresión puede detenerse.",
+    "s3Stage": "Etapa 3",
+    "s3Title": "Periodontitis moderada",
+    "s3Description": "Bolsas más profundas, mayor pérdida ósea y posible movilidad dental. La relación entre la enfermedad periodontal y la salud general se vuelve crítica.",
+    "s4Stage": "Etapa 4",
+    "s4Title": "Periodontitis avanzada",
+    "s4Description": "Destrucción ósea severa. Los dientes pueden aflojarse o requerir extracción. Puede resultar en la pérdida de dientes.",
+    "stat1Value": "Solo el 1%",
+    "stat1Label": "de los polacos tienen un periodonto sano",
+    "stat2Value": "Más del 16%",
+    "stat2Label": "padecen periodontitis avanzada",
+    "stat3Value": "6.° puesto",
+    "stat3Label": "entre las enfermedades más comunes del mundo"
+  },
+  "ServicePage": {
+    "backToAll": "Ver todos los tratamientos",
+    "nextService": "Ver también"
+  },
+  "ServiceData": {
+    "zapalenie-dziasel": {
+      "title": "Gingivitis",
+      "subtitle": "Gingivitis",
+      "description": "Diagnóstico y tratamiento integral de la inflamación de las encías: desde el raspado hasta procedimientos quirúrgicos avanzados.",
+      "lead": "La gingivitis es la etapa más temprana y totalmente reversible de la enfermedad periodontal. Se manifiesta con sangrado, enrojecimiento e hinchazón de las encías. La intervención temprana permite detener completamente el proceso patológico.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Síntomas",
+      "s1Body": "Sangrado de encías al cepillarse o usar hilo dental, enrojecimiento e hinchazón del margen gingival, mal aliento. La gingivitis suele ser indolora, por lo que las revisiones regulares son cruciales para su detección temprana.",
+      "s2Heading": "Diagnóstico",
+      "s2Body": "Un examen periodontal completo incluye la evaluación de la profundidad de sondaje, el nivel de inserción clínica, el sangrado al sondaje y el análisis de radiografías. Un diagnóstico preciso permite establecer un plan de tratamiento óptimo.",
+      "s3Heading": "Tratamiento",
+      "s3Body": "La eliminación profesional del sarro (raspado) y el alisado radicular son la base de la terapia. Combinados con instrucciones de higiene oral y seguimiento regular, el tratamiento conduce a la resolución completa de la inflamación."
+    },
+    "zapalenie-przyzebia": {
+      "title": "Periodontitis",
+      "subtitle": "Periodontitis",
+      "description": "Diagnóstico y tratamiento de la enfermedad periodontal: prevención de la formación de bolsas, pérdida ósea y movilidad dental.",
+      "lead": "La periodontitis es una forma avanzada de la enfermedad en la que la inflamación se extiende a los tejidos de soporte del diente: hueso alveolar, ligamento periodontal y cemento radicular. Sin tratamiento, conduce a la pérdida dental.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Progresión de la enfermedad",
+      "s1Body": "La enfermedad periodontal se desarrolla gradualmente, desde la inflamación inicial de las encías, pasando por la formación de bolsas y la pérdida ósea, hasta la movilidad y la pérdida de dientes. En cada etapa existen métodos de tratamiento eficaces que pueden detener la progresión.",
+      "s2Heading": "Tratamiento conservador",
+      "s2Body": "El tratamiento periodontal no quirúrgico incluye raspado subgingival, alisado radicular y terapia antibacteriana. El objetivo es eliminar el biofilm bacteriano y crear las condiciones para la regeneración de los tejidos periodontales.",
+      "s3Heading": "Tratamiento quirúrgico",
+      "s3Body": "En casos avanzados se utilizan técnicas de cirugía a colgajo, regeneración tisular guiada (RTG) e injertos óseos. Un enfoque microquirúrgico preciso minimiza el trauma y acelera la cicatrización.",
+      "s4Heading": "Relación con la salud general",
+      "s4Body": "Las enfermedades periodontales pueden estar relacionadas con la diabetes, el ictus, las enfermedades cardiovasculares, la aterosclerosis, el parto prematuro y el bajo peso al nacer. Tratar las encías es una inversión en la salud de todo el organismo."
+    },
+    "recesje-dziasel": {
+      "title": "Recesión gingival",
+      "subtitle": "Recesión gingival",
+      "description": "Técnicas microquirúrgicas precisas con injertos de tejido conectivo: cobertura de raíces dentales expuestas.",
+      "lead": "La recesión gingival es el retroceso del margen de la encía, que expone el cuello o la raíz del diente. Causa sensibilidad, deterioro estético y mayor riesgo de caries radicular.",
+      "beforeAfterLabel": "Procedimiento de cobertura de recesión",
+      "s1Heading": "Causas",
+      "s1Body": "Las causas más comunes son una técnica de cepillado incorrecta, biotipo gingival fino, periodontitis, malposición dental y apretamiento o rechinamiento habitual de los dientes (bruxismo).",
+      "s2Heading": "Técnicas microquirúrgicas",
+      "s2Body": "El estándar de oro para el tratamiento de la recesión es el injerto de tejido conectivo obtenido del paladar. Las técnicas de túnel y sobre permiten una invasividad mínima y una cobertura óptima de las raíces expuestas.",
+      "s3Heading": "Resultados del tratamiento",
+      "s3Body": "Las técnicas microquirúrgicas modernas permiten la cobertura de las raíces expuestas en el 80-100% de los casos. Restaurar la línea gingival adecuada elimina la sensibilidad, mejora la estética y protege los dientes de una mayor destrucción."
+    },
+    "augmentacja-dziasel": {
+      "title": "Aumento gingival",
+      "subtitle": "Aumento de tejido blando",
+      "description": "Engrosamiento de la encía antes del tratamiento ortodóntico: prevención del empeoramiento de la recesión durante el uso de brackets.",
+      "lead": "El aumento gingival es un procedimiento de engrosamiento de la encía fina, especialmente importante antes de un tratamiento ortodóntico planificado. Una zona adecuadamente gruesa de encía adherida proporciona protección contra la recesión.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Indicaciones",
+      "s1Body": "Biotipo gingival fino, tratamiento ortodóntico planificado, prevención de recesión en zonas de dientes sometidos a sobrecarga o movimiento labial.",
+      "s2Heading": "Técnica del procedimiento",
+      "s2Body": "Un injerto libre de tejido conectivo o un injerto mucoso permite ampliar y engrosar la zona de encía adherida. El procedimiento se realiza bajo anestesia local utilizando técnicas microquirúrgicas.",
+      "s3Heading": "Ortodoncia y periodonto",
+      "s3Body": "La colaboración entre periodoncista y ortodoncista es clave para un movimiento dental seguro. El aumento gingival antes de los brackets minimiza el riesgo de complicaciones y asegura un resultado ortodóntico estable."
+    },
+    "wydluzenie-koron-klinicznych": {
+      "title": "Alargamiento de corona clínica",
+      "subtitle": "Alargamiento de corona",
+      "description": "Remodelación quirúrgica de la encía y el hueso para exponer más superficie dental: restauración de una estética proporcional y equilibrada.",
+      "lead": "El alargamiento de corona clínica es un procedimiento quirúrgico preciso que consiste en eliminar el exceso de encía y/o hueso para exponer una mayor superficie dental. Se utiliza tanto por indicaciones estéticas como protésicas.",
+      "beforeAfterLabel": "Procedimiento de alargamiento de corona",
+      "s1Heading": "Indicaciones estéticas",
+      "s1Body": "La denominada \"sonrisa gingival\" (gummy smile): exposición excesiva de la encía al sonreír. La remodelación quirúrgica de la línea gingival restaura una estética de la sonrisa proporcional y armoniosa.",
+      "s2Heading": "Indicaciones protésicas",
+      "s2Body": "Una corona clínica demasiado corta impide la fabricación correcta de una corona protésica. El alargamiento de corona asegura una retención adecuada y un contorno biológico apropiado de la restauración.",
+      "s3Heading": "Procedimiento",
+      "s3Body": "El procedimiento se realiza bajo anestesia local. La eliminación precisa del exceso de tejido blando y duro permite exponer la superficie dental adecuada manteniendo la anchura biológica del periodonto."
+    },
+    "tkanki-wokol-implantow": {
+      "title": "Tejidos periimplantarios",
+      "subtitle": "Tejidos periimplantarios",
+      "description": "Tratamiento especializado de la inflamación periimplantaria: protección de la integración y el éxito del tratamiento a largo plazo.",
+      "lead": "La inflamación de los tejidos periimplantarios (mucositis y periimplantitis) es un problema creciente en implantología. Como periodoncista, me especializo en el diagnóstico y tratamiento de estas afecciones que amenazan la supervivencia del implante a largo plazo.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Mucositis y periimplantitis",
+      "s1Body": "La mucositis es una inflamación reversible de la mucosa alrededor del implante. La periimplantitis es una afección inflamatoria avanzada con pérdida del hueso de soporte del implante. El diagnóstico temprano es crucial para preservar el implante.",
+      "s2Heading": "Tratamiento",
+      "s2Body": "La terapia incluye la descontaminación de la superficie del implante, el tratamiento conservador y, en casos avanzados, la cirugía regenerativa con biomateriales sustitutos óseos y membranas de colágeno.",
+      "s3Heading": "Prevención",
+      "s3Body": "Las revisiones regulares, la higiene profesional y un programa preventivo individualizado son la base del éxito a largo plazo del tratamiento con implantes."
+    },
+    "wedzidelka-warg-i-jezyka": {
+      "title": "Frenillos labiales y linguales",
+      "subtitle": "Frenectomía",
+      "description": "Frenectomía y miofrenuloplastia para frenillo acortado: restauración de la función adecuada del habla, la respiración y la deglución.",
+      "lead": "Un frenillo labial o lingual acortado puede afectar la lactancia en bebés, el desarrollo del habla en niños y la comodidad y función en adultos. La frenectomía restaura la movilidad y función adecuadas.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Frenillo lingual (anquiloglosia)",
+      "s1Body": "Un frenillo lingual acortado restringe la movilidad de la lengua, afectando la lactancia, el desarrollo del habla, la respiración nasal y la posición de reposo de la lengua. La frenuloplastia restaura el rango completo de movimiento.",
+      "s2Heading": "Frenillo labial",
+      "s2Body": "Un frenillo labial superior voluminoso o de inserción baja puede causar diastema (espacio entre los incisivos centrales) o recesión gingival. La frenectomía elimina la tensión tisular y facilita el cierre ortodóntico del espacio.",
+      "s3Heading": "Técnica del procedimiento",
+      "s3Body": "El procedimiento se realiza bajo anestesia local utilizando técnicas microquirúrgicas. La cicatrización es rápida y el efecto es inmediato. En el caso de niños, colaboro con logopedas y ortodoncistas."
+    },
+    "choroby-blony-sluzowej": {
+      "title": "Enfermedades de la mucosa oral",
+      "subtitle": "Enfermedades de la mucosa oral",
+      "description": "Diagnóstico y tratamiento de aftas, lesiones inflamatorias y enfermedades de la mucosa oral: donde la odontología se encuentra con el confort diario.",
+      "lead": "Las enfermedades de la mucosa oral abarcan un amplio espectro de afecciones, desde aftas recurrentes, pasando por liquen plano, hasta lesiones precancerosas. Un diagnóstico preciso y un tratamiento temprano son cruciales para la salud y el confort del paciente.",
+      "beforeAfterLabel": "",
+      "s1Heading": "Afecciones más frecuentes",
+      "s1Body": "Aftas recurrentes, liquen plano oral, leucoplasia, penfigoide de las mucosas, lesiones medicamentosas y fúngicas. Cualquier lesión oral crónica requiere diagnóstico para descartar un proceso neoplásico.",
+      "s2Heading": "Diagnóstico",
+      "s2Body": "Examen clínico, documentación fotográfica, examen citológico e histopatológico (biopsia). Colaboración con dermatólogos y patólogos para lesiones que requieren diagnóstico interdisciplinario.",
+      "s3Heading": "Tratamiento",
+      "s3Body": "Terapia farmacológica local y sistémica, eliminación de factores irritantes, tratamiento de enfermedades concomitantes. Seguimiento regular de lesiones potencialmente malignas."
+    }
+  }
+}

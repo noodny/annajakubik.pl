@@ -2,7 +2,8 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 
 import icon01 from "../assets/icons/01.svg?raw";
@@ -53,6 +54,7 @@ export default function ServiceCard({
   service: ServiceCardData;
   index?: number;
 }) {
+  const t = useTranslations("Services");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const iconSvg = iconMap[service.icon] ?? service.icon;
@@ -87,8 +89,11 @@ export default function ServiceCard({
             {service.description}
           </p>
           <div className="mt-6 flex items-center gap-2 text-gold/40 lg:text-gold/0 group-hover:text-gold/60 transition-all duration-500 text-xs tracking-wider uppercase">
-            <span>Dowiedz się więcej</span>
-            <ArrowRight size={14} className="transition-transform duration-500 group-hover:translate-x-1" />
+            <span>{t("learnMore")}</span>
+            <ArrowRight
+              size={14}
+              className="transition-transform duration-500 group-hover:translate-x-1"
+            />
           </div>
         </div>
       </Link>

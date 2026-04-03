@@ -1,4 +1,10 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="border-t border-white/[0.04] py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -8,7 +14,7 @@ export default function Footer() {
               Anna Jakubik
             </span>
             <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light">
-              Specjalista Periodontologii
+              {t("subtitle")}
             </span>
           </div>
 

@@ -2,51 +2,49 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
-const stages = [
-  {
-    stage: "Etap 1",
-    title: "Zapalenie dziąseł",
-    description:
-      "Wczesny objaw choroby przyzębia, charakteryzujący się krwawieniem i zaczerwienieniem dziąseł. W pełni odwracalny przy odpowiednim leczeniu.",
-    visual: "●○○○",
-    color: "text-sage",
-  },
-  {
-    stage: "Etap 2",
-    title: "Wczesne zapalenie przyzębia",
-    description:
-      "Stan zapalny rozprzestrzenia się poniżej linii dziąseł. Zaczynają powstawać kieszenie przyzębne. Rozpoczyna się utrata kości — ale progresję można zatrzymać.",
-    visual: "●●○○",
-    color: "text-gold",
-  },
-  {
-    stage: "Etap 3",
-    title: "Umiarkowane zapalenie przyzębia",
-    description:
-      "Głębsze kieszenie, nasilona utrata kości i potencjalna ruchomość zębów. Związek między chorobą przyzębia a zdrowiem ogólnym staje się krytyczny.",
-    visual: "●●●○",
-    color: "text-gold-dark",
-  },
-  {
-    stage: "Etap 4",
-    title: "Zaawansowane zapalenie przyzębia",
-    description:
-      "Ciężka destrukcja kości. Zęby mogą się rozchwiać lub wymagać usunięcia. Może skutkować utratą zębów.",
-    visual: "●●●●",
-    color: "text-red-400/70",
-  },
-];
-
-const stats = [
-  { value: "Tylko 1%", label: "Polaków ma zdrowe przyzębie" },
-  { value: "Ponad 16%", label: "choruje na zaawansowane zapalenie przyzębia" },
-  { value: "6. miejsce", label: "wśród najczęstszych chorób na świecie" },
-];
+import { useTranslations } from "next-intl";
 
 export default function ConditionsContent() {
+  const t = useTranslations("ConditionsContent");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  const stages = [
+    {
+      stage: t("s1Stage"),
+      title: t("s1Title"),
+      description: t("s1Description"),
+      visual: "●○○○",
+      color: "text-sage",
+    },
+    {
+      stage: t("s2Stage"),
+      title: t("s2Title"),
+      description: t("s2Description"),
+      visual: "●●○○",
+      color: "text-gold",
+    },
+    {
+      stage: t("s3Stage"),
+      title: t("s3Title"),
+      description: t("s3Description"),
+      visual: "●●●○",
+      color: "text-gold-dark",
+    },
+    {
+      stage: t("s4Stage"),
+      title: t("s4Title"),
+      description: t("s4Description"),
+      visual: "●●●●",
+      color: "text-red-400/70",
+    },
+  ];
+
+  const stats = [
+    { value: t("stat1Value"), label: t("stat1Label") },
+    { value: t("stat2Value"), label: t("stat2Label") },
+    { value: t("stat3Value"), label: t("stat3Label") },
+  ];
 
   return (
     <div ref={ref}>
@@ -77,12 +75,10 @@ export default function ConditionsContent() {
         className="mb-10"
       >
         <h2 className="font-serif text-2xl md:text-3xl text-white">
-          Etapy choroby przyzębia
+          {t("heading")}
         </h2>
         <p className="mt-3 text-white/30 text-base leading-relaxed max-w-xl">
-          Choroba przyzębia rozwija się stopniowo, często bez bólu.
-          Rozpoznanie jej etapów to pierwszy krok do ochrony nie tylko zębów —
-          ale całego organizmu.
+          {t("description")}
         </p>
       </motion.div>
 

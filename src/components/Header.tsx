@@ -1,22 +1,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { usePathname } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { href: "#about", label: "O mnie" },
-  { href: "#services", label: "Leczenie" },
-  { href: "#philosophy", label: "Podejście" },
-  { href: "#contact", label: "Kontakt" },
-];
+import LanguageSwitcher, { LanguageSwitcherInline } from "./LanguageSwitcher";
 
 export default function Header() {
+  const t = useTranslations("Header");
   const pathname = usePathname();
   const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#about", label: t("about") },
+    { href: "#services", label: t("services") },
+    { href: "#philosophy", label: t("approach") },
+    { href: "#contact", label: t("contact") },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -58,7 +61,7 @@ export default function Header() {
               Anna Jakubik
             </span>
             <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light">
-              Specjalista Periodontologii
+              {t("subtitle")}
             </span>
           </a>
 
@@ -77,10 +80,11 @@ export default function Header() {
             <a
               href={isHome ? "#contact" : "/#contact"}
               onClick={(e) => scrollToHash(e, "#contact")}
-              className="text-sm px-6 py-2.5 border border-gold/40 text-gold hover:bg-gold/10 transition-all duration-300 tracking-wider uppercase"
+              className="hidden lg:inline-block text-sm px-6 py-2.5 border border-gold/40 text-gold hover:bg-gold/10 transition-all duration-300 tracking-wider uppercase"
             >
-              Umów wizytę
+              {t("bookVisit")}
             </a>
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile toggle */}
@@ -109,7 +113,10 @@ export default function Header() {
                 <a
                   key={link.href}
                   href={isHome ? link.href : `/${link.href}`}
-                  onClick={(e) => { scrollToHash(e, link.href); setMobileOpen(false); }}
+                  onClick={(e) => {
+                    scrollToHash(e, link.href);
+                    setMobileOpen(false);
+                  }}
                   className="text-base text-white/60 hover:text-gold transition-colors tracking-wide"
                 >
                   {link.label}
@@ -117,11 +124,17 @@ export default function Header() {
               ))}
               <a
                 href={isHome ? "#contact" : "/#contact"}
-                onClick={(e) => { scrollToHash(e, "#contact"); setMobileOpen(false); }}
+                onClick={(e) => {
+                  scrollToHash(e, "#contact");
+                  setMobileOpen(false);
+                }}
                 className="text-sm px-6 py-3 border border-gold/40 text-gold text-center hover:bg-gold/10 transition-all tracking-wider uppercase mt-2"
               >
-                Umów wizytę
+                {t("bookVisit")}
               </a>
+              <div className="flex justify-center mt-2">
+                <LanguageSwitcherInline />
+              </div>
             </div>
           </motion.div>
         )}

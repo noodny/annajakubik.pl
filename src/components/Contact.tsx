@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 import { MapPin, Phone, Smartphone } from "lucide-react";
 
 const locations = [
@@ -22,6 +23,7 @@ const locations = [
 ];
 
 export default function Contact() {
+  const t = useTranslations("Contact");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -39,17 +41,15 @@ export default function Contact() {
           className="max-w-2xl"
         >
           <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
-            Lokalizacje
+            {t("sectionLabel")}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight">
-            Gdzie
+            {t("heading1")}
             <br />
-            <span className="text-white/30">konsultuję pacjentów</span>
+            <span className="text-white/30">{t("heading2")}</span>
           </h2>
           <p className="mt-6 text-white/30 text-base leading-relaxed max-w-xl">
-            Na konsultacje zgłaszają się do mnie pacjenci z całego regionu
-            Podhala, w tym z miejscowości takich jak Rabka-Zdrój, Nowy Targ,
-            Jordanów, Poronin, Zakopane.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -108,7 +108,7 @@ export default function Contact() {
                   href={`tel:${loc.phone.replace(/\s/g, "")}`}
                   className="inline-block mt-10 px-8 py-3 border border-gold/30 text-gold text-sm tracking-wider uppercase hover:bg-gold/10 transition-all duration-500"
                 >
-                  Zadzwoń i umów wizytę
+                  {t("callAndBook")}
                 </a>
               </div>
             </motion.div>
