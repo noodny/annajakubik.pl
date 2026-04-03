@@ -3,6 +3,11 @@
     "title": "Anna Jakubik — Periodontology Specialist",
     "description": "Periodontology with precision and care. A specialist in gum health, oral medicine, and advanced periodontal treatment."
   },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "Sorry, we couldn\u2019t find the page you\u2019re looking for.",
+    "backHome": "Back to homepage"
+  },
   "Header": {
     "about": "About",
     "services": "Services",

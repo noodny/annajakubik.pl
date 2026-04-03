@@ -3,6 +3,11 @@
     "title": "Anna Jakubik — Specjalista Periodontologii",
     "description": "Periodontologia z precyzją i troską. Specjalista w zakresie zdrowia dziąseł, medycyny jamy ustnej i zaawansowanego leczenia periodontalnego."
   },
+  "NotFound": {
+    "title": "Strona nie istnieje",
+    "description": "Przepraszamy, nie mogliśmy znaleźć strony, której szukasz.",
+    "backHome": "Wróć na stronę główną"
+  },
   "Header": {
     "about": "O mnie",
     "services": "Leczenie",

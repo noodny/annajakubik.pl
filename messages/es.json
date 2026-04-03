@@ -3,6 +3,11 @@
     "title": "Anna Jakubik — Especialista en Periodoncia",
     "description": "Periodoncia con precisión y dedicación. Especialista en salud de las encías, medicina oral y tratamiento periodontal avanzado."
   },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "description": "Lo sentimos, no pudimos encontrar la página que buscas.",
+    "backHome": "Volver a la página principal"
+  },
   "Header": {
     "about": "Sobre mí",
     "services": "Tratamientos",
