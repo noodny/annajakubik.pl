@@ -9,6 +9,7 @@ const locations = [
   {
     name: "S3 Stomatologia",
     address: "Za Torem 28D, 34-520 Poronin",
+    addressUrl: "https://maps.app.goo.gl/EcidLeaS1MHufM6d6",
     phone: "+48 18 201 29 29",
     mobilePhone: "+48 508 012 929",
     region: "Poronin",
@@ -16,6 +17,7 @@ const locations = [
   {
     name: "Centrum Stomatologii Dominik",
     address: "Zakopiańska 6A, 34-700 Rabka-Zdrój",
+    addressUrl: "https://maps.app.goo.gl/hVC682eC9c9Hmc876",
     phone: "+48 18 267 07 39",
     mobilePhone: "+48 696 025 147",
     region: "Rabka-Zdrój",
@@ -82,7 +84,14 @@ export default function Contact() {
                       size={18}
                       className="text-gold-faint mt-0.5 shrink-0"
                     />
-                    <p className="text-fg-3 text-base">{loc.address}</p>
+                    <a
+                      href={loc.addressUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-fg-2 hover:text-gold transition-colors duration-300 text-base"
+                    >
+                      {loc.address}
+                    </a>
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone size={18} className="text-gold-faint shrink-0" />
@@ -94,7 +103,10 @@ export default function Contact() {
                     </a>
                   </div>
                   <div className="flex items-center gap-4">
-                    <Smartphone size={18} className="text-gold-faint shrink-0" />
+                    <Smartphone
+                      size={18}
+                      className="text-gold-faint shrink-0"
+                    />
                     <a
                       href={`tel:${loc.mobilePhone.replace(/\s/g, "")}`}
                       className="text-fg-2 hover:text-gold transition-colors duration-300 text-base"
