@@ -6,6 +6,7 @@ import { usePathname } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher, { LanguageSwitcherInline } from "./LanguageSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Header() {
   const t = useTranslations("Header");
@@ -49,7 +50,7 @@ export default function Header() {
           mobileOpen
             ? "bg-transparent border-b border-transparent"
             : scrolled
-              ? "bg-charcoal-dark/90 backdrop-blur-md border-b border-white/5"
+              ? "bg-charcoal-dark/90 backdrop-blur-md border-b border-fg/5"
               : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -60,7 +61,7 @@ export default function Header() {
               onClick={(e) => scrollToHash(e, "")}
               className="group flex flex-col items-baseline"
             >
-              <span className="font-serif text-[1.6rem] text-white tracking-wide">
+              <span className="font-serif text-[1.6rem] text-fg tracking-wide">
                 Anna Jakubik
               </span>
               <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light">
@@ -75,7 +76,7 @@ export default function Header() {
                   key={link.href}
                   href={isHome ? link.href : `/${link.href}`}
                   onClick={(e) => scrollToHash(e, link.href)}
-                  className="text-sm text-white/50 hover:text-gold transition-colors duration-300 tracking-wide"
+                  className="text-sm text-fg/50 hover:text-gold transition-colors duration-300 tracking-wide"
                 >
                   {link.label}
                 </a>
@@ -87,12 +88,13 @@ export default function Header() {
               >
                 {t("bookVisit")}
               </a>
+              <ThemeSwitcher className="text-fg/50 hover:text-fg/80" />
               <LanguageSwitcher />
             </div>
 
             {/* Mobile toggle */}
             <button
-              className="md:hidden text-white/70 hover:text-white transition-colors"
+              className="md:hidden text-fg/70 hover:text-fg transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
@@ -123,7 +125,7 @@ export default function Header() {
                       scrollToHash(e, link.href);
                       setMobileOpen(false);
                     }}
-                    className="text-lg text-white/60 hover:text-gold transition-colors tracking-wide"
+                    className="text-lg text-fg/60 hover:text-gold transition-colors tracking-wide"
                   >
                     {link.label}
                   </a>
@@ -142,7 +144,10 @@ export default function Header() {
                 >
                   {t("bookVisit")}
                 </a>
-                <LanguageSwitcherInline mobile />
+                <div className="flex items-center gap-6">
+                  <LanguageSwitcherInline mobile />
+                  <ThemeSwitcher className="text-fg/50 hover:text-fg/80" />
+                </div>
               </div>
             </div>
           </motion.div>

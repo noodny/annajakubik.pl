@@ -46,7 +46,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.1] tracking-tight"
+          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-fg leading-[1.1] tracking-tight"
         >
           {t("title1")}
           <br />
@@ -59,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 text-white/40 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
+          className="mt-10 text-fg/40 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
         >
           {t("description")}
         </motion.p>
@@ -72,14 +72,14 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="group relative px-10 py-4 bg-gold text-charcoal-dark font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(201,169,110,0.3)]"
+            className="group relative px-10 py-4 bg-gold text-ink font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(201,169,110,0.3)]"
           >
             <span className="relative z-10">{t("ctaPrimary")}</span>
             <div className="absolute inset-0 bg-gold-light translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
           </a>
           <a
             href="#about"
-            className="px-10 py-4 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-all duration-500 tracking-wider uppercase text-sm"
+            className="px-10 py-4 border border-fg/10 text-fg/60 hover:text-fg hover:border-fg/30 transition-all duration-500 tracking-wider uppercase text-sm"
           >
             {t("ctaSecondary")}
           </a>

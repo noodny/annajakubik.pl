@@ -56,7 +56,7 @@ export default function Education() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-[19px] lg:left-1/2 top-0 bottom-0 w-px bg-white/[0.06]" />
+          <div className="absolute left-[19px] lg:left-1/2 top-0 bottom-0 w-px bg-fg/[0.06]" />
 
           <div className="space-y-16 lg:space-y-24" ref={ref}>
             {milestones.map((item, i) => (
@@ -89,10 +89,10 @@ export default function Education() {
                   <p className="text-gold/50 text-xs tracking-[0.3em] uppercase mb-3">
                     {item.year}
                   </p>
-                  <h3 className="font-serif text-xl md:text-2xl text-white mb-3">
+                  <h3 className="font-serif text-xl md:text-2xl text-fg mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-white/30 text-sm leading-relaxed max-w-md inline-block">
+                  <p className="text-fg/30 text-sm leading-relaxed max-w-md inline-block">
                     {item.description}
                   </p>
 
@@ -104,12 +104,12 @@ export default function Education() {
                       {publications.map((pub) => (
                         <div
                           key={pub.title}
-                          className="border-t border-white/[0.04] pt-3"
+                          className="border-t border-fg/[0.04] pt-3"
                         >
-                          <p className="text-white/50 text-sm leading-relaxed">
+                          <p className="text-fg/50 text-sm leading-relaxed">
                             {pub.title}
                           </p>
-                          <p className="text-white/20 text-xs mt-1">
+                          <p className="text-fg/20 text-xs mt-1">
                             {pub.journal}, {pub.year}
                           </p>
                         </div>

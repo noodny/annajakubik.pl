@@ -53,14 +53,14 @@ export default function ConditionsContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-        className="grid sm:grid-cols-3 gap-8 mb-16 p-8 border border-white/[0.06] bg-charcoal/30"
+        className="grid sm:grid-cols-3 gap-8 mb-16 p-8 border border-fg/[0.06] bg-charcoal/30"
       >
         {stats.map((s) => (
           <div key={s.value} className="text-center sm:text-left">
             <p className="font-serif text-3xl md:text-4xl text-gold">
               {s.value}
             </p>
-            <p className="text-white/30 text-sm mt-2 leading-relaxed">
+            <p className="text-fg/30 text-sm mt-2 leading-relaxed">
               {s.label}
             </p>
           </div>
@@ -74,16 +74,16 @@ export default function ConditionsContent() {
         transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         className="mb-10"
       >
-        <h2 className="font-serif text-2xl md:text-3xl text-white">
+        <h2 className="font-serif text-2xl md:text-3xl text-fg">
           {t("heading")}
         </h2>
-        <p className="mt-3 text-white/30 text-base leading-relaxed max-w-xl">
+        <p className="mt-3 text-fg/30 text-base leading-relaxed max-w-xl">
           {t("description")}
         </p>
       </motion.div>
 
       {/* Stages */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/[0.02]">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-fg/[0.02]">
         {stages.map((item, i) => (
           <motion.div
             key={item.title}
@@ -96,18 +96,18 @@ export default function ConditionsContent() {
               delay: 0.4 + i * 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="group p-8 bg-charcoal-dark border border-white/[0.03] hover:border-white/[0.08] transition-all duration-700"
+            className="group p-8 bg-charcoal-dark border border-fg/[0.03] hover:border-fg/[0.08] transition-all duration-700"
           >
-            <p className="text-xs tracking-[0.2em] uppercase text-white/20 mb-4">
+            <p className="text-xs tracking-[0.2em] uppercase text-fg/20 mb-4">
               {item.stage}
             </p>
             <p className={`text-lg tracking-widest mb-4 ${item.color}`}>
               {item.visual}
             </p>
-            <h3 className="font-serif text-xl text-white mb-3">
+            <h3 className="font-serif text-xl text-fg mb-3">
               {item.title}
             </h3>
-            <p className="text-white/30 text-sm leading-relaxed">
+            <p className="text-fg/30 text-sm leading-relaxed">
               {item.description}
             </p>
           </motion.div>

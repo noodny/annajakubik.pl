@@ -39,7 +39,7 @@ export default function ServicePageContent({ slug }: { slug: string }) {
           >
             <Link
               href="/#services"
-              className="inline-flex items-center gap-2 text-sm text-white/30 hover:text-gold transition-colors duration-300 mb-12"
+              className="inline-flex items-center gap-2 text-sm text-fg/30 hover:text-gold transition-colors duration-300 mb-12"
             >
               <ArrowLeft size={16} />
               <span>{t("backToAll")}</span>
@@ -48,10 +48,10 @@ export default function ServicePageContent({ slug }: { slug: string }) {
             <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4">
               {ts(`${slug}.subtitle`)}
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-fg leading-tight">
               {ts(`${slug}.title`)}
             </h1>
-            <p className="mt-6 text-white/40 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+            <p className="mt-6 text-fg/40 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
               {ts(`${slug}.lead`)}
             </p>
           </motion.div>
@@ -72,12 +72,12 @@ export default function ServicePageContent({ slug }: { slug: string }) {
                   delay: 0.2 + i * 0.1,
                   ease: EASE,
                 }}
-                className="border-t border-white/[0.06] pt-8"
+                className="border-t border-fg/[0.06] pt-8"
               >
-                <h2 className="font-serif text-2xl text-white mb-4">
+                <h2 className="font-serif text-2xl text-fg mb-4">
                   {section.heading}
                 </h2>
-                <p className="text-white/40 text-base leading-relaxed">
+                <p className="text-fg/40 text-base leading-relaxed">
                   {section.body}
                 </p>
               </motion.div>
@@ -104,13 +104,13 @@ export default function ServicePageContent({ slug }: { slug: string }) {
       )}
 
       {/* Next service */}
-      <section className="relative py-24 lg:py-32 border-t border-white/[0.04]">
+      <section className="relative py-24 lg:py-32 border-t border-fg/[0.04]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="text-white/20 text-sm tracking-[0.3em] uppercase mb-8"
+            className="text-fg/20 text-sm tracking-[0.3em] uppercase mb-8"
           >
             {t("nextService")}
           </motion.p>

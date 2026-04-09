@@ -28,7 +28,7 @@ export function LanguageSwitcherInline({ mobile = false }: { mobile?: boolean })
               ? "w-10 h-10 flex items-center justify-center text-sm"
               : "text-xs"
           } ${
-            l === locale ? "text-gold" : "text-white/30 hover:text-white/60"
+            l === locale ? "text-gold" : "text-fg/30 hover:text-fg/60"
           }`}
         >
           {labels[l]}
@@ -64,7 +64,7 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 text-xs tracking-wider uppercase text-white/50 hover:text-white/80 transition-colors duration-300 cursor-pointer"
+        className="flex items-center gap-1 text-xs tracking-wider uppercase text-fg/50 hover:text-fg/80 transition-colors duration-300 cursor-pointer"
       >
         {labels[locale]}
         <ChevronDown
@@ -74,14 +74,14 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 min-w-[4rem] border border-white/10 bg-charcoal-dark/95 backdrop-blur-md">
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 min-w-[4rem] border border-fg/10 bg-charcoal-dark/95 backdrop-blur-md">
           {routing.locales
             .filter((l) => l !== locale)
             .map((l) => (
               <button
                 key={l}
                 onClick={() => onChange(l)}
-                className={`block w-full px-4 py-2 text-xs tracking-wider uppercase text-center transition-colors duration-200 cursor-pointer text-white/40 hover:text-white hover:bg-white/5`}
+                className={`block w-full px-4 py-2 text-xs tracking-wider uppercase text-center transition-colors duration-200 cursor-pointer text-fg/40 hover:text-fg hover:bg-fg/5`}
               >
                 {labels[l]}
               </button>

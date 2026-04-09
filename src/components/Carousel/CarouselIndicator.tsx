@@ -15,7 +15,7 @@ export function CarouselIndicator({
           className={`h-px transition-all duration-500 ${
             i === activePageIndex
               ? "w-8 bg-gold/60"
-              : "w-4 bg-white/10"
+              : "w-4 bg-fg/10"
           }`}
         />
       ))}

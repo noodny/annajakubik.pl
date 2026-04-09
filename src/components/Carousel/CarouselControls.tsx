@@ -18,7 +18,7 @@ export function CarouselControls({
       <button
         onClick={onPrevClick}
         disabled={!hasPrevPage}
-        className="w-10 h-10 border border-white/10 flex items-center cursor-pointer justify-center text-white/40 hover:text-gold hover:border-gold/30 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-300"
+        className="w-10 h-10 border border-fg/10 flex items-center cursor-pointer justify-center text-fg/40 hover:text-gold hover:border-gold/30 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-300"
         aria-label="Poprzednia opinia"
       >
         <ChevronLeft size={18} />
@@ -26,7 +26,7 @@ export function CarouselControls({
       <button
         onClick={onNextClick}
         disabled={!hasNextPage}
-        className="w-10 h-10 border border-white/10 flex items-center cursor-pointer justify-center text-white/40 hover:text-gold hover:border-gold/30 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-300"
+        className="w-10 h-10 border border-fg/10 flex items-center cursor-pointer justify-center text-fg/40 hover:text-gold hover:border-gold/30 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-300"
         aria-label="Następna opinia"
       >
         <ChevronRight size={18} />

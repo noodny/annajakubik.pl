@@ -3,10 +3,14 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import ThemeProvider from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})()`;
+
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -61,14 +65,17 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className="bg-[#080a08] text-white antialiased">
+    <html lang={locale} suppressHydrationWarning>
+      <body className="bg-obsidian text-fg antialiased">
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Contact />
-          <CtaSection />
-          <Footer />
+          <ThemeProvider>
+            <Header />
+            {children}
+            <Contact />
+            <CtaSection />
+            <Footer />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

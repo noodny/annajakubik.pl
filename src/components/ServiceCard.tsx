@@ -72,7 +72,7 @@ export default function ServiceCard({
     >
       <Link
         href={`/leczenie/${service.slug}`}
-        className="group relative block p-8 bg-charcoal/50 border border-white/[0.04] hover:border-gold/20 transition-all duration-700 h-full"
+        className="group relative block p-8 bg-charcoal/50 border border-fg/[0.04] hover:border-gold/20 transition-all duration-700 h-full"
       >
         {/* Hover glow */}
         <div className="absolute inset-0 bg-gradient-to-b from-gold/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -82,10 +82,10 @@ export default function ServiceCard({
             svg={iconSvg}
             className="w-20 h-20 text-gold/50 group-hover:text-gold transition-colors duration-500 mb-6"
           />
-          <h3 className="font-serif text-xl text-white mb-3 group-hover:text-gold-light transition-colors duration-500">
+          <h3 className="font-serif text-xl text-fg mb-3 group-hover:text-gold-light transition-colors duration-500">
             {service.title}
           </h3>
-          <p className="text-white/30 text-sm leading-relaxed group-hover:text-white/50 transition-colors duration-500">
+          <p className="text-fg/30 text-sm leading-relaxed group-hover:text-fg/50 transition-colors duration-500">
             {service.description}
           </p>
           <div className="mt-6 flex items-center gap-2 text-gold/40 lg:text-gold/0 group-hover:text-gold/60 transition-all duration-500 text-xs tracking-wider uppercase">

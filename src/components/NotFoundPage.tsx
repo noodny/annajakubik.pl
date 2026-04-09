@@ -13,10 +13,10 @@ export default function NotFoundPage() {
         <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
           404
         </p>
-        <h1 className="font-serif text-4xl md:text-5xl text-white leading-tight mb-4">
+        <h1 className="font-serif text-4xl md:text-5xl text-fg leading-tight mb-4">
           {t("title")}
         </h1>
-        <p className="text-white/40 text-lg font-light max-w-md mx-auto mb-12">
+        <p className="text-fg/40 text-lg font-light max-w-md mx-auto mb-12">
           {t("description")}
         </p>
         <Link

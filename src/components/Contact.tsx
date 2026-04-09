@@ -43,12 +43,12 @@ export default function Contact() {
           <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
             {t("sectionLabel")}
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl text-fg leading-tight">
             {t("heading1")}
             <br />
-            <span className="text-white/30">{t("heading2")}</span>
+            <span className="text-fg/30">{t("heading2")}</span>
           </h2>
-          <p className="mt-6 text-white/30 text-base leading-relaxed max-w-xl">
+          <p className="mt-6 text-fg/30 text-base leading-relaxed max-w-xl">
             {t("description")}
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ export default function Contact() {
                 delay: 0.2 + i * 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group relative p-10 lg:p-12 border border-white/[0.06] bg-charcoal-dark hover:border-gold/20 transition-all duration-700"
+              className="group relative p-10 lg:p-12 border border-fg/[0.06] bg-charcoal-dark hover:border-gold/20 transition-all duration-700"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
@@ -72,7 +72,7 @@ export default function Contact() {
                 <p className="text-xs text-gold/40 tracking-[0.3em] uppercase mb-4">
                   {loc.region}
                 </p>
-                <h3 className="font-serif text-2xl md:text-3xl text-white mb-8">
+                <h3 className="font-serif text-2xl md:text-3xl text-fg mb-8">
                   {loc.name}
                 </h3>
 
@@ -82,13 +82,13 @@ export default function Contact() {
                       size={18}
                       className="text-gold/40 mt-0.5 shrink-0"
                     />
-                    <p className="text-white/40 text-base">{loc.address}</p>
+                    <p className="text-fg/40 text-base">{loc.address}</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone size={18} className="text-gold/40 shrink-0" />
                     <a
                       href={`tel:${loc.phone.replace(/\s/g, "")}`}
-                      className="text-white/60 hover:text-gold transition-colors duration-300 text-base"
+                      className="text-fg/60 hover:text-gold transition-colors duration-300 text-base"
                     >
                       {loc.phone}
                     </a>
@@ -97,7 +97,7 @@ export default function Contact() {
                     <Smartphone size={18} className="text-gold/40 shrink-0" />
                     <a
                       href={`tel:${loc.mobilePhone.replace(/\s/g, "")}`}
-                      className="text-white/60 hover:text-gold transition-colors duration-300 text-base"
+                      className="text-fg/60 hover:text-gold transition-colors duration-300 text-base"
                     >
                       {loc.mobilePhone}
                     </a>

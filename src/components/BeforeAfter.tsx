@@ -54,10 +54,10 @@ export default function BeforeAfter({
         <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4">
           {t("sectionLabel")}
         </p>
-        <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">
+        <h2 className="font-serif text-3xl md:text-4xl text-fg mb-4">
           {label}
         </h2>
-        <p className="text-white/40 text-base mb-12 max-w-xl">
+        <p className="text-fg/40 text-base mb-12 max-w-xl">
           {t("sliderHint")}
         </p>
 
@@ -102,7 +102,7 @@ export default function BeforeAfter({
                 height="16"
                 viewBox="0 0 16 16"
                 fill="none"
-                className="text-charcoal"
+                className="text-ink"
               >
                 <path
                   d="M4 8L1 5.5M4 8L1 10.5M4 8H12M12 8L15 5.5M12 8L15 10.5"

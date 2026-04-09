@@ -21,13 +21,13 @@ function TestimonialCard({ name, text, rating, source }: Testimonial) {
           <Star key={i} size={12} className="text-gold fill-gold" />
         ))}
       </div>
-      <p className="text-white/50 text-lg leading-relaxed font-light">
+      <p className="text-fg/50 text-lg leading-relaxed font-light">
         &ldquo;{text}&rdquo;
       </p>
       <div className="mt-6 flex items-center gap-3">
-        <div className="w-8 h-px bg-white/10" />
-        <p className="text-white/60 text-sm">{name}</p>
-        <span className="text-white/15 text-xs">{source}</span>
+        <div className="w-8 h-px bg-fg/10" />
+        <p className="text-fg/60 text-sm">{name}</p>
+        <span className="text-fg/15 text-xs">{source}</span>
       </div>
     </div>
   );
@@ -66,12 +66,12 @@ export default function Philosophy() {
             <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
               {t("sectionLabel")}
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-fg leading-tight">
               {t("heading1")}
               <br />
-              <span className="text-white/30">{t("heading2")}</span>
+              <span className="text-fg/30">{t("heading2")}</span>
             </h2>
-            <p className="mt-8 text-xl md:text-2xl text-white/60 font-light leading-relaxed font-serif italic">
+            <p className="mt-8 text-xl md:text-2xl text-fg/60 font-light leading-relaxed font-serif italic">
               {t("quote")}
             </p>
             <div className="mt-8 flex items-center gap-4">

@@ -28,17 +28,17 @@ export default function Services() {
           <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
             {t("sectionLabel")}
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl text-fg leading-tight">
             {t("heading1")}
             <br />
-            <span className="text-white/30">{t("heading2")}</span>
+            <span className="text-fg/30">{t("heading2")}</span>
           </h2>
-          <p className="mt-6 text-white/30 text-base leading-relaxed max-w-xl">
+          <p className="mt-6 text-fg/30 text-base leading-relaxed max-w-xl">
             {t("description")}
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/[0.02]">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-fg/[0.02]">
           {services.map((service, i) => (
             <ServiceCard
               key={service.slug}
