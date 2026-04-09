@@ -40,15 +40,15 @@ export default function Contact() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
+          <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
             {t("sectionLabel")}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl text-fg leading-tight">
             {t("heading1")}
             <br />
-            <span className="text-fg/30">{t("heading2")}</span>
+            <span className="text-fg-4">{t("heading2")}</span>
           </h2>
-          <p className="mt-6 text-fg/30 text-base leading-relaxed max-w-xl">
+          <p className="mt-6 text-fg-4 text-base leading-relaxed max-w-xl">
             {t("description")}
           </p>
         </motion.div>
@@ -69,7 +69,7 @@ export default function Contact() {
               <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
               <div className="relative z-10">
-                <p className="text-xs text-gold/40 tracking-[0.3em] uppercase mb-4">
+                <p className="text-xs text-gold-faint tracking-[0.3em] uppercase mb-4">
                   {loc.region}
                 </p>
                 <h3 className="font-serif text-2xl md:text-3xl text-fg mb-8">
@@ -80,24 +80,24 @@ export default function Contact() {
                   <div className="flex items-start gap-4">
                     <MapPin
                       size={18}
-                      className="text-gold/40 mt-0.5 shrink-0"
+                      className="text-gold-faint mt-0.5 shrink-0"
                     />
-                    <p className="text-fg/40 text-base">{loc.address}</p>
+                    <p className="text-fg-3 text-base">{loc.address}</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <Phone size={18} className="text-gold/40 shrink-0" />
+                    <Phone size={18} className="text-gold-faint shrink-0" />
                     <a
                       href={`tel:${loc.phone.replace(/\s/g, "")}`}
-                      className="text-fg/60 hover:text-gold transition-colors duration-300 text-base"
+                      className="text-fg-2 hover:text-gold transition-colors duration-300 text-base"
                     >
                       {loc.phone}
                     </a>
                   </div>
                   <div className="flex items-center gap-4">
-                    <Smartphone size={18} className="text-gold/40 shrink-0" />
+                    <Smartphone size={18} className="text-gold-faint shrink-0" />
                     <a
                       href={`tel:${loc.mobilePhone.replace(/\s/g, "")}`}
-                      className="text-fg/60 hover:text-gold transition-colors duration-300 text-base"
+                      className="text-fg-2 hover:text-gold transition-colors duration-300 text-base"
                     >
                       {loc.mobilePhone}
                     </a>

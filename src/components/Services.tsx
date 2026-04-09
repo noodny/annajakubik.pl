@@ -25,15 +25,15 @@ export default function Services() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl mb-20"
         >
-          <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
+          <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
             {t("sectionLabel")}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl text-fg leading-tight">
             {t("heading1")}
             <br />
-            <span className="text-fg/30">{t("heading2")}</span>
+            <span className="text-fg-4">{t("heading2")}</span>
           </h2>
-          <p className="mt-6 text-fg/30 text-base leading-relaxed max-w-xl">
+          <p className="mt-6 text-fg-4 text-base leading-relaxed max-w-xl">
             {t("description")}
           </p>
         </motion.div>

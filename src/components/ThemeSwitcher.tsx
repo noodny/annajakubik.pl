@@ -20,7 +20,7 @@ export default function ThemeSwitcher({
           : "Switch to dark mode"
       }
     >
-      {resolvedTheme === "dark" ? <Moon size={16} /> : <Sun size={16} />}
+      {resolvedTheme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
     </button>
   );
 }

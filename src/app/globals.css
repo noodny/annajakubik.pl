@@ -10,19 +10,27 @@
 
 /* Light mode (default) */
 :root {
-  --t-gold: #9e7c38;
-  --t-gold-light: #b89545;
-  --t-gold-dark: #846828;
+  --t-gold: #a07828;
+  --t-gold-light: #9e7c38;
+  --t-gold-dark: #6b4f10;
   --t-sage: #5a8a60;
   --t-sage-dark: #4a7a50;
   --t-charcoal: #f0ede6;
   --t-charcoal-light: #e8e4dc;
   --t-charcoal-dark: #f7f5f0;
-  --t-obsidian: #fdfcfa;
-  --t-deep-green: #e8f2ec;
+  --t-obsidian: #f8f6f1;
+  --t-deep-green: #a8a49c;
   --t-ivory: #f0ece4;
   --t-smoke: #7a766e;
   --t-fg: #1a1e1a;
+  --t-fg-2: #5e645e;
+  --t-fg-3: #676c67;
+  --t-fg-4: #848a84;
+  --t-fg-5: #aeb4ae;
+  --t-gold-muted: #835f15;
+  --t-gold-faint: #9a7840;
+  --t-cta: #917225;
+  --t-cta-text: #ffffff;
 }
 
 /* Dark mode */
@@ -40,6 +48,14 @@
   --t-ivory: #f0ece4;
   --t-smoke: #9a968e;
   --t-fg: #ffffff;
+  --t-fg-2: rgba(255, 255, 255, 0.6);
+  --t-fg-3: rgba(255, 255, 255, 0.4);
+  --t-fg-4: rgba(255, 255, 255, 0.3);
+  --t-fg-5: rgba(255, 255, 255, 0.18);
+  --t-gold-muted: rgba(201, 169, 110, 0.6);
+  --t-gold-faint: rgba(201, 169, 110, 0.4);
+  --t-cta: #c9a96e;
+  --t-cta-text: #0a0a0a;
 }
 
 @theme {
@@ -58,8 +74,18 @@
   --color-ivory: var(--t-ivory);
   --color-smoke: var(--t-smoke);
   --color-fg: var(--t-fg);
+  --color-fg-2: var(--t-fg-2);
+  --color-fg-3: var(--t-fg-3);
+  --color-fg-4: var(--t-fg-4);
+  --color-fg-5: var(--t-fg-5);
+  --color-gold-muted: var(--t-gold-muted);
+  --color-gold-faint: var(--t-gold-faint);
+  --color-cta: var(--t-cta);
+  --color-cta-text: var(--t-cta-text);
   --color-ink: #0a0a0a;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;

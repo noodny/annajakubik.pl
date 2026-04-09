@@ -39,19 +39,19 @@ export default function ServicePageContent({ slug }: { slug: string }) {
           >
             <Link
               href="/#services"
-              className="inline-flex items-center gap-2 text-sm text-fg/30 hover:text-gold transition-colors duration-300 mb-12"
+              className="inline-flex items-center gap-2 text-sm text-fg-4 hover:text-gold transition-colors duration-300 mb-12"
             >
               <ArrowLeft size={16} />
               <span>{t("backToAll")}</span>
             </Link>
 
-            <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-4">
               {ts(`${slug}.subtitle`)}
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-fg leading-tight">
               {ts(`${slug}.title`)}
             </h1>
-            <p className="mt-6 text-fg/40 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+            <p className="mt-6 text-fg-3 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
               {ts(`${slug}.lead`)}
             </p>
           </motion.div>
@@ -77,7 +77,7 @@ export default function ServicePageContent({ slug }: { slug: string }) {
                 <h2 className="font-serif text-2xl text-fg mb-4">
                   {section.heading}
                 </h2>
-                <p className="text-fg/40 text-base leading-relaxed">
+                <p className="text-fg-3 text-base leading-relaxed">
                   {section.body}
                 </p>
               </motion.div>
@@ -110,7 +110,7 @@ export default function ServicePageContent({ slug }: { slug: string }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="text-fg/20 text-sm tracking-[0.3em] uppercase mb-8"
+            className="text-fg-5 text-sm tracking-[0.3em] uppercase mb-8"
           >
             {t("nextService")}
           </motion.p>

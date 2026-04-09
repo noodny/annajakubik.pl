@@ -21,13 +21,13 @@ function TestimonialCard({ name, text, rating, source }: Testimonial) {
           <Star key={i} size={12} className="text-gold fill-gold" />
         ))}
       </div>
-      <p className="text-fg/50 text-lg leading-relaxed font-light">
+      <p className="text-fg-2 text-lg leading-relaxed font-light">
         &ldquo;{text}&rdquo;
       </p>
       <div className="mt-6 flex items-center gap-3">
         <div className="w-8 h-px bg-fg/10" />
-        <p className="text-fg/60 text-sm">{name}</p>
-        <span className="text-fg/15 text-xs">{source}</span>
+        <p className="text-fg-2 text-sm">{name}</p>
+        <span className="text-fg-5 text-xs">{source}</span>
       </div>
     </div>
   );
@@ -63,20 +63,20 @@ export default function Philosophy() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
+            <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
               {t("sectionLabel")}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-fg leading-tight">
               {t("heading1")}
               <br />
-              <span className="text-fg/30">{t("heading2")}</span>
+              <span className="text-fg-4">{t("heading2")}</span>
             </h2>
-            <p className="mt-8 text-xl md:text-2xl text-fg/60 font-light leading-relaxed font-serif italic">
+            <p className="mt-8 text-xl md:text-2xl text-fg-2 font-light leading-relaxed font-serif italic">
               {t("quote")}
             </p>
             <div className="mt-8 flex items-center gap-4">
               <div className="w-12 h-px bg-gold/30" />
-              <p className="text-sm text-gold/60 tracking-wide">
+              <p className="text-sm text-gold-muted tracking-wide">
                 {t("quoteAuthor")}
               </p>
             </div>

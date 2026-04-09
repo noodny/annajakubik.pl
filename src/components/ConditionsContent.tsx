@@ -60,7 +60,7 @@ export default function ConditionsContent() {
             <p className="font-serif text-3xl md:text-4xl text-gold">
               {s.value}
             </p>
-            <p className="text-fg/30 text-sm mt-2 leading-relaxed">
+            <p className="text-fg-4 text-sm mt-2 leading-relaxed">
               {s.label}
             </p>
           </div>
@@ -77,7 +77,7 @@ export default function ConditionsContent() {
         <h2 className="font-serif text-2xl md:text-3xl text-fg">
           {t("heading")}
         </h2>
-        <p className="mt-3 text-fg/30 text-base leading-relaxed max-w-xl">
+        <p className="mt-3 text-fg-4 text-base leading-relaxed max-w-xl">
           {t("description")}
         </p>
       </motion.div>
@@ -98,7 +98,7 @@ export default function ConditionsContent() {
             }}
             className="group p-8 bg-charcoal-dark border border-fg/[0.03] hover:border-fg/[0.08] transition-all duration-700"
           >
-            <p className="text-xs tracking-[0.2em] uppercase text-fg/20 mb-4">
+            <p className="text-xs tracking-[0.2em] uppercase text-fg-5 mb-4">
               {item.stage}
             </p>
             <p className={`text-lg tracking-widest mb-4 ${item.color}`}>
@@ -107,7 +107,7 @@ export default function ConditionsContent() {
             <h3 className="font-serif text-xl text-fg mb-3">
               {item.title}
             </h3>
-            <p className="text-fg/30 text-sm leading-relaxed">
+            <p className="text-fg-4 text-sm leading-relaxed">
               {item.description}
             </p>
           </motion.div>

@@ -86,19 +86,19 @@ export default function Education() {
                     i % 2 === 0 ? "lg:text-right lg:pr-16" : "lg:pl-16"
                   }`}
                 >
-                  <p className="text-gold/50 text-xs tracking-[0.3em] uppercase mb-3">
+                  <p className="text-gold-muted text-xs tracking-[0.3em] uppercase mb-3">
                     {item.year}
                   </p>
                   <h3 className="font-serif text-xl md:text-2xl text-fg mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-fg/30 text-sm leading-relaxed max-w-md inline-block">
+                  <p className="text-fg-4 text-sm leading-relaxed max-w-md inline-block">
                     {item.description}
                   </p>
 
                   {i === 2 && (
                     <div className="mt-8 space-y-4 max-w-md inline-block">
-                      <p className="text-gold/40 text-xs tracking-[0.2em] uppercase">
+                      <p className="text-gold-faint text-xs tracking-[0.2em] uppercase">
                         {t("selectedPublications")}
                       </p>
                       {publications.map((pub) => (
@@ -106,10 +106,10 @@ export default function Education() {
                           key={pub.title}
                           className="border-t border-fg/[0.04] pt-3"
                         >
-                          <p className="text-fg/50 text-sm leading-relaxed">
+                          <p className="text-fg-2 text-sm leading-relaxed">
                             {pub.title}
                           </p>
-                          <p className="text-fg/20 text-xs mt-1">
+                          <p className="text-fg-5 text-xs mt-1">
                             {pub.journal}, {pub.year}
                           </p>
                         </div>

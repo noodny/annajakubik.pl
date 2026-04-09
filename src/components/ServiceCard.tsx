@@ -80,15 +80,15 @@ export default function ServiceCard({
         <div className="relative z-10">
           <SvgIcon
             svg={iconSvg}
-            className="w-20 h-20 text-gold/50 group-hover:text-gold transition-colors duration-500 mb-6"
+            className="w-20 h-20 text-gold-muted group-hover:text-gold transition-colors duration-500 mb-6"
           />
           <h3 className="font-serif text-xl text-fg mb-3 group-hover:text-gold-light transition-colors duration-500">
             {service.title}
           </h3>
-          <p className="text-fg/30 text-sm leading-relaxed group-hover:text-fg/50 transition-colors duration-500">
+          <p className="text-fg-4 text-sm leading-relaxed group-hover:text-fg-2 transition-colors duration-500">
             {service.description}
           </p>
-          <div className="mt-6 flex items-center gap-2 text-gold/40 lg:text-gold/0 group-hover:text-gold/60 transition-all duration-500 text-xs tracking-wider uppercase">
+          <div className="mt-6 flex items-center gap-2 text-gold-faint lg:text-gold/0 group-hover:text-gold-muted transition-all duration-500 text-xs tracking-wider uppercase">
             <span>{t("learnMore")}</span>
             <ArrowRight
               size={14}

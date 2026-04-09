@@ -13,12 +13,12 @@ export default function Footer() {
             <span className="font-serif text-[1.6rem] text-fg tracking-wide">
               Anna Jakubik
             </span>
-            <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light">
+            <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light [text-shadow:0_0_1px_rgba(255,255,255,0.9)] dark:text-shadow-none">
               {t("subtitle")}
             </span>
           </div>
 
-          <p className="text-xs text-fg/15">
+          <p className="text-xs text-fg-5">
             &copy; {new Date().getFullYear()} annajakubik.pl
           </p>
         </div>

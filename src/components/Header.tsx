@@ -64,7 +64,7 @@ export default function Header() {
               <span className="font-serif text-[1.6rem] text-fg tracking-wide">
                 Anna Jakubik
               </span>
-              <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light">
+              <span className="text-[0.6rem] lg:text-xs text-gold/80 tracking-widest uppercase font-light [text-shadow:0_0_5px_rgba(255,255,255,0.5)] dark:text-shadow-none">
                 {t("subtitle")}
               </span>
             </a>
@@ -76,7 +76,7 @@ export default function Header() {
                   key={link.href}
                   href={isHome ? link.href : `/${link.href}`}
                   onClick={(e) => scrollToHash(e, link.href)}
-                  className="text-sm text-fg/50 hover:text-gold transition-colors duration-300 tracking-wide"
+                  className="text-sm text-fg-2 hover:text-gold transition-colors duration-300 tracking-wide"
                 >
                   {link.label}
                 </a>
@@ -88,7 +88,7 @@ export default function Header() {
               >
                 {t("bookVisit")}
               </a>
-              <ThemeSwitcher className="text-fg/50 hover:text-fg/80" />
+              <ThemeSwitcher className="text-fg-2 hover:text-fg/80" />
               <LanguageSwitcher />
             </div>
 
@@ -125,7 +125,7 @@ export default function Header() {
                       scrollToHash(e, link.href);
                       setMobileOpen(false);
                     }}
-                    className="text-lg text-fg/60 hover:text-gold transition-colors tracking-wide"
+                    className="text-lg text-fg-2 hover:text-gold transition-colors tracking-wide"
                   >
                     {link.label}
                   </a>
@@ -146,7 +146,7 @@ export default function Header() {
                 </a>
                 <div className="flex items-center gap-6">
                   <LanguageSwitcherInline mobile />
-                  <ThemeSwitcher className="text-fg/50 hover:text-fg/80" />
+                  <ThemeSwitcher className="text-fg-2 hover:text-fg/80" />
                 </div>
               </div>
             </div>

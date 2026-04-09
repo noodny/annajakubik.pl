@@ -46,11 +46,11 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left: Label + Photo placeholder */}
           <FadeInSection>
-            <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
+            <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
               {t("sectionLabel")}
             </p>
             <h2 className="font-serif text-fg leading-tight">
-              <span className="text-2xl text-fg/30">{t("degree")}</span>
+              <span className="text-2xl text-fg-4">{t("degree")}</span>
               <br />
               <span className="text-4xl md:text-5xl lg:text-6xl">
                 Anna Jakubik
@@ -67,7 +67,7 @@ export default function About() {
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, 448px"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark/80 via-transparent to-transparent dark:block hidden" />
               {/* Accent border */}
               <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-gold/40 via-gold/20 to-transparent" />
               <div className="absolute bottom-0 left-0 h-full w-px bg-gradient-to-t from-gold/40 via-gold/20 to-transparent" />
@@ -83,7 +83,7 @@ export default function About() {
             </FadeInSection>
 
             <FadeInSection delay={0.4}>
-              <div className="mt-12 space-y-6 text-fg/40 text-base leading-relaxed">
+              <div className="mt-12 space-y-6 text-fg-3 text-base leading-relaxed">
                 <p>{t("bio1")}</p>
                 <p>{t("bio2")}</p>
                 <p>{t("bio3")}</p>
@@ -97,7 +97,7 @@ export default function About() {
             {stats.map((stat) => (
               <div key={stat.label} className="border-t border-fg/10 pt-4">
                 <p className="font-serif text-2xl text-gold">{stat.number}</p>
-                <p className="text-xs text-fg/30 mt-1 tracking-wide uppercase">
+                <p className="text-xs text-fg-4 mt-1 tracking-wide uppercase">
                   {stat.label}
                 </p>
               </div>

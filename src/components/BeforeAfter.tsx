@@ -51,13 +51,13 @@ export default function BeforeAfter({
       className="relative pbe-24 lg:pbe-32"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4">
+        <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-4">
           {t("sectionLabel")}
         </p>
         <h2 className="font-serif text-3xl md:text-4xl text-fg mb-4">
           {label}
         </h2>
-        <p className="text-fg/40 text-base mb-12 max-w-xl">
+        <p className="text-fg-3 text-base mb-12 max-w-xl">
           {t("sliderHint")}
         </p>
 

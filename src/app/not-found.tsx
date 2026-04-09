@@ -10,19 +10,20 @@ export default async function RootNotFound() {
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
-      <body className="bg-[#080a08] text-white antialiased">
+    <html lang={locale} suppressHydrationWarning>
+      <body className="bg-obsidian text-fg antialiased">
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})()` }} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <div className="min-h-[70vh] flex items-center justify-center">
             <div className="text-center px-6">
-              <p className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-6">
+              <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
                 404
               </p>
-              <h1 className="font-serif text-4xl md:text-5xl text-white leading-tight mb-4">
+              <h1 className="font-serif text-4xl md:text-5xl text-fg leading-tight mb-4">
                 {(messages as Record<string, Record<string, string>>).NotFound.title}
               </h1>
-              <p className="text-white/40 text-lg font-light max-w-md mx-auto mb-12">
+              <p className="text-fg-3 text-lg font-light max-w-md mx-auto mb-12">
                 {(messages as Record<string, Record<string, string>>).NotFound.description}
               </p>
               <a
