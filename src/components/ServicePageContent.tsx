@@ -38,7 +38,7 @@ export default function ServicePageContent({ slug }: { slug: string }) {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <Link
-              href="/#services"
+              href={{ pathname: "/" as const, hash: "services" }}
               className="inline-flex items-center gap-2 text-sm text-fg-4 hover:text-gold transition-colors duration-300 mb-12"
             >
               <ArrowLeft size={16} />

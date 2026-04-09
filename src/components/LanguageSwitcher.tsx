@@ -1,35 +1,64 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useLocale } from "next-intl";
+import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { getInternalSlug, getLocalizedSlug } from "@/lib/services";
 import { ChevronDown } from "lucide-react";
 
 const labels: Record<string, string> = { pl: "PL", en: "EN", es: "ES" };
 
-export function LanguageSwitcherInline({ mobile = false }: { mobile?: boolean }) {
+function useLocaleSwitch() {
   const locale = useLocale();
   const pathname = usePathname();
+  const params = useParams();
   const router = useRouter();
 
-  function onChange(newLocale: string) {
-    router.replace(pathname, { locale: newLocale });
-  }
+  const switchLocale = useCallback(
+    (newLocale: string) => {
+      if (params?.slug) {
+        const internalSlug = getInternalSlug(params.slug as string, locale);
+        if (internalSlug) {
+          router.replace(
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            {
+              pathname: "/leczenie/[slug]",
+              params: { slug: getLocalizedSlug(internalSlug, newLocale) },
+            } as any,
+            { locale: newLocale },
+          );
+          return;
+        }
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      router.replace(pathname as any, { locale: newLocale });
+    },
+    [locale, pathname, params, router],
+  );
+
+  return { locale, switchLocale };
+}
+
+export function LanguageSwitcherInline({
+  mobile = false,
+}: {
+  mobile?: boolean;
+}) {
+  const { locale, switchLocale } = useLocaleSwitch();
 
   return (
     <div className={`flex items-center ${mobile ? "gap-4" : "gap-2"}`}>
       {routing.locales.map((l) => (
         <button
           key={l}
-          onClick={() => onChange(l)}
+          onClick={() => switchLocale(l)}
           className={`tracking-wider uppercase cursor-pointer transition-colors duration-300 ${
             mobile
               ? "w-10 h-10 flex items-center justify-center text-sm"
               : "text-xs"
-          } ${
-            l === locale ? "text-gold" : "text-fg-4 hover:text-fg-2"
-          }`}
+          } ${l === locale ? "text-gold" : "text-fg-4 hover:text-fg-2"}`}
         >
           {labels[l]}
         </button>
@@ -39,9 +68,7 @@ export function LanguageSwitcherInline({ mobile = false }: { mobile?: boolean })
 }
 
 export default function LanguageSwitcher() {
-  const locale = useLocale();
-  const pathname = usePathname();
-  const router = useRouter();
+  const { locale, switchLocale } = useLocaleSwitch();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -56,7 +83,7 @@ export default function LanguageSwitcher() {
   }, []);
 
   function onChange(newLocale: string) {
-    router.replace(pathname, { locale: newLocale });
+    switchLocale(newLocale);
     setOpen(false);
   }
 

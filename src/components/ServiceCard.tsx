@@ -2,9 +2,10 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
+import { getLocalizedSlug } from "@/lib/services";
 
 import icon01 from "../assets/icons/01.svg?raw";
 import icon02 from "../assets/icons/02.svg?raw";
@@ -55,6 +56,7 @@ export default function ServiceCard({
   index?: number;
 }) {
   const t = useTranslations("Services");
+  const locale = useLocale();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const iconSvg = iconMap[service.icon] ?? service.icon;
@@ -71,7 +73,7 @@ export default function ServiceCard({
       }}
     >
       <Link
-        href={`/leczenie/${service.slug}`}
+        href={{ pathname: "/leczenie/[slug]" as const, params: { slug: getLocalizedSlug(service.slug, locale) } }}
         className="group relative block p-8 bg-charcoal/50 border border-fg/[0.04] hover:border-gold/20 transition-all duration-700 h-full"
       >
         {/* Hover glow */}

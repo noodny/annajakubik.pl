@@ -41,6 +41,47 @@ export function getServiceMeta(slug: string): ServiceMeta | undefined {
   return services.find((s) => s.slug === slug);
 }
 
+const slugTranslations: Record<string, Record<string, string>> = {
+  "zapalenie-dziasel": { en: "gingivitis", es: "gingivitis" },
+  "zapalenie-przyzebia": { en: "periodontitis", es: "periodontitis" },
+  "recesje-dziasel": { en: "gum-recession", es: "recesion-gingival" },
+  "augmentacja-dziasel": { en: "gum-augmentation", es: "aumento-gingival" },
+  "wydluzenie-koron-klinicznych": {
+    en: "clinical-crown-lengthening",
+    es: "alargamiento-de-corona-clinica",
+  },
+  "tkanki-wokol-implantow": {
+    en: "peri-implant-tissues",
+    es: "tejidos-periimplantarios",
+  },
+  "wedzidelka-warg-i-jezyka": {
+    en: "lip-and-tongue-frenula",
+    es: "frenillos-labiales-y-linguales",
+  },
+  "choroby-blony-sluzowej": {
+    en: "oral-mucosal-diseases",
+    es: "enfermedades-de-la-mucosa-oral",
+  },
+};
+
+export function getLocalizedSlug(internalSlug: string, locale: string): string {
+  if (locale === "pl") return internalSlug;
+  return slugTranslations[internalSlug]?.[locale] ?? internalSlug;
+}
+
+export function getInternalSlug(
+  localizedSlug: string,
+  locale: string,
+): string | undefined {
+  if (locale === "pl") {
+    return services.find((s) => s.slug === localizedSlug)?.slug;
+  }
+  for (const [internal, translations] of Object.entries(slugTranslations)) {
+    if (translations[locale] === localizedSlug) return internal;
+  }
+  return undefined;
+}
+
 export function getAllServiceSlugs(): string[] {
   return services.map((s) => s.slug);
 }
