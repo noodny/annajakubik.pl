@@ -7,6 +7,7 @@ import {
   useState,
   useCallback,
 } from "react";
+import { ENABLE_THEME_SWITCHING } from "@/config/features";
 
 type Theme = "system" | "light" | "dark";
 type ResolvedTheme = "light" | "dark";
@@ -41,6 +42,11 @@ export default function ThemeProvider({
   const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("dark");
 
   const applyTheme = useCallback((t: Theme) => {
+    if (!ENABLE_THEME_SWITCHING) {
+      setResolvedTheme("dark");
+      document.documentElement.classList.add("dark");
+      return;
+    }
     const resolved = t === "system" ? getSystemTheme() : t;
     setResolvedTheme(resolved);
     document.documentElement.classList.toggle("dark", resolved === "dark");
@@ -48,6 +54,7 @@ export default function ThemeProvider({
 
   const setTheme = useCallback(
     (t: Theme) => {
+      if (!ENABLE_THEME_SWITCHING) return;
       setThemeState(t);
       if (t === "system") {
         localStorage.removeItem("theme");
@@ -60,6 +67,10 @@ export default function ThemeProvider({
   );
 
   useEffect(() => {
+    if (!ENABLE_THEME_SWITCHING) {
+      document.documentElement.classList.add("dark");
+      return;
+    }
     const stored = localStorage.getItem("theme");
     const initial: Theme =
       stored === "light" || stored === "dark" ? stored : "system";
@@ -68,6 +79,7 @@ export default function ThemeProvider({
   }, [applyTheme]);
 
   useEffect(() => {
+    if (!ENABLE_THEME_SWITCHING) return;
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     const handler = () => {
       if (theme === "system") applyTheme("system");

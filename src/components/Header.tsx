@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher, { LanguageSwitcherInline } from "./LanguageSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { ENABLE_THEME_SWITCHING } from "@/config/features";
 
 export default function Header() {
   const t = useTranslations("Header");
@@ -88,7 +89,9 @@ export default function Header() {
               >
                 {t("bookVisit")}
               </a>
-              <ThemeSwitcher className="text-fg-2 hover:text-fg/80" />
+              {ENABLE_THEME_SWITCHING && (
+                <ThemeSwitcher className="text-fg-2 hover:text-fg/80" />
+              )}
               <LanguageSwitcher />
             </div>
 
@@ -146,7 +149,9 @@ export default function Header() {
                 </a>
                 <div className="flex items-center gap-6">
                   <LanguageSwitcherInline mobile />
-                  <ThemeSwitcher className="text-fg-2 hover:text-fg/80" />
+                  {ENABLE_THEME_SWITCHING && (
+                    <ThemeSwitcher className="text-fg-2 hover:text-fg/80" />
+                  )}
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
+import { ENABLE_THEME_SWITCHING } from "@/config/features";
 
 export default async function RootNotFound() {
   const locale = routing.defaultLocale;
@@ -12,7 +13,9 @@ export default async function RootNotFound() {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className="bg-obsidian text-fg antialiased">
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})()` }} />
+        <script dangerouslySetInnerHTML={{ __html: ENABLE_THEME_SWITCHING
+          ? `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})()`
+          : `document.documentElement.classList.add('dark')` }} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <div className="min-h-[70vh] flex items-center justify-center">

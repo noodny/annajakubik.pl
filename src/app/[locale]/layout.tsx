@@ -4,12 +4,15 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import ThemeProvider from "@/components/ThemeProvider";
+import { ENABLE_THEME_SWITCHING } from "@/config/features";
 import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})()`;
+const themeScript = ENABLE_THEME_SWITCHING
+  ? `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})()`
+  : `document.documentElement.classList.add('dark')`;
 
 
 type Props = { params: Promise<{ locale: string }> };
