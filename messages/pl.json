@@ -135,7 +135,7 @@
     "zapalenie-dziasel": {
       "title": "Zapalenie dziąseł",
       "subtitle": "Gingivitis",
-      "description": "Kompleksowa diagnostyka i leczenie stanów zapalnych dziąseł — od skalingu po zaawansowane procedury chirurgiczne.",
+      "description": "Krwawiące dziąsła to sygnał ostrzegawczy. Wczesna interwencja pozwala całkowicie cofnąć stan zapalny.",
       "lead": "Zapalenie dziąseł to najwcześniejszy i w pełni odwracalny etap choroby przyzębia. Objawia się krwawieniem, zaczerwienieniem i obrzękiem dziąseł. Wczesna interwencja pozwala całkowicie zatrzymać proces chorobowy.",
       "beforeAfterLabel": "",
       "s1Heading": "Objawy",
@@ -148,7 +148,7 @@
     "zapalenie-przyzebia": {
       "title": "Zapalenie przyzębia",
       "subtitle": "Periodontitis",
-      "description": "Diagnostyka i leczenie choroby przyzębia — zapobieganie powstawaniu kieszeni przyzębnych, utracie kości i ruchomości zębów.",
+      "description": "Choroba przyzębia zagraża nie tylko zębom — ale całemu organizmowi. Skuteczne leczenie zatrzymuje jej progresję.",
       "lead": "Zapalenie przyzębia to zaawansowana forma choroby, w której stan zapalny rozprzestrzenia się na tkanki podtrzymujące ząb — kość wyrostka zębodołowego, ozębną i cement korzeniowy. Nieleczone prowadzi do utraty zębów.",
       "beforeAfterLabel": "",
       "s1Heading": "Progresja choroby",
@@ -163,7 +163,7 @@
     "recesje-dziasel": {
       "title": "Recesje dziąseł",
       "subtitle": "Gingival recession",
-      "description": "Precyzyjne techniki mikrochirurgiczne z wykorzystaniem przeszczepów tkanki łącznej — pokrycie odsłoniętych szyjek zębowych.",
+      "description": "Odsłonięte szyjki zębowe powodują ból i psują estetykę uśmiechu. Mikrochirurgia przywraca naturalną linię dziąsła.",
       "lead": "Recesja dziąsła to cofnięcie się brzegu dziąsłowego, które odsłania szyjkę lub korzeń zęba. Powoduje nadwrażliwość, pogorszenie estetyki i zwiększone ryzyko próchnicy korzeniowej.",
       "beforeAfterLabel": "Zabieg pokrycia recesji",
       "s1Heading": "Przyczyny",
@@ -176,7 +176,7 @@
     "augmentacja-dziasel": {
       "title": "Augmentacja dziąseł",
       "subtitle": "Soft tissue augmentation",
-      "description": "Pogrubienie dziąsła przed leczeniem ortodontycznym — zapobieganie pogłębianiu recesji podczas noszenia aparatu stałego.",
+      "description": "Cienkie dziąsło to ryzyko recesji — szczególnie przy leczeniu ortodontycznym. Zabieg pogrubienia zapewnia ochronę na lata.",
       "lead": "Augmentacja dziąseł to zabieg pogrubienia cienkiego dziąsła, szczególnie istotny przed planowanym leczeniem ortodontycznym. Odpowiednio gruba strefa dziąsła związanego stanowi ochronę przed powstaniem recesji.",
       "beforeAfterLabel": "",
       "s1Heading": "Wskazania",
@@ -189,7 +189,7 @@
     "wydluzenie-koron-klinicznych": {
       "title": "Wydłużenie koron klinicznych",
       "subtitle": "Crown lengthening",
-      "description": "Chirurgiczne modelowanie dziąsła i kości w celu odsłonięcia większej części zęba — przywrócenie proporcjonalnej, zbalansowanej estetyki.",
+      "description": "Nadmiar dziąsła ukrywa naturalną długość zębów. Precyzyjny zabieg przywraca harmonijny, proporcjonalny uśmiech.",
       "lead": "Wydłużenie korony klinicznej to precyzyjny zabieg chirurgiczny polegający na usunięciu nadmiaru dziąsła i/lub kości, aby odsłonić większą powierzchnię zęba. Stosowany zarówno ze wskazań estetycznych, jak i protetycznych.",
       "beforeAfterLabel": "Zabieg wydłużenia koron klinicznych",
       "s1Heading": "Wskazania estetyczne",
@@ -202,7 +202,7 @@
     "tkanki-wokol-implantow": {
       "title": "Tkanki wokół implantów",
       "subtitle": "Peri-implant tissues",
-      "description": "Specjalistyczne leczenie stanów zapalnych tkanek wokół implantów — ochrona integracji i długoterminowego powodzenia leczenia.",
+      "description": "Stan zapalny wokół implantu może prowadzić do jego utraty. Specjalistyczne leczenie chroni Twoją inwestycję.",
       "lead": "Zapalenie tkanek wokół implantów (mucositis i peri-implantitis) to narastający problem w implantologii. Jako periodontolog specjalizuję się w diagnostyce i leczeniu tych stanów, które zagrażają długoterminowemu utrzymaniu implantów.",
       "beforeAfterLabel": "",
       "s1Heading": "Mucositis i peri-implantitis",
@@ -215,7 +215,7 @@
     "wedzidelka-warg-i-jezyka": {
       "title": "Wędzidełka warg i języka",
       "subtitle": "Frenectomy",
-      "description": "Frenulektomia i miofrenuloplastyka przy skróconym wędzidełku — przywrócenie prawidłowej funkcji mowy, oddychania i połykania.",
+      "description": "Skrócone wędzidełko wpływa na mowę, oddychanie i karmienie. Szybki zabieg przywraca pełną swobodę ruchu.",
       "lead": "Skrócone wędzidełko wargi lub języka może wpływać na karmienie piersią u niemowląt, rozwój mowy u dzieci oraz komfort i funkcję u dorosłych. Zabieg frenulektomii przywraca prawidłową ruchomość i funkcję.",
       "beforeAfterLabel": "",
       "s1Heading": "Wędzidełko języka (ankyloglossia)",
@@ -228,7 +228,7 @@
     "choroby-blony-sluzowej": {
       "title": "Choroby błony śluzowej",
       "subtitle": "Oral mucosal diseases",
-      "description": "Diagnostyka i leczenie aft, zmian zapalnych i chorób błony śluzowej jamy ustnej — gdzie medycyna stomatologiczna spotyka codzienny komfort.",
+      "description": "Nawracające afty, zmiany na błonie śluzowej, przewlekły dyskomfort — trafna diagnoza to klucz do skutecznego leczenia.",
       "lead": "Choroby błony śluzowej jamy ustnej obejmują szerokie spektrum zmian — od nawracających aft, przez liszaj płaski, po zmiany przedrakowe. Precyzyjna diagnostyka i wczesne leczenie są kluczowe dla zdrowia i komfortu pacjenta.",
       "beforeAfterLabel": "",
       "s1Heading": "Najczęstsze schorzenia",

@@ -135,7 +135,7 @@
     "zapalenie-dziasel": {
       "title": "Gingivitis",
       "subtitle": "Gingivitis",
-      "description": "Diagnóstico y tratamiento integral de la inflamación de las encías: desde el raspado hasta procedimientos quirúrgicos avanzados.",
+      "description": "Las encías sangrantes son una señal de alerta. La intervención temprana puede revertir completamente la inflamación.",
       "lead": "La gingivitis es la etapa más temprana y totalmente reversible de la enfermedad periodontal. Se manifiesta con sangrado, enrojecimiento e hinchazón de las encías. La intervención temprana permite detener completamente el proceso patológico.",
       "beforeAfterLabel": "",
       "s1Heading": "Síntomas",
@@ -148,7 +148,7 @@
     "zapalenie-przyzebia": {
       "title": "Periodontitis",
       "subtitle": "Periodontitis",
-      "description": "Diagnóstico y tratamiento de la enfermedad periodontal: prevención de la formación de bolsas, pérdida ósea y movilidad dental.",
+      "description": "La enfermedad periodontal amenaza no solo los dientes, sino todo el organismo. Un tratamiento eficaz detiene su progresión.",
       "lead": "La periodontitis es una forma avanzada de la enfermedad en la que la inflamación se extiende a los tejidos de soporte del diente: hueso alveolar, ligamento periodontal y cemento radicular. Sin tratamiento, conduce a la pérdida dental.",
       "beforeAfterLabel": "",
       "s1Heading": "Progresión de la enfermedad",
@@ -163,7 +163,7 @@
     "recesje-dziasel": {
       "title": "Recesión gingival",
       "subtitle": "Recesión gingival",
-      "description": "Técnicas microquirúrgicas precisas con injertos de tejido conectivo: cobertura de raíces dentales expuestas.",
+      "description": "Las raíces expuestas causan dolor y afectan la estética de tu sonrisa. La microcirugía restaura la línea natural de la encía.",
       "lead": "La recesión gingival es el retroceso del margen de la encía, que expone el cuello o la raíz del diente. Causa sensibilidad, deterioro estético y mayor riesgo de caries radicular.",
       "beforeAfterLabel": "Procedimiento de cobertura de recesión",
       "s1Heading": "Causas",
@@ -176,7 +176,7 @@
     "augmentacja-dziasel": {
       "title": "Aumento gingival",
       "subtitle": "Aumento de tejido blando",
-      "description": "Engrosamiento de la encía antes del tratamiento ortodóntico: prevención del empeoramiento de la recesión durante el uso de brackets.",
+      "description": "Las encías finas suponen un riesgo de recesión, especialmente con ortodoncia. El engrosamiento ofrece protección duradera.",
       "lead": "El aumento gingival es un procedimiento de engrosamiento de la encía fina, especialmente importante antes de un tratamiento ortodóntico planificado. Una zona adecuadamente gruesa de encía adherida proporciona protección contra la recesión.",
       "beforeAfterLabel": "",
       "s1Heading": "Indicaciones",
@@ -189,7 +189,7 @@
     "wydluzenie-koron-klinicznych": {
       "title": "Alargamiento de corona clínica",
       "subtitle": "Alargamiento de corona",
-      "description": "Remodelación quirúrgica de la encía y el hueso para exponer más superficie dental: restauración de una estética proporcional y equilibrada.",
+      "description": "El exceso de encía oculta la longitud natural de los dientes. Un procedimiento preciso devuelve una sonrisa armoniosa y proporcionada.",
       "lead": "El alargamiento de corona clínica es un procedimiento quirúrgico preciso que consiste en eliminar el exceso de encía y/o hueso para exponer una mayor superficie dental. Se utiliza tanto por indicaciones estéticas como protésicas.",
       "beforeAfterLabel": "Procedimiento de alargamiento de corona",
       "s1Heading": "Indicaciones estéticas",
@@ -202,7 +202,7 @@
     "tkanki-wokol-implantow": {
       "title": "Tejidos periimplantarios",
       "subtitle": "Tejidos periimplantarios",
-      "description": "Tratamiento especializado de la inflamación periimplantaria: protección de la integración y el éxito del tratamiento a largo plazo.",
+      "description": "La inflamación alrededor de un implante puede provocar su pérdida. El tratamiento especializado protege tu inversión.",
       "lead": "La inflamación de los tejidos periimplantarios (mucositis y periimplantitis) es un problema creciente en implantología. Como periodoncista, me especializo en el diagnóstico y tratamiento de estas afecciones que amenazan la supervivencia del implante a largo plazo.",
       "beforeAfterLabel": "",
       "s1Heading": "Mucositis y periimplantitis",
@@ -215,7 +215,7 @@
     "wedzidelka-warg-i-jezyka": {
       "title": "Frenillos labiales y linguales",
       "subtitle": "Frenectomía",
-      "description": "Frenectomía y miofrenuloplastia para frenillo acortado: restauración de la función adecuada del habla, la respiración y la deglución.",
+      "description": "Un frenillo acortado afecta el habla, la respiración y la alimentación. Un procedimiento rápido devuelve la plena libertad de movimiento.",
       "lead": "Un frenillo labial o lingual acortado puede afectar la lactancia en bebés, el desarrollo del habla en niños y la comodidad y función en adultos. La frenectomía restaura la movilidad y función adecuadas.",
       "beforeAfterLabel": "",
       "s1Heading": "Frenillo lingual (anquiloglosia)",
@@ -228,7 +228,7 @@
     "choroby-blony-sluzowej": {
       "title": "Enfermedades de la mucosa oral",
       "subtitle": "Enfermedades de la mucosa oral",
-      "description": "Diagnóstico y tratamiento de aftas, lesiones inflamatorias y enfermedades de la mucosa oral: donde la odontología se encuentra con el confort diario.",
+      "description": "Aftas recurrentes, lesiones en la mucosa, molestias crónicas: un diagnóstico preciso es la clave para un tratamiento eficaz.",
       "lead": "Las enfermedades de la mucosa oral abarcan un amplio espectro de afecciones, desde aftas recurrentes, pasando por liquen plano, hasta lesiones precancerosas. Un diagnóstico preciso y un tratamiento temprano son cruciales para la salud y el confort del paciente.",
       "beforeAfterLabel": "",
       "s1Heading": "Afecciones más frecuentes",

@@ -135,7 +135,7 @@
     "zapalenie-dziasel": {
       "title": "Gingivitis",
       "subtitle": "Gingivitis",
-      "description": "Comprehensive diagnostics and treatment of gum inflammation — from scaling to advanced surgical procedures.",
+      "description": "Bleeding gums are a warning sign. Early intervention can fully reverse the inflammation.",
       "lead": "Gingivitis is the earliest and fully reversible stage of periodontal disease. It manifests as bleeding, redness, and swelling of the gums. Early intervention allows the disease process to be completely stopped.",
       "beforeAfterLabel": "",
       "s1Heading": "Symptoms",
@@ -148,7 +148,7 @@
     "zapalenie-przyzebia": {
       "title": "Periodontitis",
       "subtitle": "Periodontitis",
-      "description": "Diagnosis and treatment of periodontal disease — preventing pocket formation, bone loss, and tooth mobility.",
+      "description": "Periodontal disease threatens not just your teeth — but your whole body. Effective treatment stops its progression.",
       "lead": "Periodontitis is an advanced form of disease in which inflammation spreads to the tooth-supporting tissues — alveolar bone, periodontal ligament, and root cementum. Left untreated, it leads to tooth loss.",
       "beforeAfterLabel": "",
       "s1Heading": "Disease progression",
@@ -163,7 +163,7 @@
     "recesje-dziasel": {
       "title": "Gum recession",
       "subtitle": "Gingival recession",
-      "description": "Precise microsurgical techniques using connective tissue grafts — coverage of exposed tooth roots.",
+      "description": "Exposed tooth roots cause pain and compromise your smile. Microsurgery restores the natural gum line.",
       "lead": "Gum recession is the retreat of the gingival margin, exposing the neck or root of a tooth. It causes sensitivity, aesthetic deterioration, and increased risk of root caries.",
       "beforeAfterLabel": "Recession coverage procedure",
       "s1Heading": "Causes",
@@ -176,7 +176,7 @@
     "augmentacja-dziasel": {
       "title": "Gum augmentation",
       "subtitle": "Soft tissue augmentation",
-      "description": "Gum thickening before orthodontic treatment — preventing recession worsening during braces.",
+      "description": "Thin gums put you at risk of recession — especially with orthodontic treatment. Augmentation provides lasting protection.",
       "lead": "Gum augmentation is a procedure to thicken thin gingiva, particularly important before planned orthodontic treatment. An adequately thick zone of attached gingiva provides protection against recession.",
       "beforeAfterLabel": "",
       "s1Heading": "Indications",
@@ -189,7 +189,7 @@
     "wydluzenie-koron-klinicznych": {
       "title": "Clinical crown lengthening",
       "subtitle": "Crown lengthening",
-      "description": "Surgical gum and bone recontouring to expose more of the tooth — restoring proportional, balanced aesthetics.",
+      "description": "Excess gum tissue hides the natural length of your teeth. A precise procedure restores a harmonious, proportional smile.",
       "lead": "Clinical crown lengthening is a precise surgical procedure involving removal of excess gum and/or bone to expose a greater tooth surface. Used for both aesthetic and prosthetic indications.",
       "beforeAfterLabel": "Crown lengthening procedure",
       "s1Heading": "Aesthetic indications",
@@ -202,7 +202,7 @@
     "tkanki-wokol-implantow": {
       "title": "Peri-implant tissues",
       "subtitle": "Peri-implant tissues",
-      "description": "Specialist treatment of peri-implant inflammation — protecting integration and long-term treatment success.",
+      "description": "Inflammation around an implant can lead to its loss. Specialist treatment protects your investment.",
       "lead": "Peri-implant tissue inflammation (mucositis and peri-implantitis) is a growing problem in implantology. As a periodontist, I specialise in diagnosing and treating these conditions that threaten long-term implant survival.",
       "beforeAfterLabel": "",
       "s1Heading": "Mucositis and peri-implantitis",
@@ -215,7 +215,7 @@
     "wedzidelka-warg-i-jezyka": {
       "title": "Lip and tongue frenula",
       "subtitle": "Frenectomy",
-      "description": "Frenectomy and myofrenuloplasty for shortened frenulum — restoring proper function of speech, breathing, and swallowing.",
+      "description": "A shortened frenulum affects speech, breathing, and feeding. A quick procedure restores full freedom of movement.",
       "lead": "A shortened lip or tongue frenulum can affect breastfeeding in infants, speech development in children, and comfort and function in adults. Frenectomy restores proper mobility and function.",
       "beforeAfterLabel": "",
       "s1Heading": "Tongue-tie (ankyloglossia)",
@@ -228,7 +228,7 @@
     "choroby-blony-sluzowej": {
       "title": "Oral mucosal diseases",
       "subtitle": "Oral mucosal diseases",
-      "description": "Diagnosis and treatment of aphthae, inflammatory lesions, and oral mucosal diseases — where dental medicine meets everyday comfort.",
+      "description": "Recurring aphthae, mucosal lesions, chronic discomfort — an accurate diagnosis is the key to effective treatment.",
       "lead": "Oral mucosal diseases encompass a wide spectrum of conditions — from recurrent aphthae, through lichen planus, to precancerous lesions. Precise diagnostics and early treatment are crucial for patient health and comfort.",
       "beforeAfterLabel": "",
       "s1Heading": "Most common conditions",
