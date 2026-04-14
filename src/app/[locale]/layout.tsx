@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import ThemeProvider from "@/components/ThemeProvider";
@@ -9,11 +13,11 @@ import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const themeScript = ENABLE_THEME_SWITCHING
   ? `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})()`
   : `document.documentElement.classList.add('dark')`;
-
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -71,6 +75,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <body className="bg-obsidian text-fg antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <Header />
