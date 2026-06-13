@@ -1,10 +1,9 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Star } from "lucide-react";
 import { Carousel } from "./Carousel";
+import Reveal from "./Reveal";
 
 interface Testimonial {
   name: string;
@@ -35,8 +34,6 @@ function TestimonialCard({ name, text, rating, source }: Testimonial) {
 
 export default function Philosophy() {
   const t = useTranslations("Philosophy");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const testimonials: Testimonial[] = [
     { name: t("t1Name"), text: t("t1Text"), rating: 5, source: t("t1Source") },
@@ -57,12 +54,7 @@ export default function Philosophy() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left: heading + quote */}
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <Reveal>
             <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
               {t("sectionLabel")}
             </p>
@@ -80,26 +72,17 @@ export default function Philosophy() {
                 {t("quoteAuthor")}
               </p>
             </div>
-          </motion.div>
+          </Reveal>
 
           {/* Right: testimonials carousel */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.3,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="lg:pt-8 self-end"
-          >
+          <Reveal y={30} delay={0.3} className="lg:pt-8 self-end">
             <Carousel
               items={testimonials}
               ItemComponent={TestimonialCard}
               autoScroll
               hasNavigation
             />
-          </motion.div>
+          </Reveal>
         </div>
       </div>
     </section>

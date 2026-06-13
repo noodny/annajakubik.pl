@@ -1,8 +1,5 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { useTranslations } from "next-intl";
+import Reveal from "./Reveal";
 
 const publications = [
   {
@@ -30,8 +27,6 @@ const publications = [
 
 export default function Education() {
   const t = useTranslations("Education");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const milestones = [
     {
@@ -58,19 +53,13 @@ export default function Education() {
           {/* Vertical line */}
           <div className="absolute left-[19px] lg:left-1/2 top-0 bottom-0 w-px bg-fg/[0.06]" />
 
-          <div className="space-y-16 lg:space-y-24" ref={ref}>
+          <div className="space-y-16 lg:space-y-24">
             {milestones.map((item, i) => (
-              <motion.div
+              <Reveal
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                }
-                transition={{
-                  duration: 0.6,
-                  delay: 0.2 + i * 0.15,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
+                y={30}
+                duration={0.6}
+                delay={0.2 + i * 0.15}
                 className={`relative flex flex-col lg:flex-row items-start gap-8 lg:gap-16 ${
                   i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
@@ -117,7 +106,7 @@ export default function Education() {
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>

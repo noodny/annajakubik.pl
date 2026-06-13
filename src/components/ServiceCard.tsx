@@ -1,11 +1,10 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import { getLocalizedSlug } from "@/lib/services";
+import Reveal from "./Reveal";
 
 import icon01 from "../assets/icons/01.svg?raw";
 import icon02 from "../assets/icons/02.svg?raw";
@@ -57,21 +56,10 @@ export default function ServiceCard({
 }) {
   const t = useTranslations("Services");
   const locale = useLocale();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
   const iconSvg = iconMap[service.icon] ?? service.icon;
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{
-        duration: 0.6,
-        delay: index * 0.08,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-    >
+    <Reveal y={30} duration={0.6} delay={index * 0.08}>
       <Link
         href={{ pathname: "/leczenie/[slug]" as const, params: { slug: getLocalizedSlug(service.slug, locale) } }}
         className="group relative block p-8 bg-charcoal/50 border border-fg/[0.04] hover:border-gold/20 transition-all duration-700 h-full"
@@ -99,6 +87,6 @@ export default function ServiceCard({
           </div>
         </div>
       </Link>
-    </motion.div>
+    </Reveal>
   );
 }

@@ -91,6 +91,90 @@ html {
   scroll-behavior: smooth;
 }
 
+/*
+ * Scroll-reveal (see Reveal.tsx + the inline reveal script in the layout).
+ * Content is visible by default so the page is never stuck blank when JS is
+ * slow/blocked/disabled. The hidden start state only applies once the inline
+ * script has added the `js` class (before first paint), and elements are
+ * revealed by an inline IntersectionObserver independent of the main bundle.
+ */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 40px));
+  transition:
+    opacity var(--reveal-duration, 0.8s) cubic-bezier(0.22, 1, 0.36, 1),
+    transform var(--reveal-duration, 0.8s) cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js [data-reveal].reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+/*
+ * Hero entrance animations. Pure CSS so the hero (the LCP) is painted by the
+ * browser without waiting on any JS bundle; the animation plays on load even
+ * when JS is disabled.
+ */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--rise, 40px));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.anim-rise {
+  animation: hero-rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--anim-delay, 0s);
+}
+
+/* Opacity-only entrance (leaves any existing transform, e.g. centering, intact). */
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anim-fade {
+  animation: hero-fade 1s ease both;
+  animation-delay: var(--anim-delay, 0s);
+}
+
+@keyframes scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.anim-bounce {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .anim-rise,
+  .anim-fade,
+  .anim-bounce {
+    animation: none;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);

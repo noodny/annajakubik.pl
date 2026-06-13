@@ -1,16 +1,11 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { services } from "@/lib/services";
 import ServiceCard from "./ServiceCard";
+import Reveal from "./Reveal";
 
 export default function Services() {
   const t = useTranslations("Services");
   const ts = useTranslations("ServiceData");
-  const headingRef = useRef(null);
-  const isInView = useInView(headingRef, { once: true, margin: "-100px" });
 
   return (
     <section
@@ -18,13 +13,7 @@ export default function Services() {
       className="relative pbs-32 lg:pbs-44 bg-charcoal-dark"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <motion.div
-          ref={headingRef}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-2xl mb-20"
-        >
+        <Reveal y={30} className="max-w-2xl mb-20">
           <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
             {t("sectionLabel")}
           </p>
@@ -36,7 +25,7 @@ export default function Services() {
           <p className="mt-6 text-fg-4 text-base leading-relaxed max-w-xl">
             {t("description")}
           </p>
-        </motion.div>
+        </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-fg/[0.02]">
           {services.map((service, i) => (
