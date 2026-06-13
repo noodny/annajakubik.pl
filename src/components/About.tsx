@@ -1,34 +1,6 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
 import { useTranslations } from "next-intl";
-
-function FadeInSection({
-  children,
-  className = "",
-  delay = 0,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  delay?: number;
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import Reveal from "./Reveal";
 
 export default function About() {
   const t = useTranslations("About");
@@ -45,7 +17,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left: Label + Photo placeholder */}
-          <FadeInSection>
+          <Reveal>
             <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
               {t("sectionLabel")}
             </p>
@@ -72,27 +44,27 @@ export default function About() {
               <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-gold/40 via-gold/20 to-transparent" />
               <div className="absolute bottom-0 left-0 h-full w-px bg-gradient-to-t from-gold/40 via-gold/20 to-transparent" />
             </div>
-          </FadeInSection>
+          </Reveal>
 
           {/* Right: Bio text */}
           <div className="lg:pt-24">
-            <FadeInSection delay={0.2}>
+            <Reveal delay={0.2}>
               <p className="text-xl md:text-2xl text-fg/80 font-light leading-relaxed font-serif italic">
                 {t("intro")}
               </p>
-            </FadeInSection>
+            </Reveal>
 
-            <FadeInSection delay={0.4}>
+            <Reveal delay={0.4}>
               <div className="mt-12 space-y-6 text-fg-3 text-base leading-relaxed">
                 <p>{t("bio1")}</p>
                 <p>{t("bio2")}</p>
                 <p>{t("bio3")}</p>
               </div>
-            </FadeInSection>
+            </Reveal>
           </div>
         </div>
 
-        <FadeInSection delay={0.5}>
+        <Reveal delay={0.5}>
           <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="border-t border-fg/10 pt-4">
@@ -103,7 +75,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </FadeInSection>
+        </Reveal>
       </div>
     </section>
   );

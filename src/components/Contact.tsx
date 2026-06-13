@@ -1,9 +1,6 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { MapPin, Phone, Smartphone } from "lucide-react";
+import Reveal from "./Reveal";
 
 const locations = [
   {
@@ -26,8 +23,6 @@ const locations = [
 
 export default function Contact() {
   const t = useTranslations("Contact");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section
@@ -35,13 +30,7 @@ export default function Contact() {
       className="relative pbs-16 pbe-16 lg:py-44 bg-charcoal/30"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-2xl"
-        >
+        <Reveal y={30} className="max-w-2xl">
           <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-6">
             {t("sectionLabel")}
           </p>
@@ -53,21 +42,12 @@ export default function Contact() {
           <p className="mt-6 text-fg-4 text-base leading-relaxed max-w-xl">
             {t("description")}
           </p>
-        </motion.div>
+        </Reveal>
 
         <div className="grid pbs-20 lg:grid-cols-2 gap-8" id="contact-details">
           {locations.map((loc, i) => (
-            <motion.div
-              key={loc.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.2 + i * 0.15,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="group relative p-10 lg:p-12 border border-fg/[0.06] bg-charcoal-dark hover:border-gold/20 transition-all duration-700"
-            >
+            <Reveal key={loc.name} y={30} duration={0.6} delay={0.2 + i * 0.15}>
+              <div className="group relative p-10 lg:p-12 border border-fg/[0.06] bg-charcoal-dark hover:border-gold/20 transition-all duration-700">
               <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
               <div className="relative z-10">
@@ -123,7 +103,8 @@ export default function Contact() {
                   {t("callAndBook")}
                 </a>
               </div>
-            </motion.div>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

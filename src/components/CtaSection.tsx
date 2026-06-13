@@ -1,13 +1,8 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { useTranslations } from "next-intl";
+import Reveal from "./Reveal";
 
 export default function CtaSection() {
   const t = useTranslations("CtaSection");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section className="relative py-16 lg:py-44 overflow-hidden">
@@ -15,12 +10,7 @@ export default function CtaSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.04] blur-[150px]" />
 
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <Reveal duration={1}>
           <p className="text-gold-muted text-sm tracking-[0.3em] uppercase mb-8">
             {t("label")}
           </p>
@@ -42,7 +32,7 @@ export default function CtaSection() {
               <div className="absolute inset-0 bg-gold-light translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </a>
           </div>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

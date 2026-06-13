@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import type { CSSProperties } from "react";
 import { useTranslations } from "next-intl";
 
 const NOISE_SVG = `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`;
@@ -42,33 +40,27 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-fg leading-[1.1] tracking-tight"
+        <h1
+          style={{ "--anim-delay": "0.5s" } as CSSProperties}
+          className="anim-rise font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-fg leading-[1.1] tracking-tight"
         >
           {t("title1")}
           <br />
           <span className="text-gold">{t("title2")}</span>
           <br />
           {t("title3")}
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 text-fg-3 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
+        <p
+          style={{ "--anim-delay": "0.8s", "--rise": "30px" } as CSSProperties}
+          className="anim-rise mt-10 text-fg-3 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
         >
           {t("description")}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6"
+        <div
+          style={{ "--anim-delay": "1.1s", "--rise": "20px" } as CSSProperties}
+          className="anim-rise mt-14 flex flex-col sm:flex-row items-center justify-center gap-6"
         >
           <a
             href="#contact"
@@ -83,22 +75,16 @@ export default function Hero() {
           >
             {t("ctaSecondary")}
           </a>
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10"
+      <div
+        style={{ "--anim-delay": "2s" } as CSSProperties}
+        className="anim-fade absolute bottom-0 left-1/2 -translate-x-1/2 z-10"
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-[1px] h-16 bg-gradient-to-b from-transparent via-gold/50 to-transparent"
-        />
-      </motion.div>
+        <div className="anim-bounce w-[1px] h-16 bg-gradient-to-b from-transparent via-gold/50 to-transparent" />
+      </div>
 
       {/* Layer 7: Bottom fade for seamless transition */}
       <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-obsidian to-transparent" />
