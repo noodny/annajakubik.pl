@@ -6,9 +6,11 @@ This app is deployed to a [Dokku](https://dokku.com) VPS via GitHub Actions.
 | ----------------------------- | ------------------------------------------------- | --------------------------- | -------------- |
 | Push to `main`                | [`deploy-production.yml`](.github/workflows/deploy-production.yml) | `annajakubik`               | `Production`   |
 | PR opened / updated / reopened| [`deploy-preview.yml`](.github/workflows/deploy-preview.yml)       | `annajakubik-pr-<PR_NUMBER>`| `Preview`      |
-| PR closed (merged or not)     | [`cleanup-preview.yml`](.github/workflows/cleanup-preview.yml)     | destroys the preview app    | `Preview`      |
 
 Dokku builds the app from the repo's [`Dockerfile`](Dockerfile) on every `git push`.
+
+Preview apps are **not** torn down when a PR closes — they are reaped on an
+inactivity schedule instead (see [Cleanup of preview deployments](#time-based-cleanup-of-preview-deployments)).
 
 ## One-time setup
 
@@ -26,7 +28,7 @@ In **Settings → Secrets and variables → Actions**:
 
 | Name                    | Description                                                                 |
 | ----------------------- | --------------------------------------------------------------------------- |
-| `DOKKU_SSH_PRIVATE_KEY` | Private SSH key whose public key is added to Dokku (`dokku ssh-keys:add`).  |
+| `DOKKU_SSH_PRIVATE_KEY` | **Dedicated** deploy key for CI — generate a fresh keypair just for this, do not reuse your personal SSH key. Add the public half to Dokku with `dokku ssh-keys:add github-actions <pubkey>`. Revoke it any time with `dokku ssh-keys:remove github-actions`. |
 
 **Variables**
 
@@ -47,8 +49,11 @@ In **Settings → Secrets and variables → Actions**:
 dokku apps:create annajakubik
 dokku domains:set annajakubik annajakubik.pl
 
-# Add the CI key (paste the PUBLIC key matching DOKKU_SSH_PRIVATE_KEY)
-dokku ssh-keys:add github-actions /path/to/id.pub
+# Generate a dedicated CI keypair (do NOT reuse your personal key), then add
+# the PUBLIC half to Dokku. The PRIVATE half goes into the DOKKU_SSH_PRIVATE_KEY
+# GitHub secret. Revoke later with: dokku ssh-keys:remove github-actions
+#   ssh-keygen -t ed25519 -f ./dokku-ci -N "" -C github-actions
+dokku ssh-keys:add github-actions /path/to/dokku-ci.pub
 
 # For predictable preview URLs, point a wildcard DNS record
 # (*.preview.example.com) at the VPS. Preview apps then resolve automatically.
@@ -62,25 +67,21 @@ setup per PR is needed.
 > **Q: Can Dokku kill preview deployments over time?**
 >
 > Dokku has **no built-in TTL / auto-expiry** for apps, and there's no official
-> plugin for it. The supported approach is event- and cron-based cleanup, which
-> this repo sets up in two layers:
+> plugin for it. The supported approach is a cron-based sweep on the VPS.
 
-1. **On PR close** — `cleanup-preview.yml` runs `dokku apps:destroy` as soon as a
-   PR is merged or closed. This handles the normal case.
+Preview apps are reaped purely on inactivity — there is no PR-close teardown.
+Install [`scripts/dokku-prune-previews.sh`](scripts/dokku-prune-previews.sh) on
+the VPS via cron. It destroys any `annajakubik-pr-*` app that hasn't been
+deployed to in `MAX_AGE_DAYS` (default 7); reopening/pushing to a PR resets its
+clock because each deploy touches the app's directory:
 
-2. **Time/inactivity sweep (safety net)** — for previews that slip through (the
-   cleanup job failed, the PR was deleted, etc.), install
-   [`scripts/dokku-prune-previews.sh`](scripts/dokku-prune-previews.sh) on the
-   VPS via cron. It destroys any `annajakubik-pr-*` app that hasn't been deployed
-   to in `MAX_AGE_DAYS` (default 7):
+```bash
+sudo cp scripts/dokku-prune-previews.sh /usr/local/bin/dokku-prune-previews.sh
+sudo chmod +x /usr/local/bin/dokku-prune-previews.sh
 
-   ```bash
-   sudo cp scripts/dokku-prune-previews.sh /usr/local/bin/dokku-prune-previews.sh
-   sudo chmod +x /usr/local/bin/dokku-prune-previews.sh
+# Daily at 04:00 — only touches "<prefix>-pr-*" apps, never production.
+echo '0 4 * * * MAX_AGE_DAYS=7 /usr/local/bin/dokku-prune-previews.sh >> /var/log/dokku-prune-previews.log 2>&1' \
+  | sudo tee /etc/cron.d/dokku-prune-previews
+```
 
-   # Daily at 04:00 — only touches "<prefix>-pr-*" apps, never production.
-   echo '0 4 * * * MAX_AGE_DAYS=7 /usr/local/bin/dokku-prune-previews.sh >> /var/log/dokku-prune-previews.log 2>&1' \
-     | sudo tee /etc/cron.d/dokku-prune-previews
-   ```
-
-   Test first with `DRY_RUN=1 ./scripts/dokku-prune-previews.sh`.
+Test first with `DRY_RUN=1 ./scripts/dokku-prune-previews.sh`.

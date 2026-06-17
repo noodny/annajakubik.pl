@@ -2,11 +2,9 @@
 #
 # Prune stale Dokku preview apps.
 #
-# Dokku has no built-in TTL/expiry for apps. The primary cleanup happens when a
-# PR is closed (see .github/workflows/cleanup-preview.yml). This script is a
-# safety net for previews that were never cleaned up (e.g. the cleanup workflow
-# failed, or a PR was deleted) by destroying preview apps that have not been
-# deployed to in a while.
+# Dokku has no built-in TTL/expiry for apps. Preview apps are reaped solely by
+# this inactivity sweep (there is no PR-close teardown): it destroys preview
+# apps that have not been deployed to in a while.
 #
 # "Staleness" is measured by the modification time of the app's Dokku home
 # directory (/home/dokku/<app>), which is touched on every deploy. So this
