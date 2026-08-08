@@ -1,0 +1,33 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Never run two production deploys at once; let the running one finish.
+concurrency:
+  group: dokku-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: ${{ vars.DOKKU_PRODUCTION_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Dokku deploys via `git push`, so the full history is required.
+          fetch-depth: 0
+
+      - name: Push to Dokku
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: ssh://dokku@${{ vars.DOKKU_HOST }}:22/${{ vars.DOKKU_APP || 'annajakubik' }}
+          ssh_private_key: ${{ secrets.DOKKU_SSH_PRIVATE_KEY }}
+          # Force push so the deploy is not blocked by manual pushes made
+          # directly to the server outside of CI.
+          git_push_flags: --force

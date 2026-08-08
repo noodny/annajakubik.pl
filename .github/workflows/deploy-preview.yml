@@ -1,0 +1,82 @@
+name: Deploy Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+# One in-flight deploy per PR; a newer push cancels the older build.
+concurrency:
+  group: dokku-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    environment:
+      name: Preview
+      url: ${{ steps.meta.outputs.url }}
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          # Dokku deploys via `git push`, so the full history is required.
+          fetch-depth: 0
+
+      - name: Compute preview app name and URL
+        id: meta
+        run: |
+          base="${{ vars.DOKKU_APP || 'annajakubik' }}"
+          app="${base}-pr-${{ github.event.pull_request.number }}"
+          echo "app=${app}" >> "$GITHUB_OUTPUT"
+          if [ -n "${{ vars.DOKKU_DOMAIN }}" ]; then
+            echo "url=https://${app}.${{ vars.DOKKU_DOMAIN }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.DOKKU_SSH_PRIVATE_KEY }}" > ~/.ssh/id_dokku
+          chmod 600 ~/.ssh/id_dokku
+          ssh-keyscan -p 22 "${{ vars.DOKKU_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Ensure preview app exists
+        env:
+          APP: ${{ steps.meta.outputs.app }}
+        run: |
+          ssh_dokku() { ssh -i ~/.ssh/id_dokku "dokku@${{ vars.DOKKU_HOST }}" "$@"; }
+          # apps:create exits non-zero if the app already exists; that's fine.
+          ssh_dokku apps:create "$APP" || true
+          if [ -n "${{ vars.DOKKU_DOMAIN }}" ]; then
+            ssh_dokku domains:set "$APP" "${APP}.${{ vars.DOKKU_DOMAIN }}" || true
+          fi
+
+      - name: Deploy to preview app
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: ssh://dokku@${{ vars.DOKKU_HOST }}:22/${{ steps.meta.outputs.app }}
+          ssh_private_key: ${{ secrets.DOKKU_SSH_PRIVATE_KEY }}
+          git_push_flags: --force
+
+      - name: Comment preview URL on PR
+        if: steps.meta.outputs.url != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ steps.meta.outputs.url }}';
+            const marker = '<!-- dokku-preview -->';
+            const body = `${marker}\n🚀 Preview deployed: ${url}`;
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+            const comments = await github.rest.issues.listComments({ owner, repo, issue_number });
+            const existing = comments.data.find(c => c.body && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
